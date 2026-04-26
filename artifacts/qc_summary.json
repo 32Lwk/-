@@ -1,0 +1,43 @@
+{
+  "n_rows": 64000,
+  "missing_by_col": {
+    "customer_id": 0,
+    "recency": 0,
+    "history": 0,
+    "used_discount": 0,
+    "used_bogo": 0,
+    "zip_code": 0,
+    "is_referral": 0,
+    "channel": 0,
+    "offer": 0,
+    "conversion": 0
+  },
+  "dtypes": {
+    "customer_id": "int64",
+    "recency": "int64",
+    "history": "float64",
+    "used_discount": "int64",
+    "used_bogo": "int64",
+    "zip_code": "object",
+    "is_referral": "int64",
+    "channel": "object",
+    "offer": "object",
+    "conversion": "int64"
+  },
+  "unique_zip_code": [
+    "Rural",
+    "Surburban",
+    "Urban"
+  ],
+  "unique_channel": [
+    "Multichannel",
+    "Phone",
+    "Web"
+  ],
+  "unique_offer": [
+    "Buy One Get One",
+    "Discount",
+    "No Offer"
+  ],
+  "conversion_rate": 0.14678125
+}
