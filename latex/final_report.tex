@@ -1,0 +1,457 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage{luatexja}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{subcaption}
+\usepackage{url}
+
+\hypersetup{colorlinks=true, linkcolor=blue, urlcolor=blue, citecolor=blue}
+
+\title{期待利益最大化に向けた分析レポート\\（観察データ・オフポリシー評価・制約付き配信・実験計画）}
+\author{分析パイプライン自動生成（\texttt{analytics/}・\texttt{run\_analysis.py}）}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+\textbf{目的.}
+店舗顧客の観察データに対し、購入（コンバージョン）予測、多値介入に対する傾向スコアと二重頑健（doubly robust; DR）推定量、
+$K$折アウト・オブ・フォールド（OOF）予測に基づくオフポリシー評価、期待利益最大化に基づく離散政策、
+および接触上限等の制約下での貪欲割当を一連のパイプラインとして整理する。
+
+\medskip\noindent
+\textbf{識別と限界.}
+推定の解釈は\textbf{条件付き無視可能性} $Y(t)\perp T \mid X$、\textbf{SUTVA}、\textbf{共通支援}の下での参考値に留まる。
+未観測交絡があれば DR も漸近的にバイアスを残す。増分効果の確定にはランダム化比較試験（RCT）を要する。
+
+\medskip\noindent
+\textbf{価値とコスト.}
+会計上の粗利・LTVは本データに含まれないため、\texttt{history} を売上の proxy とし、
+\texttt{analytics/config.py} に定義したコストシナリオによる感度分析のみを行う（絶対額の断定はしない）。
+
+\medskip\noindent
+\textbf{推論.}
+ブートストラップ区間は訓練データの\textbf{層化部分標本再学習}に基づく。全件ノンパラメトリック・ブートストラップによる区間とは一般に一致しない。
+\end{abstract}
+
+\tableofcontents
+\newpage
+
+\section{序論}
+
+\subsection{背景}
+マーケティング施策は（オファー種別 $\times$ チャネル）など\textbf{多値の離散介入}として観察される。
+本稿では、施策の\textbf{記述的関連}（条件付きCVR）から出発し、購入確率の\textbf{予測モデル}、
+介入割当の\textbf{傾向モデル}と結果モデルを用いた\textbf{DR 推定}、
+そして期待利益に基づく\textbf{個別最適化政策}へと分析を段階的に接続する。
+各段階で必要な\textbf{統計的仮定}と\textbf{実装上の近似}（同一データ再使用、貪欲制約解など）を明示する。
+
+\subsection{本稿の貢献（分析パイプラインとしての位置づけ）}
+\begin{itemize}
+  \item \textbf{再現可能なレポート生成}: 図表・\texttt{artifacts/}・本 PDF は同一スクリプトから再生成可能。
+  \item \textbf{楽観バイアスの可視化}: フル学習評価、$K$折OOF、ホールドアウト、DR（全件学習 vs ホールドアウト）を並置する。
+  \item \textbf{重み付き推定の診断}: 処置別 ESS と傾向スコア分布で IPW 系推定の安定性を監視する。
+  \item \textbf{意思決定への接続}: 制約付き配信、A/B 必要サンプル表、ガバナンス・モニタリング表を同梱する。
+\end{itemize}
+
+\subsection{記号とデータ生成}
+表 \ref{tab:notation} に主要記号をまとめる。
+\begin{table}[ht]
+\centering
+\caption{主要記号}
+\label{tab:notation}
+\begin{tabular}{@{}ll@{}}
+\toprule
+記号 & 意味 \\
+\midrule
+$i$ & 顧客インデックス \\
+$Y_i \in \{0,1\}$ & 購入（\texttt{conversion}） \\
+$T_i$ & 処置（\texttt{offer} と \texttt{channel} の組） \\
+$X_i$ & 共変量ベクトル（\texttt{recency}, \texttt{history} 等） \\
+$\hat e(t\mid X_i)$ & 傾向スコア（多値ロジスティックの予測確率） \\
+$\hat\mu(t,X_i)$ & 結果モデルによる $\Pr(Y{=}1\mid X_i, T{=}t)$ \\
+$\hat\Pi_i(t)$ & 期待利益のオフライン代理（後述の定義式） \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection{図表の見方と再現性}
+静止画は \texttt{figures/}（EDA・ROC 等）と \texttt{figures/improvements/}（診断・政策・サマリー）に保存する。
+インタラクティブな Plotly 図は \texttt{figures\_html/*.html} をブラウザで開くと拡大・回転が可能（PDF には同内容の PNG を併記）。
+\textbf{図中の日本語}は \texttt{analytics/figures\_jp.py} で \textbf{BIZ UDGothic}（BIZ UD ゴシック）を最優先し、未導入時は Meiryo 等へフォールバックする。
+
+\section{問題設定と識別仮定}
+
+\subsection{潜在的結果とターゲット}
+処置 $T \in \mathcal{T}$ を（オファー, チャネル）の組とする。潜在的結果 $Y(t)$、観測結果 $Y=\sum_{t\in\mathcal{T}} \mathbf{1}\{T=t\}Y(t)$。
+\textbf{平均処置効果} $\mathbb{E}[Y(t)-Y(t_0)]$ 等が関心量となるが、観察データでは一般に識別できない。
+
+\subsection{識別条件}
+\textbf{無視可能性}: $Y(t)\perp T \mid X$（交絡が $X$ に含まれる）。
+\textbf{SUTVA}: 処置の定義が顧客間で干渉しない。
+\textbf{共通支援}: $0<e(t\mid x)<1$。
+いずれかが崩れると、本稿の DR・OOF 評価は\textbf{方向を示す参考値}にとどまる。
+
+\section{データと探索（分布・条件付きCVR）}
+
+\subsection{周辺分布と層別箱ひげ}
+図 \ref{fig:dist} は主要共変量の周辺分布と、購入有無で層別化した箱ひげを示す。
+
+\begin{figure}[p]
+  \centering
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/dist_recency.png}
+    \caption{recency（最終購入からの月数）の周辺分布}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/dist_history.png}
+    \caption{history（過去購入価値 proxy）の周辺分布}
+  \end{subfigure}\\[1.2ex]
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/box_recency_by_conversion.png}
+    \caption{recency：購入有無別}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/box_history_by_conversion.png}
+    \caption{history：購入有無別}
+  \end{subfigure}
+  \caption{主要共変量の分布と購入との関係}
+  \label{fig:dist}
+\end{figure}
+
+\subsubsection*{解釈}
+周辺分布は\textbf{接触母集団の代表性}と\textbf{外れ値・右裾}を把握するための記述統計である。
+箱ひげは $\Pr(\text{共変量}\mid Y)$ の差を示すが、これは\textbf{因果効果ではない}。
+特に recency と処置の割当が相関する場合（例：休眠顧客に強いオファー）、
+高い条件付きCVRは\textbf{交絡}により過大評価されうる。
+
+\subsection{オファー$\times$チャネル別の条件付きCVR}
+図 \ref{fig:heat} はセルごとの標本CVRを色で表す。セル内件数が小さい組み合わせでは標準誤差が大きい。
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.92\linewidth]{../figures/heat_cvr_offer_x_channel.png}
+  \caption{オファー$\times$チャネル別 CVR ヒートマップ（記述統計）}
+  \label{fig:heat}
+\end{figure}
+
+\subsubsection*{解釈}
+セル間のコントラストは\textbf{交互作用の存在の手がかり}となる。
+ただし各セルの値は $P(Y{=}1\mid T,\text{セル})$ の\textbf{観察された連関}であり、
+コストを伴う期待利益の最適処置とは一致しない場合がある（後章）。
+
+\subsection{属性別 CVR（棒グラフ）}
+図 \ref{fig:cvrbars} はオファー・チャネル・地域等の\textbf{一変量層別}CVRを示す。
+
+\begin{figure}[p]
+  \centering
+  \begin{subfigure}{0.32\linewidth}
+    \includegraphics[width=\linewidth]{../figures/cvr_by_offer.png}
+    \caption{オファー別}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.32\linewidth}
+    \includegraphics[width=\linewidth]{../figures/cvr_by_channel.png}
+    \caption{チャネル別}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.32\linewidth}
+    \includegraphics[width=\linewidth]{../figures/cvr_by_zip_code.png}
+    \caption{地域別}
+  \end{subfigure}
+  \caption{属性別条件付きCVR（棒グラフ）}
+  \label{fig:cvrbars}
+\end{figure}
+
+\subsubsection*{解釈}
+棒の差は\textbf{セグメント施策の動機}となるが、層の定義が処置と同時に決まる変数（過去プロモ利用など）では
+\textbf{過去の処置}と\textbf{現在の割当}が絡み、因果の読み替えに注意する。
+地域はセンシティブ属性の proxy になりうるため、配信ルールへの直結はガバナンスレビューを前提とする。
+
+\section{多重検定（FDR）と効果量}
+
+\subsection{方法}
+各カテゴリ特徴量について購入との\textbf{独立性のカイ二乗検定}を行い、
+Benjamini--Hochberg 手順で偽発見率（FDR）を $q$ 値として報告する。
+効果量には Cramér's $V$ を併記し、$p$ 値のみに依存しない。
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth]{../figures/improvements/chi2_cramers_v_bar.png}
+  \caption{カイ二乗検定に基づく効果量（Cramér's $V$）}
+\end{figure}
+
+\subsubsection*{解釈}
+大標本では\textbf{統計的有意 $\neq$ 実務的に大きな効果}となりやすい。
+$V$ が小さい場合は、予測モデルへの寄与も限定的である可能性がある。
+多数の変数が購入と関連する場合、ロジスティック回帰では\textbf{多重共線性}により係数解釈が難しくなる。
+
+\section{予測モデル（ROC・校正・PR）}
+
+\subsection{評価指標の意味}
+\textbf{AUC（ROC）}: 閾値を掃引したときの誤警報率と検出力のトレードオフを要約したランキング指標。
+\textbf{Brier スコア}: 確率予測の二乗誤差。
+\textbf{校正曲線}: 予測確率ビンにおける観測頻度との一致（較正）。
+\textbf{PR 曲線・AP}: 陽性クラスが稀なときの precision--recall トレードオフとその要約。
+
+\begin{figure}[p]
+  \centering
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/roc_logreg.png}
+    \caption{ROC（logistic regression）}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/roc_hgb.png}
+    \caption{ROC（histogram-based gradient boosting）}
+  \end{subfigure}\\[1.2ex]
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/calibration_logreg.png}
+    \caption{校正（logreg）}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/calibration_hgb.png}
+    \caption{校正（HGB）}
+  \end{subfigure}
+  \caption{ターゲティングモデルの性能（ホールドアウト）}
+\end{figure}
+
+\subsubsection*{解釈}
+AUC が中程度のとき、完全分離は達成されておらず、\textbf{ターゲティングの上限}が統計的に制限される。
+期待利益は確率の\textbf{絶対水準}に依存するため、校正の崩れは\textbf{政策の順位入れ替え}を招きうる。
+運用では ECE やドリフト監視が有効である。
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/pr_curve_logreg.png}
+    \caption{PR（logreg）}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/pr_curve_hgb.png}
+    \caption{PR（HGB）}
+  \end{subfigure}
+  \caption{Precision--Recall（不均衡データ向け）}
+\end{figure}
+
+\subsubsection*{解釈}
+AP と TopK\% CVR（表）は\textbf{限られた接触枠}のもとでの運用品質に直結する。
+木系が線形より Top 尾で有利な場合があり、ROC の差以上に政策評価に効くことがある。
+
+\section{因果推論（傾向スコア、DR、ブートストラップ）}
+
+\subsection{DR 推定量（参考）}
+処置 $t$ について、本実装で用いる DR 形式は次の標本平均である：
+\[
+\hat{\mu}_{\mathrm{DR}}(t) = \frac{1}{n}\sum_{i=1}^n \left( \hat{\mu}(t, X_i) + \frac{\mathbf{1}\{T_i=t\}}{\hat{e}(t\mid X_i)} (Y_i - \hat{\mu}(t, X_i)) \right).
+\]
+ここで $\hat{e}$ は多値ロジスティック傾向、$\hat{\mu}$ は処置を特徴量に含む結果モデル（ロジスティック）から得る。
+\textbf{クリップ}を $\hat{e}$ に施し、極端な IPW 重みを抑制する（\texttt{PROPENSITY\_CLIP}）。
+
+\subsection{実装上の注意（同一データ学習）}
+本パイプラインでは、傾向・結果モデルを\textbf{同一学習標本}上でフィットし、\textbf{同一標本}で上式を評価している。
+一般にこれは\textbf{ナイーブで楽観的}となりうる。厳密にはサンプル分割や\textbf{cross-fitting} により
+「自分で学習したデータで評価しない」手続きが推奨される。
+本稿では\textbf{ホールドアウト再学習}による棒グラフ比較で、その\textbf{ギャップの大きさ}を監視する。
+
+\begin{figure}[p]
+  \centering
+  \includegraphics[width=0.92\linewidth]{../figures/improvements/report_dr_full_vs_holdout.png}
+  \caption{処置別 DR：全件学習による評価とホールドアウト再学習による評価の比較}
+\end{figure}
+
+\subsubsection*{解釈}
+処置ごとに全件とホールドアウトの差が大きい場合、\textbf{過学習}、\textbf{傾向の極小確率}、
+または\textbf{結果モデルの誤指定}が疑われる。差が小さくても\textbf{未観測交絡}は残る。
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.85\linewidth]{../figures/improvements/report_propensity_ess.png}
+  \caption{処置別 ESS（IPW 重みに対応する有効標本量の目安）}
+\end{figure}
+
+\subsubsection*{解釈}
+ESS が低い処置では、少数観測に過度に重みが乗り、DR の分散が増大する。
+その場合、政策の主役から外す・トリミング・別母集団での感度分析を検討する。
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth]{../figures/improvements/dr_bootstrap_ci.png}
+  \caption{DR 点推定とブートストラップ区間（森林図風）}
+\end{figure}
+
+\subsubsection*{解釈}
+区間は\textbf{部分標本再学習}に基づく。処置間で区間が重なるとき、\textbf{順位確定}には実験が有効である。
+
+\section{期待利益・オフポリシー評価・ベンチマーク}
+
+\subsection{期待利益の定義（オフライン代理）}
+顧客 $i$、処置 $t$ について、本稿で用いる期待利益の代理は
+\[
+\widehat{\Pi}_i(t) = \hat{P}(Y{=}1\mid X_i, t)\,\mathrm{history}_i
+  - c_{\mathrm{offer}}(t)\,\mathrm{history}_i - c_{\mathrm{ch}}(t)\,\mathrm{history}_i
+\]
+とする。$c_{\cdot}(\cdot)$ はシナリオ依存のコスト係数（\texttt{DEFAULT\_SCENARIOS}）。
+離散処置について $\arg\max_t \widehat{\Pi}_i(t)$ を\textbf{個別最適政策}とみなす。
+
+\subsection{オフポリシー評価の読み方}
+\textbf{フル学習}: 全データで学習した $\hat{P}$ で評価（楽観バイアスがありうる）。
+\textbf{OOF}: $K$折で学習していないフォールドの予測を用いる。
+\textbf{ホールドアウト}: 保持検証セット上の予測を用いる。
+
+\begin{figure}[p]
+  \centering
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/policy_reco_dist_full.png}
+    \caption{推奨処置の分布（シナリオ別）}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/profit_full_vs_oof_scatter.png}
+    \caption{フル学習 vs OOF 期待利益（顧客ごと）}
+  \end{subfigure}\\[1.2ex]
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/policy_benchmarks_bar.png}
+    \caption{ベンチマーク政策の比較}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/report_profit_summary_by_scenario.png}
+    \caption{シナリオ別 期待利益要約}
+  \end{subfigure}
+  \caption{政策評価とベンチマーク}
+\end{figure}
+
+\subsubsection*{解釈}
+推奨分布の集中（例：一処置に100\%）は、\textbf{コスト仮定のもとで他処置が支配的に不利}なことの\textbf{シグナル}であるが、
+モデル誤差でも起こりうるため散布図と OOF を併読する。
+ベンチマーク棒は\textbf{単純ルールで十分か}の基準線を与える。
+
+\begin{figure}[p]
+  \centering
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/decision_flow.png}
+    \caption{意思決定フロー（ゲート例）}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/report_policy_eval_means.png}
+    \caption{評価モード別 平均期待利益}
+  \end{subfigure}
+  \caption{経営向け：ゲートとオフライン評価の要約}
+\end{figure}
+
+\subsubsection*{解釈}
+左図は\textbf{オフライン合格 $\rightarrow$ パイロット $\rightarrow$ スケール}の例。
+右図でフルだけ突出していれば、\textbf{過信}の警告となる。
+
+\subsection{制約付き配信（貪欲近似）}
+接触上限・予算等の\textbf{整数制約}下では、全員への $\arg\max_t$ は実行不可能な場合がある。
+実装では貪欲割当により\textbf{近似解}を求める。一般に\textbf{最適解との最適性ギャップ}は問題依存である。
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.55\linewidth]{../figures/improvements/constrained_selection_summary.png}
+  \caption{制約付き配信：選択割合の変化（例）}
+\end{figure}
+
+\subsubsection*{解釈}
+図は\textbf{運用イメージ}であり、実予算・キャパに合わせパラメータを再設定する。
+完全最適が必要な場合は MIP 等との比較が望ましい。
+
+\section{セグメントと頑健性}
+
+\subsection{潜在空間の可視化}
+PCA は線形、UMAP は非線形構造を強調するが、\textbf{大域的距離の厳密解釈は持たない}。
+クラスタリングは主に UMAP 座標上で実施し、\textbf{ARI} でシード頑健性を確認する。
+
+\begin{figure}[p]
+  \centering
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/latent2d_pca2_color_conversion.png}
+    \caption{PCA 2D（購入で色分け）}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/latent2d_umap2_color_conversion.png}
+    \caption{UMAP 2D}
+  \end{subfigure}\\[1.2ex]
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/latent3d_umap3_color_conversion.png}
+    \caption{UMAP 3D（PNG 静止画）}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/latent3d_umap3_color_segment.png}
+    \caption{セグメント着色（UMAP 3D）}
+  \end{subfigure}
+  \caption{潜在空間の可視化（HTML 版は \texttt{figures\_html/}）}
+\end{figure}
+
+\subsubsection*{解釈}
+セグメントラベルは\textbf{説明用}であり、差別的利用やセンシティブ属性の proxy 化には\textbf{人のレビュー}を要する。
+
+\begin{figure}[ht]
+  \centering
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/silhouette_vs_k.png}
+    \caption{シルエット vs $k$}
+  \end{subfigure}\hfill
+  \begin{subfigure}{0.48\linewidth}
+    \includegraphics[width=\linewidth]{../figures/improvements/segment_stability_ari.png}
+    \caption{多シード ARI}
+  \end{subfigure}
+  \caption{クラスタ数選定と安定性}
+\end{figure}
+
+\subsubsection*{解釈}
+ARI が低い場合、セグメント施策の固定化は\textbf{再現性リスク}を伴う。スコア層への回帰や合意クラスタを検討する。
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\linewidth]{../figures/improvements/report_segment_mean_profit.png}
+  \caption{セグメント別 平均期待利益（参考）}
+\end{figure}
+
+\subsubsection*{解釈}
+棒はクラスタ内平均であり、\textbf{クラスタ人数}と併読する。小クラスタは偶然の振れが大きい。
+
+\section{実験計画（RCT/A/B）}
+主アウトカムを購入率と置き、有意水準・検定力・最小検出効果（MDE）に基づく必要サンプルは表 \ref{tab:ab}。
+\begin{table}[ht]
+\centering
+\caption{A/B 必要サンプル（二標本比例・正規近似）}
+\label{tab:ab}
+\small
+\input{../artifacts/tables/ab_design.tex}
+\end{table}
+
+\subsubsection*{解釈}
+表の $n$ は\textbf{近似の出発点}である。無効検査、多重主アウトカム、クラスタランダム化等で設計を調整する。
+オフラインで有効に見えた政策が実験で再現しない場合、\textbf{実装差・SUTVA・残存交絡}を疑う。
+
+\section{ガバナンス・倫理・人の関与}
+\input{../artifacts/tables/governance_ethics.tex}
+
+\section{運用モニタリングとインシデント対応}
+\begin{table}[ht]
+\centering
+\caption{監視指標の例（詳細は \texttt{artifacts/monitoring\_spec.*}）}
+\small
+\input{../artifacts/tables/monitoring_summary.tex}
+\end{table}
+
+\subsubsection*{解釈}
+閾値は組織で合意し、逸脱時の\textbf{縮小運用・再学習・ロールバック}を手順化する。
+
+\section{結論とロードマップ}
+オフライン評価は\textbf{識別仮定}と\textbf{コスト・価値 proxy}に依存する。
+本稿の数値は\textbf{パイロット実験}と\textbf{本番モニタリング}を前提にスケールすべきである。
+今後の拡張として、(i) cross-fitting による DR、(ii) 制約付き政策の最適性ギャップ評価、
+(iii) 長期 LTV との接続が挙げられる。
+
+\appendix
+\section{限界と免責}
+\begin{itemize}
+  \item \textbf{観察データ}: 未観測交絡、SUTVA 違反、慣習化（\texttt{risk\_register.json} 参照）。
+  \item \textbf{ブートストラップ}: 部分標本再学習であり、厳密な頑健区間の代替ではない。
+  \item \textbf{法的助言}: 本稿は法的・コンプライアンス上の助言を構成しない。
+\end{itemize}
+
+\end{document}

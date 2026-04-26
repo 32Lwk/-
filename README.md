@@ -7,6 +7,8 @@ pip install -r requirements.txt
 python run_analysis.py
 ```
 
+図中の日本語は **BIZ UDGothic**（BIZ UD ゴシック）を最優先します。未インストール時は Meiryo 等へ自動フォールバックします。推奨: [BIZ UD フォント（Google Fonts）](https://fonts.google.com/) を OS にインストール。
+
 従来どおり `python analysis.py` でも実行可能（内部で同一パイプライン）。
 
 ## 主な成果物
@@ -14,14 +16,14 @@ python run_analysis.py
 | 種別 | パス |
 |------|------|
 | Markdown レポート | `final_report.md` |
-| LaTeX 理系レポート | `latex/final_report.tex`（LuaLaTeX + `ltjsarticle` 想定） |
+| LaTeX 理系レポート | `latex/final_report.tex`（LuaLaTeX + `luatexja`、既定で Harano Aji 等） |
 | 図（本編） | `figures/` |
 | 図（改善・診断） | `figures/improvements/` |
 | 表・CSV | `artifacts/`、`artifacts/tables/*.tex` |
 
 ## LaTeX（任意）
 
-Windows で [LuaLaTeX](https://www.luatex.org/) と日本語フォント（例: Yu Gothic）が利用可能な環境で:
+MiKTeX / TeX Live などで [LuaLaTeX](https://www.luatex.org/) と `luatexja` が入っている環境で（Harano Aji は多くの配布に同梱。`luatexja-preset` は古い `fontspec` と衝突することがあるため本テンプレでは未使用）:
 
 ```bash
 cd latex

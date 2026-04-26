@@ -1,0 +1,4 @@
+scenario_a,scenario_b,treatment_agreement_rate,mean_profit_diff_a_minus_b,mean_profit_a,mean_profit_b
+high_cost,low_cost,1.0,0.0,35.10621208112383,35.10621208112383
+high_cost,mid_cost,1.0,0.0,35.10621208112383,35.10621208112383
+low_cost,mid_cost,1.0,0.0,35.10621208112383,35.10621208112383

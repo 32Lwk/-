@@ -1,0 +1,12 @@
+policy,mean_profit
+固定: No Offer | Web,40.8645115197072
+固定: No Offer | Multichannel,36.70282833217243
+固定: No Offer | Phone,32.63468043879939
+固定: Buy One Get One | Web,-6.8181903980999765
+固定: Buy One Get One | Multichannel,-11.621428009836144
+ランダム処置（観測分布・モンテカルロ）,-11.714742858197203
+固定: Buy One Get One | Phone,-16.625520790299092
+個別最適（OOF予測）,-40.89259655129565
+固定: Discount | Web,-55.44104095830318
+固定: Discount | Multichannel,-60.743651371531705
+固定: Discount | Phone,-64.944521640713

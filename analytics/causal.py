@@ -229,16 +229,12 @@ def plot_dr_bootstrap_forest(dr_point: pd.DataFrame, dr_boot: pd.DataFrame, path
     m = m.sort_values("mu_dr", ascending=True)
     y_pos = np.arange(len(m))
     plt.figure(figsize=(8, max(4, len(m) * 0.35)))
-    plt.errorbar(
-        m["mu_dr"].values,
-        y_pos,
-        xerr=[
-            m["mu_dr"].values - m["mu_dr_p025"].values,
-            m["mu_dr_p975"].values - m["mu_dr"].values,
-        ],
-        fmt="o",
-        capsize=3,
-    )
+    x = m["mu_dr"].values
+    lo = m["mu_dr_p025"].values
+    hi = m["mu_dr_p975"].values
+    xerr_lo = np.clip(x - lo, 0, None)
+    xerr_hi = np.clip(hi - x, 0, None)
+    plt.errorbar(x, y_pos, xerr=[xerr_lo, xerr_hi], fmt="o", capsize=3)
     plt.yticks(y_pos, [t.replace(" | ", " / ") for t in m["treatment"]])
     plt.xlabel("推定購入確率（DR）とブートストラップ区間")
     plt.title("DR点推定とブートストラップ95%区間（ホールドアウト上・部分標本再学習）")

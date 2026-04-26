@@ -1,0 +1,25 @@
+{
+  "model_calibration": {
+    "metric": "Brier, ECE",
+    "threshold_example": "Brier がベースライン+0.02 超で再学習検討"
+  },
+  "ranking": {
+    "metric": "PR-AUC",
+    "threshold_example": "週次で前週比 -5pt 以上なら調査"
+  },
+  "data_drift": {
+    "metric": "PSI / KS（主要特徴）",
+    "threshold_example": "PSI > 0.2 でアラート"
+  },
+  "propensity_ess": {
+    "metric": "ESS（IPW重み）",
+    "threshold_example": "ESS < 0.1 * n でトリミング強化または縮小運用"
+  },
+  "incident_response": {
+    "actions": [
+      "介入配布停止",
+      "ルールベース縮退",
+      "再学習"
+    ]
+  }
+}

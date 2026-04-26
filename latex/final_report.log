@@ -1,0 +1,1130 @@
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2026.2.7)  27 APR 2026 02:40
+ restricted system commands enabled.
+**final_report.tex
+(./final_report.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+Lua module: luaotfload 2023-08-31 3.26 Lua based OpenType font support
+Lua module: lualibs 2023-07-13 2.76 ConTeXt Lua standard libraries.
+Lua module: lualibs-extended 2023-07-13 2.76 ConTeXt Lua libraries -- extended c
+ollection.
+luaotfload | conf : Root cache directory is "C:/Users/yutok/AppData/Local/MiKTeX
+/luatex-cache/generic/names".
+luaotfload | init : Loading fontloader "fontloader-2023-08-19.lua" from kpse-res
+olved path "C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/f
+ontloader-2023-08-19.lua".
+Lua-only attribute luaotfload@noligature = 1
+luaotfload | init : Context OpenType loader version 3.133
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `luaotfload.glyph_stream' in `glyph_stream_provider'.
+Inserting `luaotfload.define_font' in `define_font'.
+Lua-only attribute luaotfload_color_attribute = 2
+luaotfload | conf : Root cache directory is "C:/Users/yutok/AppData/Local/MiKTeX
+/luatex-cache/generic/names".
+Inserting `luaotfload.harf.strip_prefix' in `find_opentype_file'.
+Inserting `luaotfload.harf.strip_prefix' in `find_truetype_file'.
+Removing  `luaotfload.glyph_stream' from `glyph_stream_provider'.
+Inserting `luaotfload.harf.glyphstream' in `glyph_stream_provider'.
+Inserting `luaotfload.harf.finalize_vlist' in `post_linebreak_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `luaotfload.cleanup_files' in `wrapup_run'.
+Inserting `luaotfload.harf.finalize_unicode' in `finish_pdffile'.
+Inserting `luaotfload.glyphinfo' in `glyph_info'.
+Lua-only attribute luaotfload.letterspace_done = 3
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.fixup_fontdata' in `luaotfload.patch_font_unsafe'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
+Inserting `tracingstacklevels' in `input_level_string'. (C:/Users/yutok/AppData
+/Local/Programs/MiKTeX/tex/latex/base/article.cls
+Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/base/size11.clo
+File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+luaotfload | db : Font names database loaded from C:/Users/yutok/AppData/Local/M
+iKTeX/luatex-cache/generic/names/luaotfload-names.luc.gz)
+\c@part=\count185
+\c@section=\count186
+\c@subsection=\count187
+\c@subsubsection=\count188
+\c@paragraph=\count189
+\c@subparagraph=\count190
+\c@figure=\count191
+\c@table=\count192
+\abovecaptionskip=\skip48
+\belowcaptionskip=\skip49
+\bibindent=\dimen139
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/luatexja.sty
+Package: luatexja 2025-11-02 Japanese Typesetting with Lua(La)TeX
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/luatexja-core
+.sty
+Package: luatexja-core 2023-10-07 Core of LuaTeX-ja
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/infwarerr/infwarerr.s
+ty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbase.
+sty
+Package: luatexbase 2015/10/04 v1.3 luatexbase interface to LuaTeX 
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/ctablestack/ctablestac
+k.sty
+Package: ctablestack 2015/10/01 v1.0 Catcode table stable support
+\@catcodetablestackcnt=\count193
+)
+\CatcodeTableOther=\catcodetable14
+\CatcodeTableExpl=\catcodetable15
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/pdftexcmds/pdftexcmds
+.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+ (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+\pdftexcmds@toks=\toks17
+) (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkeyval.tex
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks18
+\XKV@tempa@toks=\toks19
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/xkeyval/keyval.tex))
+\XKV@depth=\count194
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+)) (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/etoolbox/etoolbox.st
+y
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count195
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/everyhook/everyhook.sty
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/svn-prov/svn-prov.sty
+Package: svn-prov 2010/04/24 v3.1862 Package Date/Version from SVN Keywords
+)
+Package: everyhook 2014/11/26 v1.2 (SVN Rev: 12)\ Hooks for low level TeX every
+X primitives.
+\everypar=\toks20
+\frozen@everymath=\toks21
+\frozen@everydisplay=\toks22
+\everyhbox=\toks23
+\everyvbox=\toks24
+\everycr=\toks25
+)
+\ltjlineendcomment=\count196
+\ltj@dimen@zw=\dimen140
+\ltj@dimen@zh=\dimen141
+\ltj@dimen@jQ=\dimen142
+\ltj@icflag=\attribute4
+\ltj@curjfnt=\attribute5
+\ltj@curtfnt=\attribute6
+\ltj@charclass=\attribute7
+\ltj@charcode=\attribute8
+\ltj@autospc=\attribute9
+\ltj@autoxspc=\attribute10
+\ltj@yablshift=\attribute11
+\ltj@ykblshift=\attribute12
+\ltj@tablshift=\attribute13
+\ltj@tkblshift=\attribute14
+\jfam=\attribute15
+\ltj@vert@ori=\attribute16
+\ltj@dir=\attribute17
+\ltj@@japanese=\language2
+\ltj@tempcnta=\count197
+\ltj@tempdima=\dimen143
+\ltj@@stack=\count198
+\ltj@@group@level=\count199
+\ltj@kcat0=\attribute18
+\ltj@kcat1=\attribute19
+\ltj@kcat2=\attribute20
+\ltj@kcat3=\attribute21
+\ltj@kcat4=\attribute22
+\ltj@kcat5=\attribute23
+\ltj@kcat6=\attribute24
+Custom whatsit inhibitglue = 1
+Custom whatsit stack_marker = 2
+Custom whatsit begin_par = 3
+Custom whatsit direction = 4
+Custom whatsit box_boundary = 5
+Custom whatsit ja_al_boundary = 6
+Module luatexbase Info: Uninstalling kernel luatexbase code on input line 184
+Lua module: luatexja.charrange 2022-08-19 Handling the range of Japanese charact
+ers
+Lua module: luatexja.stack 2022-08-20 LuaTeX-ja stack system
+Inserting `ltj.create_dir_whatsit' in `hpack_filter'.
+Inserting `ltj.create_dir_whatsit' in `post_linebreak_filter'.
+Inserting `ltj.direction' in `vpack_filter'.
+Inserting `ltj.direction' in `pre_output_filter'.
+Inserting `ltj.lineskip' in `post_linebreak_filter'.
+Inserting `ltj.lineskip' in `append_to_vlist_filter'.
+Lua module: luatexja.jfont 2025-05-04 Loader for Japanese fonts
+Removing  `luaotfload.define_font' from `define_font'.
+Inserting `luatexja.font_callback' in `define_font'.
+Removing  `luaotfload.aux.set_sscale_dimens' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_font_index' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.patch_cambria_domh' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_capheight' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_xheight' from `luaotfload.patch_font'.
+Removing  `luaotfload.rewrite_fontname' from `luaotfload.patch_font'.
+Inserting `ltj.prepare_extra_data' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
+Inserting `ltj.prepare_extra_data' in `luatexja.define_font'.
+Inserting `ltj.get_vert_form' in `luatexja.define_jfont'.
+Removing  `ltj.prepare_extra_data' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_sscale_dimens' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_font_index' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.patch_cambria_domh' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_capheight' from `luaotfload.patch_font'.
+Removing  `luaotfload.aux.set_xheight' from `luaotfload.patch_font'.
+Removing  `luaotfload.rewrite_fontname' from `luaotfload.patch_font'.
+Inserting `ltj.supply_tounicode' in `luaotfload.patch_font'.
+Inserting `ltj.prepare_extra_data' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_sscale_dimens' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_font_index' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.patch_cambria_domh' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_capheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.aux.set_xheight' in `luaotfload.patch_font'.
+Inserting `luaotfload.rewrite_fontname' in `luaotfload.patch_font'.
+Inserting `ltj.process_input_buffer' in `process_input_buffer'.
+Inserting `ltj.hyphenate' in `hyphenate'.
+Removing  `luaotfload.node_processor' from `hpack_filter'.
+Removing  `luaotfload.harf.finalize_hlist' from `hpack_filter'.
+Removing  `ltj.create_dir_whatsit' from `hpack_filter'.
+Inserting `ltj.set_stack_level' in `hpack_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `ltj.create_dir_whatsit' in `hpack_filter'.
+Removing  `luaotfload.node_processor' from `pre_linebreak_filter'.
+Inserting `ltj.set_stack_level' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Lua module: luatexja.jfmglue 2025-05-27 Insertion process of JFM glues, [x]kanji
+skip and others
+Inserting `luatexja.beginpar.np_info' in `luatexja.jfmglue.whatsit_getinfo'.
+Inserting `luatexja.beginpar.np_info_after' in `luatexja.jfmglue.whatsit_after'.
+Inserting `ltj.mlist_to_hlist_pre' in `pre_mlist_to_hlist_filter'.
+Inserting `ltj.main' in `pre_linebreak_filter'.
+Removing  `luaotfload.harf.finalize_hlist' from `hpack_filter'.
+Removing  `ltj.create_dir_whatsit' from `hpack_filter'.
+Inserting `ltj.main' in `hpack_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `ltj.create_dir_whatsit' in `hpack_filter'.
+Removing  `ltj.set_stack_level' from `pre_linebreak_filter'.
+Removing  `luaotfload.node_processor' from `pre_linebreak_filter'.
+Removing  `ltj.main' from `pre_linebreak_filter'.
+Inserting `ltj.adjust_icflag' in `pre_linebreak_filter'.
+Inserting `ltj.set_stack_level' in `pre_linebreak_filter'.
+Inserting `luaotfload.node_processor' in `pre_linebreak_filter'.
+Inserting `ltj.main' in `pre_linebreak_filter'.
+Removing  `ltj.set_stack_level' from `hpack_filter'.
+Removing  `luaotfload.node_processor' from `hpack_filter'.
+Removing  `ltj.main' from `hpack_filter'.
+Removing  `luaotfload.harf.finalize_hlist' from `hpack_filter'.
+Removing  `ltj.create_dir_whatsit' from `hpack_filter'.
+Inserting `ltj.adjust_icflag' in `hpack_filter'.
+Inserting `ltj.set_stack_level' in `hpack_filter'.
+Inserting `luaotfload.node_processor' in `hpack_filter'.
+Inserting `ltj.main' in `hpack_filter'.
+Inserting `luaotfload.harf.finalize_hlist' in `hpack_filter'.
+Inserting `ltj.create_dir_whatsit' in `hpack_filter'. (C:/Users/yutok/AppData/L
+ocal/Programs/MiKTeX/tex/luatex/luatexja/ltj-base.sty
+Package: ltj-base 2021-03-16
+\ltj@tempcntb=\count266
+\ltj@tempcntc=\count267
+\ltj@afbox=\box51
+)
+\ltj@@italic@inner=\luafunction25
+\ltj@@start@time@measure@inner=\luafunction26
+\ltj@@stop@time@measure@inner=\luafunction27
+\ltj@@jfont@inner=\luafunction28
+\ltj@zw@inner=\luafunction29
+\ltj@zh@inner=\luafunction30
+\ltj@reset@globaldefs@inner=\luafunction31
+\ltj@restore@globaldefs@inner=\luafunction32
+\ltj@@disihb@inner=\luafunction33
+\ltj@@ihb@inner=\luafunction34
+\ltj@@fakeparbegin@inner=\luafunction35
+\ltj@@fakeboxbdd@inner=\luafunction36
+\ltj@@ins@xk@inner=\luafunction37
+\ltj@@ins@k@inner=\luafunction38
+\ltjsetkanjiskip@inner=\luafunction39
+\ltjsetxkanjiskip@inner=\luafunction40
+\ltj@@getparam@one@inner=\luafunction41
+\ltj@alljachar@inner=\luafunction42
+\ltj@@lua@populate@insertwhatsit@inner=\luafunction43
+\ltj@@vadjust@begin@inner=\luafunction44
+\ltj@@vadjust@dirhook@inner=\luafunction45
+\ltj@@vadjust@check@dir@inner=\luafunction46
+\ltj@@box@dirhook@inner=\luafunction47
+\ltj@@reset@badness@inner=\luafunction48
+\ltj@@lua@raisebox@inner=\luafunction49
+\ltj@@vsplit@inner=\luafunction50
+\ltj@@lua@unboxcheckdir@inner=\luafunction51
+\ltj@@lua@uncopycheckdir@inner=\luafunction52
+\ltj@@lua@uncopy@restore@whatsit@inner=\luafunction53
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/ltj-kinsoku.t
+ex)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/ltj-latex.sty
+Package: ltj-latex 2025-06-08 LaTeX support of LuaTeX-ja
+Inserting `ltj.direction' in `pre_shipout_filter'.
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/patches/lltjf
+ont.sty
+Package: lltjfont 2025-10-26 Patch to NFSS2 for LuaTeX-ja
+\ltj@@latex@plv=\count268
+ (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/base/tuenc.def
+File: tuenc.def 2021/04/29 v2.0v Standard LaTeX file
+\@remove@tlig@@@=\luafunction54
+LaTeX Font Info:    Redeclaring font encoding TU on input line 105.
+)
+\Cht=\dimen144
+\cht=\dimen145
+\Cdp=\dimen146
+\cdp=\dimen147
+\Cwd=\dimen148
+\cwd=\dimen149
+\Cvs=\dimen150
+\cvs=\dimen151
+\Chs=\dimen152
+\chs=\dimen153
+\cHT=\dimen154
+\dstrutbox=\box52
+\tstrutbox=\box53
+\zstrutbox=\box54
+LaTeX Info: Redefining \strut on input line 71.
+\ltj@@add@fenc@@inner=\luafunction55
+\ltj@@add@kyenc@@inner=\luafunction56
+\ltj@@add@ktenc@@inner=\luafunction57
+\ltj@@is@kyenc@@inner=\luafunction58
+\ltj@@is@ktenc@@inner=\luafunction59
+\ltj@@is@kenc@@inner=\luafunction60
+\ltj@@is@ffam@@inner=\luafunction61
+\ltj@@add@ffam@@inner=\luafunction62
+\ltj@@add@kfam@@inner=\luafunction63
+\ltj@@adjust@baseline@inner=\luafunction64
+LaTeX Info: Redefining \fontencoding on input line 573.
+LaTeX Info: Redefining \fontfamily on input line 657.
+LaTeX Info: Redefining \fontseries on input line 813.
+LaTeX Info: Redefining \fontseriesforce on input line 814.
+LaTeX Info: Redefining \fontshape on input line 822.
+LaTeX Info: Redefining \fontshapeforce on input line 833.
+\ltj@@jfont@@jfmonly@@inner=\luafunction65
+\ltj@@does@alt@set@@inner=\luafunction66
+\ltj@@cipath@clear@inner=\luafunction67
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/patches/lltjd
+efs.sty
+Package: lltjdefs 2024-05-16 Default font settings of LuaTeX-ja
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 69.
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/jfm-ujisv.lua)
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 69.
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/jfm-ujis.lua)
+\symmincho=\mathgroup4
+LaTeX Font Info:    Overwriting symbol font `mincho' in version `bold'
+(Font)                  JY3/mc/m/n --> JY3/gt/m/n on input line 78.
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/patches/lltjc
+ore-241201.sty
+Package: lltjcore-241201 2025-03-02 Patch to LaTeX2e Kernel for LuaTeX-ja
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-01-04 L3 programming layer (loader) 
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/l3backend/l3backend-lua
+tex.def
+File: l3backend-luatex.def 2024-01-04 L3 backend support: PDF output (LuaTeX)
+\l__color_backend_stack_int=\count269
+Inserting `l3color' in `luaotfload.parse_color'.
+\l__pdf_internal_box=\box55
+))
+\@tombowwidth=\dimen155
+\@TL=\box56
+\@Tl=\box57
+\@TC=\box58
+\@TR=\box59
+\@Tr=\box60
+\@BL=\box61
+\@Bl=\box62
+\@BC=\box63
+\@BR=\box64
+\@Br=\box65
+\@CL=\box66
+\@CR=\box67
+\@bannertoken=\toks26
+\@@paperheight=\dimen156
+\@@paperwidth=\dimen157
+\@@topmargin=\dimen158
+LaTeX Info: Redefining \underline on input line 285.
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/patches/lltjp
+-atbegshi.sty
+Package: lltjp-atbegshi 2024-05-14 Patching \shipout hooks for LuaTeX-ja
+\l__platex_shipout_dummy_box=\box68
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/patches/lltjp
+-geometry.sty
+Package: lltjp-geometry 2024-05-16 Patch to geometry for LuaTeX-ja with vertica
+l writing mode
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)))
+\ltj@temp@cctb=\catcodetable16
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/luatexja-comp
+at.sty
+Package: luatexja-compat 2025-09-21 Compatibility with pTeX
+\hour=\count270
+\minute=\count271
+))
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2025/07/09 v2.17z AMS math features
+\@mathmargin=\skip50
+
+For additional information on amsmath, use the `?' option.
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amstext.sty
+Package: amstext 2024/11/17 v2.01 AMS text
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks27
+\ex@=\dimen159
+))
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen160
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count272
+LaTeX Info: Redefining \frac on input line 235.
+\uproot@=\count273
+\leftroot@=\count274
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count275
+\DOTSCASE@=\count276
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box69
+\strutbox@=\box70
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen161
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count277
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count278
+\dotsspace@=\muskip16
+\c@parentequation=\count279
+\dspbrk@lvl=\count280
+\tag@help=\toks28
+\row@=\count281
+\column@=\count282
+\maxfields@=\count283
+\andhelp@=\toks29
+\eqnshift@=\dimen162
+\alignsep@=\dimen163
+\tagshift@=\dimen164
+\tagwidth@=\dimen165
+\totwidth@=\dimen166
+\lineht@=\dimen167
+\@envbody=\toks30
+\multlinegap=\skip51
+\multlinetaggap=\skip52
+\mathdisplay@stack=\toks31
+LaTeX Info: Redefining \[ on input line 2950.
+LaTeX Info: Redefining \] on input line 2951.
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amssymb.sty
+Package: amssymb 2013/01/14 v3.01 AMS font symbols
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup5
+\symAMSb=\mathgroup6
+LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
+)) (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphicx.st
+y
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/graphics.c
+fg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: luatex.def on input line 107.
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics-def/luatex.def
+File: luatex.def 2022/09/22 v1.2d Graphics/color driver for luatex
+))
+\Gin@req@height=\dimen168
+\Gin@req@width=\dimen169
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen170
+\lightrulewidth=\dimen171
+\cmidrulewidth=\dimen172
+\belowrulesep=\dimen173
+\belowbottomsep=\dimen174
+\aboverulesep=\dimen175
+\abovetopsep=\dimen176
+\cmidrulesep=\dimen177
+\cmidrulekern=\dimen178
+\defaultaddspace=\dimen179
+\@cmidla=\count284
+\@cmidlb=\count285
+\@aboverulesep=\dimen180
+\@belowrulesep=\dimen181
+\@thisruleclass=\count286
+\@lastruleclass=\count287
+\@thisrulewidth=\dimen182
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2023-11-26 v7.01g Hypertext links for LaTeX
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/kvdefinekeys/kvdefine
+keys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/pdfescape/pdfescape.s
+ty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+) (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/letltxmacro/letltxmacro
+.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/gettitlestring/gettit
+lestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count288
+)
+\@linkdim=\dimen183
+\Hy@linkcounter=\count289
+\Hy@pagecounter=\count290
+ (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2023-11-26 v7.01g Hyperref: PDFDocEncoding definition (HO)
+) (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count291
+ (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/puenc.def
+File: puenc.def 2023-11-26 v7.01g Hyperref: PDF Unicode definition (HO)
+)
+Package hyperref Info: Hyper figures OFF on input line 4181.
+Package hyperref Info: Link nesting OFF on input line 4186.
+Package hyperref Info: Hyper index ON on input line 4189.
+Package hyperref Info: Plain pages OFF on input line 4196.
+Package hyperref Info: Backreferencing OFF on input line 4201.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4448.
+\c@Hy@tempcnt=\count292
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/url/url.sty
+\Urlmuskip=\muskip17
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 4786.
+\XeTeXLinkMargin=\dimen184
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/bigintcalc/bigintcalc
+.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count293
+\Field@Width=\dimen185
+\Fld@charsize=\dimen186
+Package hyperref Info: Hyper figures OFF on input line 6065.
+Package hyperref Info: Link nesting OFF on input line 6070.
+Package hyperref Info: Hyper index ON on input line 6073.
+Package hyperref Info: backreferencing OFF on input line 6080.
+Package hyperref Info: Link coloring OFF on input line 6085.
+Package hyperref Info: Link coloring with OCG OFF on input line 6090.
+Package hyperref Info: PDF/A mode OFF on input line 6095.
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count294
+\c@Item=\count295
+\c@Hfootnote=\count296
+)
+Package hyperref Info: Driver (autodetected): hluatex.
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/hyperref/hluatex.def
+File: hluatex.def 2023-11-26 v7.01g Hyperref driver for luaTeX
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/stringenc/stringenc.s
+ty
+Package: stringenc 2019/11/29 v1.12 Convert strings between diff. encodings (HO
+)
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count297
+\c@bookmark@seq@number=\count298
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/rerunfilecheck/rerunfil
+echeck.sty
+Package: rerunfilecheck 2025-06-21 v1.11 Rerun checks for auxiliary files (HO)
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/generic/uniquecounter/uniquec
+ounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+84.
+)
+\Hy@SectionHShift=\skip53
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty
+Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen187
+\captionmargin=\dimen188
+\caption@leftmargin=\dimen189
+\caption@rightmargin=\dimen190
+\caption@width=\dimen191
+\caption@indent=\dimen192
+\caption@parindent=\dimen193
+\caption@hangindent=\dimen194
+Package caption Info: Standard document class detected.
+)
+\c@caption@flags=\count299
+\c@continuedfloat=\count300
+Package caption Info: hyperref package is loaded.
+)
+Package caption Info: New subtype `subfigure' on input line 238.
+\c@subfigure=\count301
+Package caption Info: New subtype `subtable' on input line 238.
+\c@subtable=\count302
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 10.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 16.
+(./final_report.aux)
+\openout1 = final_report.aux
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
+6.
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
+File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
+)
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
+LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 16.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 16.
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
+ii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count303
+\scratchdimen=\dimen195
+\scratchbox=\box71
+\nofMPsegments=\count304
+\nofMParguments=\count305
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count306
+\MPscratchDim=\dimen196
+\MPnumerator=\count307
+\makeMPintoPDFobject=\count308
+\everyMPtoPDFconversion=\toks33
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
+ase.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
+fg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+)) (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics/color.sty
+Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: luatex.def on input line 149.
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx))
+Package hyperref Info: Link coloring ON on input line 16.
+ (./final_report.out) (./final_report.out)
+\@outlinefile=\write3
+
+\openout3 = final_report.out
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 16.62714pt on input line 18.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 16.62714pt on input line 18.
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 18.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 18.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 18.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 5.77332pt on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
+
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <10> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 19.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 19.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <10> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 19.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 9.6222pt on input line 19.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 6.73553pt on input line 23.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 4.8111pt on input line 23.
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 41.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 41.
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <14.4> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 41.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <14.4> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 41.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 13.85594pt on input line 41.
+
+(./final_report.toc
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <10.95> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 1.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <10.95> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 1.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 10.53629pt on input line 1.
+ [1
+
+{C:/Users/yutok/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
+\tf@toc=\write4
+
+\openout4 = final_report.toc
+ [2]
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <12> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 46.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 46.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <12> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 46.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 11.54663pt on input line 46.
+ [3]
+<../figures/dist_recency.png, id=185, 505.89pt x 289.08pt>
+File: ../figures/dist_recency.png Graphic file (type png)
+<use ../figures/dist_recency.png>
+Package luatex.def Info: ../figures/dist_recency.png  used on input line 107.
+(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
+<../figures/dist_history.png, id=186, 505.89pt x 289.08pt>
+File: ../figures/dist_history.png Graphic file (type png)
+<use ../figures/dist_history.png>
+Package luatex.def Info: ../figures/dist_history.png  used on input line 111.
+(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
+<../figures/box_recency_by_conversion.png, id=187, 505.89pt x 289.08pt>
+File: ../figures/box_recency_by_conversion.png Graphic file (type png)
+<use ../figures/box_recency_by_conversion.png>
+Package luatex.def Info: ../figures/box_recency_by_conversion.png  used on inpu
+t line 115.
+(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
+<../figures/box_history_by_conversion.png, id=188, 505.89pt x 289.08pt>
+File: ../figures/box_history_by_conversion.png Graphic file (type png)
+<use ../figures/box_history_by_conversion.png>
+Package luatex.def Info: ../figures/box_history_by_conversion.png  used on inpu
+t line 119.
+(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 7.69775pt on input line 128.
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 5.77332pt on input line 128.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 132.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 132.
+
+<../figures/heat_cvr_offer_x_channel.png, id=190, 505.89pt x 289.08pt>
+File: ../figures/heat_cvr_offer_x_channel.png Graphic file (type png)
+<use ../figures/heat_cvr_offer_x_channel.png>
+Package luatex.def Info: ../figures/heat_cvr_offer_x_channel.png  used on input
+ line 137.
+(luatex.def)             Requested size: 331.19934pt x 189.25835pt.
+<../figures/cvr_by_offer.png, id=192, 578.16pt x 289.08pt>
+File: ../figures/cvr_by_offer.png Graphic file (type png)
+<use ../figures/cvr_by_offer.png>
+Package luatex.def Info: ../figures/cvr_by_offer.png  used on input line 153.
+(luatex.def)             Requested size: 115.20264pt x 57.59883pt.
+<../figures/cvr_by_channel.png, id=193, 578.16pt x 289.08pt>
+File: ../figures/cvr_by_channel.png Graphic file (type png)
+<use ../figures/cvr_by_channel.png>
+Package luatex.def Info: ../figures/cvr_by_channel.png  used on input line 157.
+
+(luatex.def)             Requested size: 115.20264pt x 57.59883pt.
+<../figures/cvr_by_zip_code.png, id=194, 578.16pt x 289.08pt>
+File: ../figures/cvr_by_zip_code.png Graphic file (type png)
+<use ../figures/cvr_by_zip_code.png>
+Package luatex.def Info: ../figures/cvr_by_zip_code.png  used on input line 161
+.
+(luatex.def)             Requested size: 115.20264pt x 57.59883pt.
+[4] [5<../figures/dist_recency.png><../figures/dist_history.png><../figures/box_
+recency_by_conversion.png><../figures/box_history_by_conversion.png><../figures/
+heat_cvr_offer_x_channel.png>]
+Overfull \hbox (35.97636pt too wide) in paragraph at lines 176--179
+|\JY3/mc/m/n/10.95 各 |カ |テ |ゴ |リ |特 |徴 |量 |に |つ |い |て |
+購 |入 |と |の |\JY3/mc/b/n/10.95 独 |立 |性 |の |カ |イ |二 |乗 |
+検 |定 |\JY3/mc/m/n/10.95 を |行 |い []  \TU/lmr/m/n/10.95 Benjamini--Hochb
+erg
+ []
+
+<../figures/improvements/chi2_cramers_v_bar.png, id=219, 578.16pt x 289.08pt>
+File: ../figures/improvements/chi2_cramers_v_bar.png Graphic file (type png)
+<use ../figures/improvements/chi2_cramers_v_bar.png>
+Package luatex.def Info: ../figures/improvements/chi2_cramers_v_bar.png  used o
+n input line 182.
+(luatex.def)             Requested size: 270.0pt x 134.99864pt.
+<../figures/roc_logreg.png, id=220, 462.528pt x 346.896pt>
+File: ../figures/roc_logreg.png Graphic file (type png)
+<use ../figures/roc_logreg.png>
+Package luatex.def Info: ../figures/roc_logreg.png  used on input line 202.
+(luatex.def)             Requested size: 172.79846pt x 129.5987pt.
+<../figures/roc_hgb.png, id=221, 462.528pt x 346.896pt>
+File: ../figures/roc_hgb.png Graphic file (type png)
+<use ../figures/roc_hgb.png>
+Package luatex.def Info: ../figures/roc_hgb.png  used on input line 206.
+(luatex.def)             Requested size: 172.79846pt x 129.5987pt.
+<../figures/calibration_logreg.png, id=222, 361.35pt x 361.35pt>
+File: ../figures/calibration_logreg.png Graphic file (type png)
+<use ../figures/calibration_logreg.png>
+Package luatex.def Info: ../figures/calibration_logreg.png  used on input line 
+210.
+(luatex.def)             Requested size: 172.79846pt x 172.80092pt.
+<../figures/calibration_hgb.png, id=223, 361.35pt x 361.35pt>
+File: ../figures/calibration_hgb.png Graphic file (type png)
+<use ../figures/calibration_hgb.png>
+Package luatex.def Info: ../figures/calibration_hgb.png  used on input line 214
+.
+(luatex.def)             Requested size: 172.79846pt x 172.80092pt.
+<../figures/improvements/pr_curve_logreg.png, id=224, 462.528pt x 346.896pt>
+File: ../figures/improvements/pr_curve_logreg.png Graphic file (type png)
+<use ../figures/improvements/pr_curve_logreg.png>
+Package luatex.def Info: ../figures/improvements/pr_curve_logreg.png  used on i
+nput line 228.
+(luatex.def)             Requested size: 172.79846pt x 129.5987pt.
+<../figures/improvements/pr_curve_hgb.png, id=225, 462.528pt x 346.896pt>
+File: ../figures/improvements/pr_curve_hgb.png Graphic file (type png)
+<use ../figures/improvements/pr_curve_hgb.png>
+Package luatex.def Info: ../figures/improvements/pr_curve_hgb.png  used on inpu
+t line 232.
+(luatex.def)             Requested size: 172.79846pt x 129.5987pt.
+[6]
+<../figures/improvements/report_dr_full_vs_holdout.png, id=234, 585.387pt x 361
+.35pt>
+File: ../figures/improvements/report_dr_full_vs_holdout.png Graphic file (type 
+png)
+<use ../figures/improvements/report_dr_full_vs_holdout.png>
+Package luatex.def Info: ../figures/improvements/report_dr_full_vs_holdout.png 
+ used on input line 260.
+(luatex.def)             Requested size: 331.19934pt x 204.44434pt.
+<../figures/improvements/report_propensity_ess.png, id=235, 505.89pt x 289.08pt
+>
+File: ../figures/improvements/report_propensity_ess.png Graphic file (type png)
+
+<use ../figures/improvements/report_propensity_ess.png>
+Package luatex.def Info: ../figures/improvements/report_propensity_ess.png  use
+d on input line 270.
+(luatex.def)             Requested size: 306.0022pt x 174.86086pt.
+<../figures/improvements/dr_bootstrap_ci.png, id=236, 578.16pt x 289.08pt>
+File: ../figures/improvements/dr_bootstrap_ci.png Graphic file (type png)
+<use ../figures/improvements/dr_bootstrap_ci.png>
+Package luatex.def Info: ../figures/improvements/dr_bootstrap_ci.png  used on i
+nput line 280.
+(luatex.def)             Requested size: 270.0pt x 134.99864pt.
+ [7]
+<../figures/improvements/policy_reco_dist_full.png, id=244, 578.16pt x 289.08pt
+>
+File: ../figures/improvements/policy_reco_dist_full.png Graphic file (type png)
+
+<use ../figures/improvements/policy_reco_dist_full.png>
+Package luatex.def Info: ../figures/improvements/policy_reco_dist_full.png  use
+d on input line 306.
+(luatex.def)             Requested size: 172.79846pt x 86.39824pt.
+<../figures/improvements/profit_full_vs_oof_scatter.png, id=245, 433.62pt x 289
+.08pt>
+File: ../figures/improvements/profit_full_vs_oof_scatter.png Graphic file (type
+ png)
+<use ../figures/improvements/profit_full_vs_oof_scatter.png>
+Package luatex.def Info: ../figures/improvements/profit_full_vs_oof_scatter.png
+  used on input line 310.
+(luatex.def)             Requested size: 172.79846pt x 115.19766pt.
+<../figures/improvements/policy_benchmarks_bar.png, id=246, 505.89pt x 289.08pt
+>
+File: ../figures/improvements/policy_benchmarks_bar.png Graphic file (type png)
+
+<use ../figures/improvements/policy_benchmarks_bar.png>
+Package luatex.def Info: ../figures/improvements/policy_benchmarks_bar.png  use
+d on input line 314.
+(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
+<../figures/improvements/report_profit_summary_by_scenario.png, id=247, 433.62p
+t x 289.08pt>
+File: ../figures/improvements/report_profit_summary_by_scenario.png Graphic fil
+e (type png)
+<use ../figures/improvements/report_profit_summary_by_scenario.png>
+Package luatex.def Info: ../figures/improvements/report_profit_summary_by_scena
+rio.png  used on input line 318.
+(luatex.def)             Requested size: 172.79846pt x 115.19766pt.
+<../figures/improvements/decision_flow.png, id=248, 578.16pt x 158.994pt>
+File: ../figures/improvements/decision_flow.png Graphic file (type png)
+<use ../figures/improvements/decision_flow.png>
+Package luatex.def Info: ../figures/improvements/decision_flow.png  used on inp
+ut line 332.
+(luatex.def)             Requested size: 172.79846pt x 47.51903pt.
+<../figures/improvements/report_policy_eval_means.png, id=249, 505.89pt x 325.2
+15pt>
+File: ../figures/improvements/report_policy_eval_means.png Graphic file (type p
+ng)
+<use ../figures/improvements/report_policy_eval_means.png>
+Package luatex.def Info: ../figures/improvements/report_policy_eval_means.png  
+used on input line 336.
+(luatex.def)             Requested size: 172.79846pt x 111.08772pt.
+<../figures/improvements/constrained_selection_summary.png, id=250, 433.62pt x 
+289.08pt>
+File: ../figures/improvements/constrained_selection_summary.png Graphic file (t
+ype png)
+<use ../figures/improvements/constrained_selection_summary.png>
+Package luatex.def Info: ../figures/improvements/constrained_selection_summary.
+png  used on input line 352.
+(luatex.def)             Requested size: 198.0011pt x 132.00357pt.
+<../figures/improvements/latent2d_pca2_color_conversion.png, id=251, 1405.25pt 
+x 1003.75pt>
+File: ../figures/improvements/latent2d_pca2_color_conversion.png Graphic file (
+type png)
+<use ../figures/improvements/latent2d_pca2_color_conversion.png>
+Package luatex.def Info: ../figures/improvements/latent2d_pca2_color_conversion
+.png  used on input line 369.
+(luatex.def)             Requested size: 172.79846pt x 123.41609pt.
+<../figures/improvements/latent2d_umap2_color_conversion.png, id=252, 1405.25pt
+ x 1003.75pt>
+File: ../figures/improvements/latent2d_umap2_color_conversion.png Graphic file 
+(type png)
+<use ../figures/improvements/latent2d_umap2_color_conversion.png>
+Package luatex.def Info: ../figures/improvements/latent2d_umap2_color_conversio
+n.png  used on input line 373.
+(luatex.def)             Requested size: 172.79846pt x 123.41609pt.
+<../figures/latent3d_umap3_color_conversion.png, id=253, 1405.25pt x 1003.75pt>
+
+File: ../figures/latent3d_umap3_color_conversion.png Graphic file (type png)
+<use ../figures/latent3d_umap3_color_conversion.png>
+Package luatex.def Info: ../figures/latent3d_umap3_color_conversion.png  used o
+n input line 377.
+(luatex.def)             Requested size: 172.79846pt x 123.41609pt.
+<../figures/improvements/latent3d_umap3_color_segment.png, id=254, 1405.25pt x 
+1003.75pt>
+File: ../figures/improvements/latent3d_umap3_color_segment.png Graphic file (ty
+pe png)
+<use ../figures/improvements/latent3d_umap3_color_segment.png>
+Package luatex.def Info: ../figures/improvements/latent3d_umap3_color_segment.p
+ng  used on input line 381.
+(luatex.def)             Requested size: 172.79846pt x 123.41609pt.
+<../figures/improvements/silhouette_vs_k.png, id=255, 505.89pt x 289.08pt>
+File: ../figures/improvements/silhouette_vs_k.png Graphic file (type png)
+<use ../figures/improvements/silhouette_vs_k.png>
+Package luatex.def Info: ../figures/improvements/silhouette_vs_k.png  used on i
+nput line 393.
+(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
+<../figures/improvements/segment_stability_ari.png, id=256, 361.35pt x 289.08pt
+>
+File: ../figures/improvements/segment_stability_ari.png Graphic file (type png)
+
+<use ../figures/improvements/segment_stability_ari.png>
+Package luatex.def Info: ../figures/improvements/segment_stability_ari.png  use
+d on input line 397.
+(luatex.def)             Requested size: 172.79846pt x 138.24072pt.
+<../figures/improvements/report_segment_mean_profit.png, id=257, 505.89pt x 289
+.08pt>
+File: ../figures/improvements/report_segment_mean_profit.png Graphic file (type
+ png)
+<use ../figures/improvements/report_segment_mean_profit.png>
+Package luatex.def Info: ../figures/improvements/report_segment_mean_profit.png
+  used on input line 408.
+(luatex.def)             Requested size: 270.0pt x 154.28795pt.
+ [8] (../artifacts/tables/ab_design.tex)
+(../artifacts/tables/governance_ethics.tex) [9]
+(../artifacts/tables/monitoring_summary.tex) [10] [11<../figures/cvr_by_offer.pn
+g><../figures/cvr_by_channel.png><../figures/cvr_by_zip_code.png><../figures/imp
+rovements/chi2_cramers_v_bar.png>] [12<../figures/roc_logreg.png><../figures/roc
+_hgb.png><../figures/calibration_logreg.png><../figures/calibration_hgb.png><../
+figures/improvements/pr_curve_logreg.png><../figures/improvements/pr_curve_hgb.p
+ng>] [13<../figures/improvements/report_dr_full_vs_holdout.png><../figures/impro
+vements/report_propensity_ess.png>] [14<../figures/improvements/dr_bootstrap_ci.
+png><../figures/improvements/policy_reco_dist_full.png><../figures/improvements/
+profit_full_vs_oof_scatter.png><../figures/improvements/policy_benchmarks_bar.pn
+g><../figures/improvements/report_profit_summary_by_scenario.png>]
+[15<../figures/improvements/decision_flow.png><../figures/improvements/report_po
+licy_eval_means.png><../figures/improvements/constrained_selection_summary.png>] [16<../figures/improvements/latent2d_pca2_color_conversion.png><../figures/improvements/latent2d_umap2_color_conversion.png><../figures/latent3d_umap3_color_conversion.png><../figures/improvements/latent3d_umap3_color_segment.png><../figures/improvements/silhouette_vs_k.png><../figures/improvements/segment_stability_ari.png>] [17<../figures/improvements/report_segment_mean_profit.png>]
+(./final_report.aux)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-01-04>
+ ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package rerunfilecheck Info: File `final_report.out' has not changed.
+(rerunfilecheck)             Checksum: 66BD4DE5B28B85AC2D358B558FA62703;4237.
+)
+
+Here is how much of LuaTeX's memory you used:
+ 13750 strings out of 476497
+ 244629,1977958 words of node,token memory allocated
+ 1152 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 247 attribute, 55 glue_sp
+ec, 34 attribute_list, 1 write, 13 user_defined nodes
+   avail lists: 1:43,2:66204,3:755,4:677,5:210,6:141,7:5016,8:59,9:2318,10:20,11
+:35
+ 35287 multiletter control sequences out of 65536+600000
+ 91 fonts using 54768103 bytes
+ 110i,12n,128p,1863b,801s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
+an12-bold.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/p
+ublic/lm/lmmono10-regular.otf><//?/c:/users/yutok/appdata/local/programs/miktex/
+fonts/opentype/public/lm/lmroman10-regular.otf><//?/c:/users/yutok/appdata/local
+/programs/miktex/fonts/opentype/public/haranoaji/haranoajigothic-medium.otf><//?
+/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman10
+-bold.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/publi
+c/lm/lmroman12-regular.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fon
+ts/opentype/public/lm/lmmono12-regular.otf><//?/c:/users/yutok/appdata/local/pro
+grams/miktex/fonts/opentype/public/haranoaji/haranoajimincho-regular.otf><C:/Use
+rs/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+ex10.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/publi
+c/amsfonts/cm/cmmi8.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr10.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/yutok/AppData/Local/Programs/MiKT
+eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/yutok/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/yutok/AppData/Loca
+l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on final_report.pdf (17 pages, 2280520 bytes).
+
+PDF statistics: 438 PDF objects out of 1000 (max. 8388607)
+ 89 named destinations out of 1000 (max. 131072)
+ 241 words of extra memory for PDF output out of 10000 (max. 100000000)
+

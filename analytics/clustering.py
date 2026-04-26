@@ -76,8 +76,10 @@ def plot_latent_2d(df, Z: np.ndarray, name: str, color: str = "conversion", out_
         color_discrete_sequence=px.colors.qualitative.Safe,
     )
     fig.update_layout(legend_title_text="凡例", xaxis_title=f"{name}_1", yaxis_title=f"{name}_2")
-    png_path = out_dir / f"latent2d_{name}_color_{color}.png"
+    stem = f"latent2d_{name}_color_{color}"
+    png_path = out_dir / f"{stem}.png"
     fig.write_image(str(png_path), scale=2)
+    fig.write_html(str(FIG_HTML_DIR / f"{stem}.html"), include_plotlyjs="cdn")
 
 
 def plot_latent_3d(df, Z: np.ndarray, name: str, color: str = "conversion", out_dir_html=None) -> None:

@@ -5,7 +5,7 @@ from typing import Dict, List
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
-from sklearn.model_selection import StratifiedKFold, train_test_split
+from sklearn.model_selection import StratifiedKFold
 from sklearn.pipeline import Pipeline
 
 from analytics.causal import (
@@ -163,6 +163,65 @@ def scenario_agreement_rate(best_a: pd.DataFrame, best_b: pd.DataFrame, scenario
     if m.empty:
         return float("nan")
     return float((m["treatment_a"] == m["treatment_b"]).mean())
+
+
+def policy_eval_compare_table(
+    best_full: pd.DataFrame,
+    best_oof: pd.DataFrame,
+    best_holdout: pd.DataFrame,
+) -> pd.DataFrame:
+    """フル学習・OOF・ホールドアウトの期待利益と、同一母集団上の推奨一致率。"""
+    scenarios = sorted(
+        set(best_full["scenario"].unique())
+        | set(best_oof["scenario"].unique())
+        | set(best_holdout["scenario"].unique())
+    )
+    rows = []
+    for sc in scenarios:
+        mf = float(best_full.loc[best_full["scenario"] == sc, "expected_profit"].mean())
+        mo = float(best_oof.loc[best_oof["scenario"] == sc, "expected_profit"].mean())
+        sub_h = best_holdout.loc[best_holdout["scenario"] == sc, "expected_profit"]
+        mh = float(sub_h.mean()) if len(sub_h) else float("nan")
+        agree_fo = scenario_agreement_rate(best_full, best_oof, sc)
+        rows.append(
+            {
+                "scenario": sc,
+                "mean_profit_full_fit": mf,
+                "mean_profit_oof": mo,
+                "mean_profit_holdout": mh,
+                "agreement_full_vs_oof_treatment": agree_fo,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
+def scenario_pairwise_sensitivity(best_targets: pd.DataFrame) -> pd.DataFrame:
+    """コストシナリオ間の推奨一致率と平均期待利益差（policy__06）。"""
+    scenarios = sorted(best_targets["scenario"].unique())
+    rows = []
+    for i in range(len(scenarios)):
+        for j in range(i + 1, len(scenarios)):
+            s1, s2 = scenarios[i], scenarios[j]
+            a = best_targets.loc[
+                best_targets["scenario"] == s1, ["customer_id", "treatment", "expected_profit"]
+            ]
+            b = best_targets.loc[
+                best_targets["scenario"] == s2, ["customer_id", "treatment", "expected_profit"]
+            ]
+            m = a.merge(b, on="customer_id", suffixes=("_a", "_b"))
+            if m.empty:
+                continue
+            rows.append(
+                {
+                    "scenario_a": s1,
+                    "scenario_b": s2,
+                    "treatment_agreement_rate": float((m["treatment_a"] == m["treatment_b"]).mean()),
+                    "mean_profit_diff_a_minus_b": float(m["expected_profit_a"].mean() - m["expected_profit_b"].mean()),
+                    "mean_profit_a": float(m["expected_profit_a"].mean()),
+                    "mean_profit_b": float(m["expected_profit_b"].mean()),
+                }
+            )
+    return pd.DataFrame(rows)
 
 
 def benchmark_policies(

@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import json
+import shutil
 
 import matplotlib.pyplot as plt
 import numpy as np
@@ -8,7 +9,6 @@ import pandas as pd
 import plotly.io as pio
 from sklearn.model_selection import train_test_split
 
-from analytics import __version__
 from analytics.causal import (
     bootstrap_dr_table,
     dr_estimate_mu,
@@ -33,6 +33,7 @@ from analytics.config import (
     ART_DIR,
     BOOTSTRAP_B,
     DEFAULT_SCENARIOS,
+    FIG_DIR,
     FIG_IMP,
     HOLDOUT_RATIO,
     RANDOM_STATE,
@@ -42,7 +43,7 @@ from analytics.constants import BASE_FEATURES
 from analytics.eda import make_eda_figures
 from analytics.experiment_design import write_ab_design_table
 from analytics.figures_jp import init_plot_style
-from analytics.governance import write_data_dictionary
+from analytics.governance import write_data_dictionary, write_governance_ethics_tex
 from analytics.io_data import basic_qc_tables, export_processed, read_data, validate_schema, write_qc_summary
 from analytics.monitoring import write_monitoring_spec
 from analytics.policy import (
@@ -52,7 +53,8 @@ from analytics.policy import (
     greedy_constrained_targets,
     oof_predictions_outcome,
     plot_policy_figures,
-    scenario_agreement_rate,
+    policy_eval_compare_table,
+    scenario_pairwise_sensitivity,
     segment_best_treatment_by_mean,
     summarize_profit,
     summarize_segments,
@@ -113,6 +115,10 @@ def run_pipeline() -> None:
     Z2 = make_latent_spaces_2d(df, preprocessor=pre)
     plot_latent_2d(df, Z2["pca2"], "pca2", color="conversion")
     plot_latent_2d(df, Z2["umap2"], "umap2", color="conversion")
+    for stem in ("latent2d_pca2_color_conversion.png", "latent2d_umap2_color_conversion.png"):
+        src = FIG_DIR / stem
+        if src.is_file():
+            shutil.copy2(src, FIG_IMP / stem)
 
     sil_df = silhouette_curve(Zs["umap3"], k_min=2, k_max=10)
     sil_df.to_csv(ART_DIR / "k_silhouette.csv", index=False)
@@ -137,6 +143,9 @@ def run_pipeline() -> None:
     plot_ari_heatmap(ari)
 
     plot_segment_3d(df, Zs["umap3"], umap_seg_auto, stem="latent3d_umap3_color_segment")
+    seg_png = FIG_DIR / "latent3d_umap3_color_segment.png"
+    if seg_png.is_file():
+        shutil.copy2(seg_png, FIG_IMP / seg_png.name)
 
     T = df["offer"].astype(str) + " | " + df["channel"].astype(str)
     prop_full, out_full, treatments = fit_propensity_and_outcome_models(df, BASE_FEATURES, T)
@@ -168,20 +177,22 @@ def run_pipeline() -> None:
     profit_oof = build_profit_tables(df, p_oof, DEFAULT_SCENARIOS)
     best_oof = export_targets(profit_oof, p_oof, csv_path=ART_DIR / "promo_targets_oof.csv")
 
+    p_holdout = policy_recommendations(df_te, out_h, BASE_FEATURES, treatments)
+    profit_holdout = build_profit_tables(df_te, p_holdout, DEFAULT_SCENARIOS)
+    best_holdout = export_targets(
+        profit_holdout, p_holdout, csv_path=ART_DIR / "promo_targets_holdout.csv"
+    )
+
     mid = next(s for s in DEFAULT_SCENARIOS if s.name == "mid_cost")
     bench = benchmark_policies(df, p_oof, mid)
+    bench.to_csv(ART_DIR / "policy_benchmarks.csv", index=False)
     bench.to_csv(ART_DIR / "policy_benchmarks_mid_cost.csv", index=False)
 
-    mean_full = best_targets.loc[best_targets["scenario"] == "mid_cost", "expected_profit"].mean()
-    mean_oof = best_oof.loc[best_oof["scenario"] == "mid_cost", "expected_profit"].mean()
-    agree = scenario_agreement_rate(best_targets, best_oof, "mid_cost")
-    pd.DataFrame(
-        [
-            {"metric": "mean_profit_mid_full", "value": mean_full},
-            {"metric": "mean_profit_mid_oof", "value": mean_oof},
-            {"metric": "agreement_rate_treatment_mid", "value": agree},
-        ]
-    ).to_csv(ART_DIR / "policy_eval_compare.csv", index=False)
+    pec = policy_eval_compare_table(best_targets, best_oof, best_holdout)
+    pec.to_csv(ART_DIR / "policy_eval_compare.csv", index=False)
+    scenario_pairwise_sensitivity(best_targets).to_csv(
+        ART_DIR / "policy_scenario_sensitivity.csv", index=False
+    )
 
     plot_policy_figures(best_targets, best_oof, bench, scenario="mid_cost")
 
@@ -203,8 +214,12 @@ def run_pipeline() -> None:
     seg_best = segment_best_treatment_by_mean(df, out_full, BASE_FEATURES, treatments, umap_seg_auto)
     seg_best.to_csv(ART_DIR / "segment_best_cvr.csv", index=False)
 
-    seg_narr = build_segment_narratives(df, umap_seg_auto)
+    seg_narr = build_segment_narratives(df, umap_seg_auto, model=res["models"]["logreg"])
     seg_narr.to_csv(ART_DIR / "segment_narratives.csv", index=False)
+
+    from analytics.report_visuals import write_report_summary_figures
+
+    write_report_summary_figures(dr_table, dr_holdout, segment_summary, pec, diag_df, profit_summary)
 
     top_treat = best_mid["treatment"].value_counts().index[0]
     top_share = float((best_mid["treatment"] == top_treat).mean())
@@ -219,6 +234,7 @@ def run_pipeline() -> None:
 
     write_ab_design_table(float(qc["conversion_rate"]))
     write_data_dictionary()
+    write_governance_ethics_tex()
     write_monitoring_spec()
 
     write_final_report(
