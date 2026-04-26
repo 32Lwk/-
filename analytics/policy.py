@@ -25,7 +25,6 @@ from analytics.config import (
     RANDOM_STATE,
 )
 from analytics.config import CostScenario
-from analytics.constants import BASE_FEATURES
 from analytics.figures_jp import save_fig
 
 
@@ -131,11 +130,6 @@ def summarize_profit(best_targets: pd.DataFrame) -> pd.DataFrame:
             }
         )
     return pd.DataFrame(rows)
-
-
-def fit_full_models(df: pd.DataFrame, base_features: List[str]) -> Tuple[Pipeline, Pipeline, List[str]]:
-    T = build_joint_treatment(df)
-    return fit_propensity_and_outcome_models(df, base_features, T)
 
 
 def oof_predictions_outcome(

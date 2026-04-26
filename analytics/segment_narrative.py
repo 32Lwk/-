@@ -21,10 +21,9 @@ def segment_feature_zprofiles(
     for seg in sorted(np.unique(segment_labels)):
         sub = tmp.loc[tmp["segment"] == seg, feature_cols]
         m = sub.mean()
-        z = (m - overall_mean) / overall_std
-        z = z.dropna().abs().sort_values(ascending=False)
-        top = z.head(3)
-        parts = [f"{idx}: z={float(top[idx]):+.2f}" for idx in top.index]
+        z_signed = ((m - overall_mean) / overall_std).dropna()
+        top_idx = z_signed.abs().sort_values(ascending=False).head(3).index
+        parts = [f"{idx}: z={float(z_signed.loc[idx]):+.2f}" for idx in top_idx]
         narratives[int(seg)] = "主な特徴（全体比z）: " + ", ".join(parts)
     return narratives
 

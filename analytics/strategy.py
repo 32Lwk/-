@@ -5,7 +5,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from analytics.config import ART_DIR, FIG_IMP, ROOT
+from analytics.config import ART_DIR, FIG_IMP
 
 
 def write_kpi_bridge_sensitivity(n_customers: int, mean_history: float, cvr: float) -> None:
