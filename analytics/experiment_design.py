@@ -47,7 +47,7 @@ def write_ab_design_table(base_cvr: float) -> None:
     df.to_csv(ART_DIR / "ab_design.csv", index=False)
     TABLES_DIR.mkdir(parents=True, exist_ok=True)
     tex = [
-        "\\begin{tabular}{rrrrr}\n\\toprule\n",
+        "\\begin{tabular}{rrrr}\n\\toprule\n",
         "MDE & 検定力 & 片群n（近似） & 合計n（近似） \\\\\n\\midrule\n",
     ]
     for mde in mdes:

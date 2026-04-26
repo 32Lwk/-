@@ -1,7 +1,5 @@
 from __future__ import annotations
 
-from typing import Dict, List, Tuple
-
 import joblib
 import matplotlib.pyplot as plt
 import numpy as np
@@ -13,8 +11,8 @@ from sklearn.decomposition import PCA
 from sklearn.metrics import adjusted_rand_score, silhouette_score
 
 from analytics.config import ART_DIR, FIG_DIR, FIG_HTML_DIR, FIG_IMP, RANDOM_STATE
-from analytics.config import SILHOUETTE_K_MAX, SILHOUETTE_K_MIN, UMAP_MIN_DIST, UMAP_N_NEIGHBORS, UMAP_STABILITY_SEEDS
-from analytics.eda import save_plotly, save_plotly_png
+from analytics.config import UMAP_MIN_DIST, UMAP_N_NEIGHBORS
+from analytics.eda import save_plotly
 from analytics.utils_common import add_display_columns
 
 
