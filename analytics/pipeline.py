@@ -12,7 +12,6 @@ from analytics import __version__
 from analytics.causal import (
     bootstrap_dr_table,
     dr_estimate_mu,
-    fit_full_models,
     fit_propensity_and_outcome_models,
     plot_dr_bootstrap_forest,
     propensity_diagnostics,
@@ -50,7 +49,6 @@ from analytics.policy import (
     benchmark_policies,
     build_profit_tables,
     export_targets,
-    fit_full_models as _ffm,
     greedy_constrained_targets,
     oof_predictions_outcome,
     plot_policy_figures,
@@ -58,9 +56,8 @@ from analytics.policy import (
     segment_best_treatment_by_mean,
     summarize_profit,
     summarize_segments,
+    policy_recommendations,
 )
-from analytics.policy import fit_full_models  # noqa: F401
-from analytics.policy import policy_recommendations
 from analytics.preprocess import build_preprocessor
 from analytics.report_md import write_final_report, write_run_config
 from analytics.segment_narrative import build_segment_narratives
@@ -158,7 +155,7 @@ def run_pipeline() -> None:
 
     dr_boot = bootstrap_dr_table(df, BASE_FEATURES, treatments, n_boot=BOOTSTRAP_B, n_jobs=4)
     dr_boot.to_csv(ART_DIR / "dr_bootstrap_quantiles.csv", index=False)
-    plot_dr_bootstrap_forest(dr_holdout.merge(dr_table[["treatment", "mu_model"]], on="treatment", how="left"), dr_boot)
+    plot_dr_bootstrap_forest(dr_holdout, dr_boot)
 
     p_full = policy_recommendations(df, out_full, BASE_FEATURES, treatments)
     profit_long = build_profit_tables(df, p_full, DEFAULT_SCENARIOS)
