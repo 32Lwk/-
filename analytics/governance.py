@@ -1,0 +1,24 @@
+from __future__ import annotations
+
+from analytics.config import ART_DIR
+
+
+def write_data_dictionary() -> None:
+    lines = [
+        "# データ辞書（目的限定・最小化のたたき台）\n\n",
+        "本分析で用いる列と目的。**法的助言ではなく**社内テンプレとして利用すること。\n\n",
+        "| 列 | 目的 | 保存期間の考え方（プレースホルダ） |\n",
+        "|---|---|---|\n",
+        "| customer_id | 再現性のための疑似ID | 分析プロジェクト期間 |\n",
+        "| recency | 購買活動の説明 | 同上 |\n",
+        "| history | 価値proxy | 同上 |\n",
+        "| used_discount / used_bogo | 行動履歴 | 同上 |\n",
+        "| zip_code | 地域カテゴリ（プロキシ） | 差別リスクレビュー |\n",
+        "| is_referral | 流入経路 | 同上 |\n",
+        "| channel / offer | 処置（観察） | 同上 |\n",
+        "| conversion | アウトカム | 同上 |\n\n",
+        "## 個人情報保護法（日本）に関する留意\n\n",
+        "- 個人データに該当する場合は**利用目的の特定・公表**、**不要な個人データの削除**等を検討すること。\n",
+        "- 自動化された決定に関する**説明・人の関与**の要否は、実装形態に依存する。\n",
+    ]
+    (ART_DIR / "data_dictionary.md").write_text("".join(lines), encoding="utf-8")
