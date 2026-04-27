@@ -14,5 +14,11 @@
   },
   "random_state": 42,
   "holdout_ratio": 0.25,
-  "bootstrap_b": 200
+  "bootstrap_b": 200,
+  "evaluation_protocol": {
+    "primary_kpi": "expected_profit_mid_cost",
+    "secondary_kpi": "topk_lift",
+    "primary_classifier": "logistic_regression",
+    "secondary_classifier": "hist_gradient_boosting"
+  }
 }

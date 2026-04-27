@@ -1,0 +1,5 @@
+{
+  "svd_n_components": 24,
+  "tfidf_max_features": 400,
+  "explained_variance_ratio_sum": 0.45088617186673646
+}

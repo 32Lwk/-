@@ -93,6 +93,9 @@ def write_final_report(
     md.append(f"- **顧客別最適ポリシー（mid_cost）で最頻の推奨施策**: `{top_treatment.replace(' | ', ' / ')}`（{top_share:.1%}）\n")
     md.append("- **示唆**: CVRが高い施策（例: 割引）は存在するが、コスト仮定が大きいと期待利益では負ける可能性がある。\n")
     md.append("- **推奨アクション**: 低コストなインセンティブへ置換し、上位スコア層（TopK%）でA/BテストしてROIが合う訴求を探索。\n")
+    md.append(
+        "- **最終課題（report.md）への答え**: 購入確度が高いユーザーは **モデルスコア上位（Top K%）** に偏在しやすい。プロモは **期待利益がプラス** の顧客に限定し、オファー・チャネルは §7・§10 で検証するのが望ましい。\n"
+    )
     _ctx = commentary_context(qc, model_eval, best_model, policy_mid_summary)
     md.append("\n" + exec_summary_commentary(_ctx))
 
@@ -105,7 +108,12 @@ def write_final_report(
     md.append("| 内容 | 本編 | improvements 複製 |\n| --- | --- | --- |\n")
     md.append("| 潜在2D PCA | `figures/latent2d_pca2_color_conversion.png` | 同名 |\n")
     md.append("| 潜在2D UMAP | `figures/latent2d_umap2_color_conversion.png` | 同名 |\n")
-    md.append("| セグメント3D（PNG） | `figures/latent3d_umap3_color_segment.png` | 同名 |\n\n")
+    md.append("| セグメント3D（PNG） | `figures/latent3d_umap3_color_segment.png` | 同名 |\n")
+    md.append("| 相関（数値・二値） | `figures/improvements/corr_numeric_detailed.png` | 下三角ヒートマップ |\n")
+    md.append("| recency×history 散布 | `figures/improvements/scatter_recency_history_by_conversion.png` | 色=購入 |\n")
+    md.append("| OLS 係数 | `figures/improvements/ols_history_coefficients.png` | history を目的変数 |\n")
+    md.append("| LSI アブレーション | `figures/improvements/ablation_base_vs_lsi_logreg.png` | BASE vs TF-IDF+SVD |\n")
+    md.append("| セグ×処置CVR（探索） | `figures/improvements/segment_treatment_cvr_heatmap_exploratory.png` | 記述のみ |\n\n")
     md.append("### インタラクティブ図（`figures_html/`）\n\n")
     html_dir = ROOT / "figures_html"
     if html_dir.is_dir():
@@ -220,6 +228,30 @@ def write_final_report(
     md.append("\n![効果量（Cramér's V）](figures/improvements/chi2_cramers_v_bar.png)\n")
     md.append("\n" + C_CHI2)
 
+    md.append("\n### 3.4 相関分析（数値・二値項目）\n")
+    md.append(
+        "`recency`, `history`, `used_discount`, `used_bogo`, `is_referral`, `conversion` の **Pearson 相関**（下三角のみ）。強い相関は共線性の手がかりであり、因果ではない。\n\n"
+    )
+    p_corr = ROOT / "artifacts" / "correlation_numeric.csv"
+    if p_corr.is_file():
+        md.append(f"- 数値表: `{p_corr.relative_to(ROOT).as_posix()}`\n\n")
+    md.append("![相関ヒートマップ（詳細）](figures/improvements/corr_numeric_detailed.png)\n\n")
+    md.append(
+        "recency と history は購入有無で分布が異なる（透明度で重なりを表現）。\n\n"
+    )
+    md.append("![recency と history の散布図](figures/improvements/scatter_recency_history_by_conversion.png)\n\n")
+
+    md.append("\n### 3.5 重回帰分析（OLS・目的変数 history）\n")
+    md.append(
+        "演習で例示される重回帰に対応し、`history` を目的変数とした **OLS**（説明: `recency`, `used_discount`, `used_bogo`, `is_referral`、HC1）。購入予測は §4 のロジスティックが主。\n\n"
+    )
+    p_ols = ROOT / "artifacts" / "ols_history_coefficients.csv"
+    if p_ols.is_file():
+        md.append(
+            f"- 係数: `{p_ols.relative_to(ROOT).as_posix()}` / 要約: `artifacts/ols_history_summary.txt`\n\n"
+        )
+    md.append("![OLS 係数と95%CI](figures/improvements/ols_history_coefficients.png)\n\n")
+
     md.append("\n## 4. 予測モデル（ターゲティング）\n")
     md.append(f"- **採用モデル（AUC最大）**: {best_model}\n")
     md.append(f"- **学習/評価**: n_train={qc.get('n_train','?')}, n_test={qc.get('n_test','?')}\n")
@@ -243,6 +275,22 @@ def write_final_report(
     md.append("![PR hgb](figures/improvements/pr_curve_hgb.png)\n")
     md.append("\n" + C_PR_HGB)
     md.append("\n" + C_PR)
+
+    md.append("\n### 4.5 TF-IDF + SVD（LSI 類似）を加えたロジスティック回帰（アブレーション）\n")
+    md.append(
+        "行を英語テンプレにし、**訓練のみ**で fit した TF-IDF・TruncatedSVD を連結（次元は `artifacts/lsi_tfidf_diag.json`）。同一ホールドアウトで BASE との比較（API 不要）。\n\n"
+    )
+    p_ab = ROOT / "artifacts" / "model_eval_ablation_lsi.csv"
+    if p_ab.is_file():
+        ab = pd.read_csv(p_ab)
+        md.append("| variant | AUC | Brier | AP | Top5% CVR | Top10% CVR |\n| --- | ---: | ---: | ---: | ---: | ---: |\n")
+        for _, r in ab.iterrows():
+            md.append(
+                f"| {r['variant']} | {r['auc']:.4f} | {r['brier']:.4f} | {r['average_precision']:.4f} | "
+                f"{r['top_5pct_cvr']:.4f} | {r['top_10pct_cvr']:.4f} |\n"
+            )
+        md.append("\n")
+    md.append("![BASE vs BASE+LSI](figures/improvements/ablation_base_vs_lsi_logreg.png)\n\n")
 
     md.append("\n## 5. 潜在空間とセグメント\n")
     md.append(
@@ -276,6 +324,14 @@ def write_final_report(
     md.append("- 安定性: ![ARI](figures/improvements/segment_stability_ari.png)\n\n")
     md.append(C_SILHOUETTE_ARI)
     md.append("\n" + C_SILHOUETTE)
+
+    md.append("\n### 5.0 セグメント×処置の観測CVR（探索・記述のみ）\n")
+    md.append(
+        "交絡ありのため因果解釈不可。`artifacts/segment_treatment_cvr_exploratory.csv` を参照。\n\n"
+    )
+    p_st = ROOT / "figures" / "improvements" / "segment_treatment_cvr_heatmap_exploratory.png"
+    if p_st.is_file():
+        md.append(f"![セグメント×処置 観測CVR]({p_st.relative_to(ROOT).as_posix()})\n\n")
 
     md.append("\n### セグメント要約（mid_cost・主クラスタ）\n")
     md.append("| セグメント | 件数 | CVR | mean(history) | mean(recency) | mean(期待利益) | 推奨オファー | 推奨チャネル |\n")

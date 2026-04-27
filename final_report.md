@@ -3,6 +3,7 @@
 - **顧客別最適ポリシー（mid_cost）で最頻の推奨施策**: `No Offer / Web`（100.0%）
 - **示唆**: CVRが高い施策（例: 割引）は存在するが、コスト仮定が大きいと期待利益では負ける可能性がある。
 - **推奨アクション**: 低コストなインセンティブへ置換し、上位スコア層（TopK%）でA/BテストしてROIが合う訴求を探索。
+- **最終課題（report.md）への答え**: 購入確度が高いユーザーは **モデルスコア上位（Top K%）** に偏在しやすい。プロモは **期待利益がプラス** の顧客に限定し、オファー・チャネルは §7・§10 で検証するのが望ましい。
 
 **考察（要約）**: 本データは **n = 64000** 件、**全体CVR = 0.1468** である。mid_cost シナリオで最頻の推奨が「No Offer / Web」（100.0%）となるのは、期待利益（購入確率の予測 × `history` − コスト仮定）のもとで、**その処置が多数の顧客に対して支配的だった**ことを意味する。条件付きCVRが高い処置（例: 割引）でも、コスト項が大きければ期待利益では劣後しうる。**採用ターゲティングモデル**は AUC 最大の `{ctx['best_model']}`（logreg AUC {ctx['auc_lr']}、HGB AUC {ctx['auc_hgb']}）であり、ランキングは有用でも **個別処置効果の点推定精度**や **未観測交絡**は別問題である。経営判断では **シナリオ感度**・**OOF/ホールドアウト**・**ESS** をセットで見ることを推奨する。
 
@@ -18,6 +19,11 @@
 | 潜在2D PCA | `figures/latent2d_pca2_color_conversion.png` | 同名 |
 | 潜在2D UMAP | `figures/latent2d_umap2_color_conversion.png` | 同名 |
 | セグメント3D（PNG） | `figures/latent3d_umap3_color_segment.png` | 同名 |
+| 相関（数値・二値） | `figures/improvements/corr_numeric_detailed.png` | 下三角ヒートマップ |
+| recency×history 散布 | `figures/improvements/scatter_recency_history_by_conversion.png` | 色=購入 |
+| OLS 係数 | `figures/improvements/ols_history_coefficients.png` | history を目的変数 |
+| LSI アブレーション | `figures/improvements/ablation_base_vs_lsi_logreg.png` | BASE vs TF-IDF+SVD |
+| セグ×処置CVR（探索） | `figures/improvements/segment_treatment_cvr_heatmap_exploratory.png` | 記述のみ |
 
 ### インタラクティブ図（`figures_html/`）
 
@@ -159,6 +165,26 @@
 **考察（カイ二乗・BH-FDR・Cramér's V）**: 各検定は **購入フラグとカテゴリ特徴量の独立性** を問う。p値はサンプルサイズに敏感であり、本データのように n が大きいと **実務的には微小な依存でも「有意」** になりやすい。Benjamini--Hochberg の q 値は **偽発見率（FDR）** を抑える手がかりだが、**検定の前提（期待度数）** や **カテゴリのまとめ方** に依存する。Cramér's V は **連関の正規化効果量** であり、**有意だが V が極小** のときはビジネスインパクトは限定的と解釈しうる。後段のロジスティック回帰では **多重共線性** により個別係数の解釈が難しくなる場合がある。
 
 
+### 3.4 相関分析（数値・二値項目）
+`recency`, `history`, `used_discount`, `used_bogo`, `is_referral`, `conversion` の **Pearson 相関**（下三角のみ）。強い相関は共線性の手がかりであり、因果ではない。
+
+- 数値表: `artifacts/correlation_numeric.csv`
+
+![相関ヒートマップ（詳細）](figures/improvements/corr_numeric_detailed.png)
+
+recency と history は購入有無で分布が異なる（透明度で重なりを表現）。
+
+![recency と history の散布図](figures/improvements/scatter_recency_history_by_conversion.png)
+
+
+### 3.5 重回帰分析（OLS・目的変数 history）
+演習で例示される重回帰に対応し、`history` を目的変数とした **OLS**（説明: `recency`, `used_discount`, `used_bogo`, `is_referral`、HC1）。購入予測は §4 のロジスティックが主。
+
+- 係数: `artifacts/ols_history_coefficients.csv` / 要約: `artifacts/ols_history_summary.txt`
+
+![OLS 係数と95%CI](figures/improvements/ols_history_coefficients.png)
+
+
 ## 4. 予測モデル（ターゲティング）
 - **採用モデル（AUC最大）**: logreg
 - **学習/評価**: n_train=48000, n_test=16000
@@ -196,6 +222,17 @@
 
 
 **考察（PR 曲線・総括）**: 陽性率が ~15% 前後でも ROC だけでは **高確率帯の挙動** が見えにくいことがある。PR と **累積ゲイン曲線** は「限られた接触枠」を前提にしたときの **取りこぼしと誤配信** のバランスを議論するのに適する。
+
+
+### 4.5 TF-IDF + SVD（LSI 類似）を加えたロジスティック回帰（アブレーション）
+行を英語テンプレにし、**訓練のみ**で fit した TF-IDF・TruncatedSVD を連結（次元は `artifacts/lsi_tfidf_diag.json`）。同一ホールドアウトで BASE との比較（API 不要）。
+
+| variant | AUC | Brier | AP | Top5% CVR | Top10% CVR |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| base_only | 0.6496 | 0.1210 | 0.2286 | 0.2775 | 0.2681 |
+| base_plus_lsi_tfidf_svd | 0.6492 | 0.1211 | 0.2277 | 0.2787 | 0.2656 |
+
+![BASE vs BASE+LSI](figures/improvements/ablation_base_vs_lsi_logreg.png)
 
 
 ## 5. 潜在空間とセグメント
@@ -240,6 +277,12 @@
 **考察（クラスタ数と安定性・総括）**: **データ駆動の $k$** は出発点に過ぎず、**セグメント施策のROI** は別途 OOF 期待利益で検証する。安定性が低い場合は **スコア層（デシル）** への回帰や **階層クラスタ** を検討する。
 
 
+### 5.0 セグメント×処置の観測CVR（探索・記述のみ）
+交絡ありのため因果解釈不可。`artifacts/segment_treatment_cvr_exploratory.csv` を参照。
+
+![セグメント×処置 観測CVR](figures/improvements/segment_treatment_cvr_heatmap_exploratory.png)
+
+
 ### セグメント要約（mid_cost・主クラスタ）
 | セグメント | 件数 | CVR | mean(history) | mean(recency) | mean(期待利益) | 推奨オファー | 推奨チャネル |
 | --- | ---: | ---: | ---: | ---: | ---: | --- | --- |
@@ -260,24 +303,34 @@
 ### セグメント別ナラティブ（z・置換重要度・SHAP）
 - **セグメント 0**: 主な特徴（全体比z）: history: z=-0.22, is_referral: z=-0.12, recency: z=+0.08
   - 置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000
+  - SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3617, cat__offer_No Offer: 0.2878, num__used_discount: 0.2866
 - **セグメント 1**: 主な特徴（全体比z）: used_bogo: z=-0.39, is_referral: z=+0.30, used_discount: z=+0.19
   - 置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000
+  - SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3737, num__used_discount: 0.2866, num__is_referral: 0.2834
 - **セグメント 2**: 主な特徴（全体比z）: history: z=+0.57, is_referral: z=+0.40, used_discount: z=+0.34
   - 置換重要度（上位）: is_referral: 0.0008, offer: 0.0000, channel: 0.0000
+  - SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3474, num__is_referral: 0.2885, num__used_discount: 0.2866
 - **セグメント 3**: 主な特徴（全体比z）: is_referral: z=-0.42, used_bogo: z=+0.33, used_discount: z=+0.22
   - 置換重要度（上位）: recency: 0.0003, offer: 0.0002, used_discount: 0.0000
+  - SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3488, num__used_discount: 0.2866, num__is_referral: 0.2645
 - **セグメント 4**: 主な特徴（全体比z）: used_bogo: z=-0.44, is_referral: z=-0.33, used_discount: z=+0.24
   - 置換重要度（上位）: used_bogo: 0.0012, offer: 0.0000, channel: 0.0000
+  - SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3749, num__used_discount: 0.2866, num__is_referral: 0.2660
 - **セグメント 5**: 主な特徴（全体比z）: history: z=-0.24, used_discount: z=-0.19, is_referral: z=+0.11
   - 置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000
+  - SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3593, cat__offer_No Offer: 0.3008, num__used_discount: 0.2866
 - **セグメント 6**: 主な特徴（全体比z）: used_discount: z=-0.80, is_referral: z=-0.69, used_bogo: z=+0.59
   - 置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000
+  - SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3405, num__used_discount: 0.2866, cat__offer_No Offer: 0.2744
 - **セグメント 7**: 主な特徴（全体比z）: history: z=+0.12, used_bogo: z=-0.09, used_discount: z=-0.06
   - 置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000
+  - SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3632, num__used_discount: 0.2866, cat__offer_No Offer: 0.2802
 - **セグメント 8**: 主な特徴（全体比z）: used_discount: z=-0.91, is_referral: z=-0.81, used_bogo: z=+0.71
   - 置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000
+  - SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3330, num__used_discount: 0.2866, cat__offer_No Offer: 0.2826
 - **セグメント 9**: 主な特徴（全体比z）: is_referral: z=+0.61, used_bogo: z=-0.59, used_discount: z=+0.39
   - 置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000
+  - SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3806, cat__offer_No Offer: 0.3495, num__is_referral: 0.2915
 
 **考察（z・SHAP・置換重要度）**: **$z$ スコア** はクラスタ平均が全体平均から何標準偏差離れているかの **単変量プロファイル** である。**SHAP**（線形近似）は **局所的な予測分解**、**置換重要度** は **汎用的だが相関により水増し** されうる。説明可能性の目的では **上位要因を2–3個に要約** し、残りは **人のドメイン知識** で補うのが実務的である。
 

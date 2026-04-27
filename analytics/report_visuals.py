@@ -9,7 +9,7 @@ import numpy as np
 import pandas as pd
 
 from analytics.config import FIG_DIR, FIG_IMP
-from analytics.figures_jp import save_fig, init_plot_style
+from analytics.figures_jp import init_plot_style, save_fig
 
 
 def plot_dr_full_vs_holdout(
@@ -34,8 +34,26 @@ def plot_dr_full_vs_holdout(
     plt.bar(x + w / 2, m["mu_dr_ho"], width=w, label="ホールドアウト", color="#dd8452")
     plt.xticks(x, [t.replace(" | ", "\n") for t in m["treatment"]], rotation=0, fontsize=8)
     plt.ylabel("DR 推定 μ（購入確率）")
-    plt.title("処置別 DR：全件 vs ホールドアウト（上位処置）")
+    plt.title(
+        "処置別 DR：全件 vs ホールドアウト（上位処置）\n"
+        "左棒=全件学習（楽観バイアスに注意）・右棒=ホールドアウト"
+    )
     plt.legend()
+    for i in range(len(m)):
+        plt.text(
+            i - w / 2,
+            m["mu_dr_full"].iloc[i] + 0.005,
+            f"{m['mu_dr_full'].iloc[i]:.3f}",
+            ha="center",
+            fontsize=7,
+        )
+        plt.text(
+            i + w / 2,
+            m["mu_dr_ho"].iloc[i] + 0.005,
+            f"{m['mu_dr_ho'].iloc[i]:.3f}",
+            ha="center",
+            fontsize=7,
+        )
     plt.tight_layout()
     save_fig(path)
     return path
@@ -45,6 +63,7 @@ def plot_policy_eval_means(compare: pd.DataFrame, path: Path | None = None) -> P
     """フル / OOF / ホールドアウトの平均期待利益（シナリオ別）。"""
     init_plot_style()
     path = path or (FIG_IMP / "report_policy_eval_means.png")
+    compare = compare.reset_index(drop=True)
     scenarios = compare["scenario"].tolist()
     x = np.arange(len(scenarios))
     w = 0.25
@@ -54,8 +73,15 @@ def plot_policy_eval_means(compare: pd.DataFrame, path: Path | None = None) -> P
     plt.bar(x + w, compare["mean_profit_holdout"], width=w, label="ホールドアウト", color="#c44e52")
     plt.xticks(x, scenarios, rotation=15, ha="right")
     plt.ylabel("平均期待利益（proxy）")
-    plt.title("コストシナリオ別：評価モード比較")
+    plt.title(
+        "コストシナリオ別：評価モード比較\n"
+        "3本柱=フル学習 / K折OOF / ホールドアウト（期待利益のオフライン監視）"
+    )
     plt.legend()
+    for i in range(len(scenarios)):
+        plt.text(i - w, compare["mean_profit_full_fit"].iloc[i] + 0.5, f"{compare['mean_profit_full_fit'].iloc[i]:.1f}", ha="center", fontsize=7)
+        plt.text(i, compare["mean_profit_oof"].iloc[i] + 0.5, f"{compare['mean_profit_oof'].iloc[i]:.1f}", ha="center", fontsize=7)
+        plt.text(i + w, compare["mean_profit_holdout"].iloc[i] + 0.5, f"{compare['mean_profit_holdout'].iloc[i]:.1f}", ha="center", fontsize=7)
     plt.tight_layout()
     save_fig(path)
     return path
@@ -110,8 +136,11 @@ def plot_profit_summary_scenarios(profit_summary: pd.DataFrame, path: Path | Non
     plt.bar(x + w / 2, ps["median_expected_profit"], width=w, label="中央値", color="#8da0cb")
     plt.xticks(x, ps.index, rotation=15, ha="right")
     plt.ylabel("期待利益（proxy）")
-    plt.title("コストシナリオ別 期待利益の要約")
+    plt.title("コストシナリオ別 期待利益の要約（平均 vs 中央値）")
     plt.legend()
+    for i in range(len(ps)):
+        plt.text(i - w / 2, ps["mean_expected_profit"].iloc[i] + 0.5, f"{ps['mean_expected_profit'].iloc[i]:.1f}", ha="center", fontsize=7)
+        plt.text(i + w / 2, ps["median_expected_profit"].iloc[i] + 0.5, f"{ps['median_expected_profit'].iloc[i]:.1f}", ha="center", fontsize=7)
     plt.tight_layout()
     save_fig(path)
     return path

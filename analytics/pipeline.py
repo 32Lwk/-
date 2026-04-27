@@ -39,8 +39,11 @@ from analytics.config import (
     RANDOM_STATE,
     ensure_all_dirs,
 )
+from analytics.stats_extra import run_stats_extra
+from analytics.supervised_ablation import run_lsi_logreg_ablation
 from analytics.constants import BASE_FEATURES
 from analytics.eda import make_eda_figures
+from analytics.exploratory_strata import write_segment_treatment_exploratory
 from analytics.experiment_design import write_ab_design_table
 from analytics.figures_jp import init_plot_style
 from analytics.governance import write_data_dictionary, write_governance_ethics_tex
@@ -106,6 +109,9 @@ def run_pipeline() -> None:
     model_eval = res["model_eval"]
     qc["n_train"] = res.get("split", {}).get("n_train")
     qc["n_test"] = res.get("split", {}).get("n_test")
+
+    run_stats_extra(df)
+    run_lsi_logreg_ablation(df)
 
     pre, _, _ = build_preprocessor(df)
     Zs = make_latent_spaces(df, preprocessor=pre)
@@ -211,6 +217,8 @@ def run_pipeline() -> None:
     segment_summary = summarize_segments(df, pd.Series(umap_seg_auto), best_mid)
     segment_summary.to_csv(ART_DIR / "segment_summary.csv", index=False)
 
+    write_segment_treatment_exploratory(df, umap_seg_auto)
+
     seg_best = segment_best_treatment_by_mean(df, out_full, BASE_FEATURES, treatments, umap_seg_auto)
     seg_best.to_csv(ART_DIR / "segment_best_cvr.csv", index=False)
 
@@ -256,7 +264,19 @@ def run_pipeline() -> None:
         segment_narrative=seg_narr,
     )
 
-    write_run_config({"random_state": RANDOM_STATE, "holdout_ratio": HOLDOUT_RATIO, "bootstrap_b": BOOTSTRAP_B})
+    write_run_config(
+        {
+            "random_state": RANDOM_STATE,
+            "holdout_ratio": HOLDOUT_RATIO,
+            "bootstrap_b": BOOTSTRAP_B,
+            "evaluation_protocol": {
+                "primary_kpi": "expected_profit_mid_cost",
+                "secondary_kpi": "topk_lift",
+                "primary_classifier": "logistic_regression",
+                "secondary_classifier": "hist_gradient_boosting",
+            },
+        }
+    )
 
     from analytics.report_tex import write_latex_bundle
 

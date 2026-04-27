@@ -29,19 +29,20 @@ def save_plotly_png(fig, stem: str):
 
 def make_eda_figures(df) -> None:
     d = add_display_columns(df)
+    n_all = len(df)
     for col, jp in [("recency", "前回購入からの月数"), ("history", "過去購入価値（history）")]:
         plt.figure(figsize=(7, 4))
         sns.histplot(df[col], bins=50, kde=True)
         plt.xlabel(jp)
-        plt.ylabel("顧客数（n）")
-        plt.title(f"{jp}の分布")
+        plt.ylabel("顧客数（件数）")
+        plt.title(f"{jp}の分布（全顧客 n={n_all:,}）")
         save_fig(FIG_DIR / f"dist_{col}.png")
 
         plt.figure(figsize=(7, 4))
         sns.boxplot(x="購入", y=col, data=d, order=["未購入", "購入"])
-        plt.xlabel("購入")
+        plt.xlabel("購入の有無")
         plt.ylabel(jp)
-        plt.title(f"{jp}（購入別）")
+        plt.title(f"{jp}（購入別・箱ひげ・n={n_all:,}）")
         save_fig(FIG_DIR / f"box_{col}_by_conversion.png")
 
     for col, col_jp in [
@@ -53,12 +54,22 @@ def make_eda_figures(df) -> None:
         ("紹介流入", "紹介流入（リファラル）"),
     ]:
         g = d.groupby(col)["conversion"].mean().sort_values(ascending=False)
+        counts = d.groupby(col)["conversion"].size().reindex(g.index)
         plt.figure(figsize=(8, 4))
-        sns.barplot(x=g.index.astype(str), y=g.values)
+        ax = sns.barplot(x=g.index.astype(str), y=g.values)
         plt.xticks(rotation=30, ha="right")
         plt.ylabel("コンバージョン率（CVR）")
         plt.xlabel(col_jp)
-        plt.title(f"{col_jp}別CVR（棒の高さ=CVR、nは表で併記）")
+        plt.title(f"{col_jp}別CVR（n={n_all:,}・各棒下の n は近似ラベル）")
+        for i, p in enumerate(ax.patches):
+            ax.annotate(
+                f"n≈{int(counts.iloc[i])}",
+                (p.get_x() + p.get_width() / 2, p.get_height()),
+                ha="center",
+                va="bottom",
+                fontsize=8,
+                rotation=0,
+            )
         safe = {
             "居住エリア": "zip_code",
             "チャネル": "channel",
@@ -75,7 +86,7 @@ def make_eda_figures(df) -> None:
     )
     plt.figure(figsize=(7, 4))
     sns.heatmap(piv, annot=True, fmt=".3f", cmap="viridis")
-    plt.title("CVRヒートマップ（オファー×チャネル）")
+    plt.title(f"CVRヒートマップ（オファー×チャネル・セル内数値=CVR・母数 n={n_all:,}）")
     plt.xlabel("チャネル")
     plt.ylabel("オファー")
     save_fig(FIG_DIR / "heat_cvr_offer_x_channel.png")

@@ -1,11 +1,11 @@
 segment,narrative_z,narrative_perm,narrative_shap
-0,"主な特徴（全体比z）: history: z=-0.22, is_referral: z=-0.12, recency: z=+0.08","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000",
-1,"主な特徴（全体比z）: used_bogo: z=-0.39, is_referral: z=+0.30, used_discount: z=+0.19","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000",
-2,"主な特徴（全体比z）: history: z=+0.57, is_referral: z=+0.40, used_discount: z=+0.34","置換重要度（上位）: is_referral: 0.0008, offer: 0.0000, channel: 0.0000",
-3,"主な特徴（全体比z）: is_referral: z=-0.42, used_bogo: z=+0.33, used_discount: z=+0.22","置換重要度（上位）: recency: 0.0003, offer: 0.0002, used_discount: 0.0000",
-4,"主な特徴（全体比z）: used_bogo: z=-0.44, is_referral: z=-0.33, used_discount: z=+0.24","置換重要度（上位）: used_bogo: 0.0012, offer: 0.0000, channel: 0.0000",
-5,"主な特徴（全体比z）: history: z=-0.24, used_discount: z=-0.19, is_referral: z=+0.11","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000",
-6,"主な特徴（全体比z）: used_discount: z=-0.80, is_referral: z=-0.69, used_bogo: z=+0.59","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000",
-7,"主な特徴（全体比z）: history: z=+0.12, used_bogo: z=-0.09, used_discount: z=-0.06","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000",
-8,"主な特徴（全体比z）: used_discount: z=-0.91, is_referral: z=-0.81, used_bogo: z=+0.71","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000",
-9,"主な特徴（全体比z）: is_referral: z=+0.61, used_bogo: z=-0.59, used_discount: z=+0.39","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000",
+0,"主な特徴（全体比z）: history: z=-0.22, is_referral: z=-0.12, recency: z=+0.08","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000","SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3617, cat__offer_No Offer: 0.2878, num__used_discount: 0.2866"
+1,"主な特徴（全体比z）: used_bogo: z=-0.39, is_referral: z=+0.30, used_discount: z=+0.19","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000","SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3737, num__used_discount: 0.2866, num__is_referral: 0.2834"
+2,"主な特徴（全体比z）: history: z=+0.57, is_referral: z=+0.40, used_discount: z=+0.34","置換重要度（上位）: is_referral: 0.0008, offer: 0.0000, channel: 0.0000","SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3474, num__is_referral: 0.2885, num__used_discount: 0.2866"
+3,"主な特徴（全体比z）: is_referral: z=-0.42, used_bogo: z=+0.33, used_discount: z=+0.22","置換重要度（上位）: recency: 0.0003, offer: 0.0002, used_discount: 0.0000","SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3488, num__used_discount: 0.2866, num__is_referral: 0.2645"
+4,"主な特徴（全体比z）: used_bogo: z=-0.44, is_referral: z=-0.33, used_discount: z=+0.24","置換重要度（上位）: used_bogo: 0.0012, offer: 0.0000, channel: 0.0000","SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3749, num__used_discount: 0.2866, num__is_referral: 0.2660"
+5,"主な特徴（全体比z）: history: z=-0.24, used_discount: z=-0.19, is_referral: z=+0.11","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000","SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3593, cat__offer_No Offer: 0.3008, num__used_discount: 0.2866"
+6,"主な特徴（全体比z）: used_discount: z=-0.80, is_referral: z=-0.69, used_bogo: z=+0.59","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000","SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3405, num__used_discount: 0.2866, cat__offer_No Offer: 0.2744"
+7,"主な特徴（全体比z）: history: z=+0.12, used_bogo: z=-0.09, used_discount: z=-0.06","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000","SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3632, num__used_discount: 0.2866, cat__offer_No Offer: 0.2802"
+8,"主な特徴（全体比z）: used_discount: z=-0.91, is_referral: z=-0.81, used_bogo: z=+0.71","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000","SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3330, num__used_discount: 0.2866, cat__offer_No Offer: 0.2826"
+9,"主な特徴（全体比z）: is_referral: z=+0.61, used_bogo: z=-0.59, used_discount: z=+0.39","置換重要度（上位）: offer: 0.0000, channel: 0.0000, is_referral: 0.0000","SHAP線形（|φ|平均・購入クラス）: num__used_bogo: 0.3806, cat__offer_No Offer: 0.3495, num__is_referral: 0.2915"

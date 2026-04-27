@@ -19,7 +19,7 @@ from sklearn.metrics import (
 from sklearn.model_selection import train_test_split
 from sklearn.pipeline import Pipeline
 
-from analytics.config import ART_DIR, FIG_DIR, FIG_IMP, RANDOM_STATE
+from analytics.config import ART_DIR, FIG_DIR, FIG_IMP, HOLDOUT_RATIO, RANDOM_STATE
 from analytics.figures_jp import save_fig
 from analytics.preprocess import build_preprocessor, build_preprocessor_dense
 from analytics.utils_common import topk_metrics, topk_precision_recall
@@ -29,7 +29,7 @@ def train_predictive_models(df: pd.DataFrame) -> Dict[str, object]:
     X = df.drop(columns=["conversion"])
     y = df["conversion"].astype(int).to_numpy()
     X_train, X_test, y_train, y_test = train_test_split(
-        X, y, test_size=0.25, random_state=RANDOM_STATE, stratify=y
+        X, y, test_size=HOLDOUT_RATIO, random_state=RANDOM_STATE, stratify=y
     )
 
     pre, _, _ = build_preprocessor(df)

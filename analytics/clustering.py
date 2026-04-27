@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from typing import Dict, Tuple
+
 import joblib
 import matplotlib.pyplot as plt
 import numpy as np
@@ -65,17 +67,29 @@ def plot_latent_2d(df, Z: np.ndarray, name: str, color: str = "conversion", out_
     tmp[f"{name}_1"] = Z[:, 0]
     tmp[f"{name}_2"] = Z[:, 1]
     color_col = "購入" if color == "conversion" else color
+    n_all = len(tmp)
+    n_show = min(n_all, 12000)
+    sub = tmp.sample(n=n_show, random_state=RANDOM_STATE)
     fig = px.scatter(
-        tmp.sample(n=min(len(tmp), 12000), random_state=RANDOM_STATE),
+        sub,
         x=f"{name}_1",
         y=f"{name}_2",
         color=color_col,
         symbol="オファー",
-        title=f"潜在空間（2D）: {name}（色={color_col}）",
         opacity=0.7,
         color_discrete_sequence=px.colors.qualitative.Safe,
     )
-    fig.update_layout(legend_title_text="凡例", xaxis_title=f"{name}_1", yaxis_title=f"{name}_2")
+    fig.update_layout(
+        title=dict(
+            text=(
+                f"潜在空間（2D）: {name}（色={color_col}）<br>"
+                f"<sup>全母集団 n={n_all:,} / 表示点 n={n_show:,}（ランダム）・軸は{name}座標</sup>"
+            )
+        ),
+        legend_title_text="凡例",
+        xaxis_title=f"{name}_1（第1軸）",
+        yaxis_title=f"{name}_2（第2軸）",
+    )
     stem = f"latent2d_{name}_color_{color}"
     png_path = out_dir / f"{stem}.png"
     fig.write_image(str(png_path), scale=2)
@@ -90,19 +104,31 @@ def plot_latent_3d(df, Z: np.ndarray, name: str, color: str = "conversion", out_
     tmp[f"{name}_2"] = Z[:, 1]
     tmp[f"{name}_3"] = Z[:, 2]
     color_col = "購入" if color == "conversion" else color
+    n_all = len(tmp)
+    n_show = min(n_all, 8000)
+    sub = tmp.sample(n=n_show, random_state=RANDOM_STATE)
     fig = px.scatter_3d(
-        tmp.sample(n=min(len(tmp), 8000), random_state=RANDOM_STATE),
+        sub,
         x=f"{name}_1",
         y=f"{name}_2",
         z=f"{name}_3",
         color=color_col,
         symbol="オファー",
-        title=f"潜在空間（3D）: {name}（色={color_col}）",
         opacity=0.7,
     )
     fig.update_layout(
+        title=dict(
+            text=(
+                f"潜在空間（3D）: {name}（色={color_col}）<br>"
+                f"<sup>全母集団 n={n_all:,} / 表示点 n={n_show:,}（ランダム）</sup>"
+            )
+        ),
         legend_title_text="凡例",
-        scene=dict(xaxis_title=f"{name}_1", yaxis_title=f"{name}_2", zaxis_title=f"{name}_3"),
+        scene=dict(
+            xaxis_title=f"{name}_1",
+            yaxis_title=f"{name}_2",
+            zaxis_title=f"{name}_3",
+        ),
     )
     save_plotly(fig, stem=f"latent3d_{name}_color_{color}")
 
@@ -140,7 +166,7 @@ def plot_silhouette_curve(curve: pd.DataFrame, path=None) -> None:
     plt.plot(curve["k"], curve["silhouette"], "o-")
     plt.xlabel("クラスタ数 k")
     plt.ylabel("シルエット係数")
-    plt.title("シルエット係数 vs クラスタ数（UMAP 3D）")
+    plt.title("シルエット係数 vs クラスタ数（UMAP 3D 上の距離・最大12k点サブサンプル）")
     from analytics.figures_jp import save_fig
 
     save_fig(path)
@@ -177,16 +203,24 @@ def plot_segment_3d(df, Z_umap3: np.ndarray, labels: np.ndarray, stem: str = "la
     tmp_seg["umap3_1"] = Z_umap3[:, 0]
     tmp_seg["umap3_2"] = Z_umap3[:, 1]
     tmp_seg["umap3_3"] = Z_umap3[:, 2]
+    n_all = len(tmp_seg)
+    n_show = min(n_all, 8000)
+    sub_seg = tmp_seg.sample(n=n_show, random_state=RANDOM_STATE)
     fig_seg = px.scatter_3d(
-        tmp_seg.sample(n=min(len(tmp_seg), 8000), random_state=RANDOM_STATE),
+        sub_seg,
         x="umap3_1",
         y="umap3_2",
         z="umap3_3",
         color="segment",
-        title="潜在空間（3D）: UMAP（色=セグメント）",
         opacity=0.7,
     )
     fig_seg.update_layout(
+        title=dict(
+            text=(
+                "潜在空間（3D）: UMAP（色=KMeansセグメント）<br>"
+                f"<sup>全母集団 n={n_all:,} / 表示点 n={n_show:,}（ランダム）・色はクラスタID</sup>"
+            )
+        ),
         legend_title_text="セグメント",
         scene=dict(xaxis_title="UMAP1", yaxis_title="UMAP2", zaxis_title="UMAP3"),
     )

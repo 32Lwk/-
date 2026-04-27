@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2026.2.7)  27 APR 2026 02:40
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2026.2.7)  27 APR 2026 02:54
  restricted system commands enabled.
 **final_report.tex
 (./final_report.tex
@@ -641,87 +641,60 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip53
 )
-(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/caption/subcaption.sty
-Package: subcaption 2023/07/28 v1.6b Sub-captions (AR)
-
-(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption.sty
-Package: caption 2023/08/05 v3.6o Customizing captions (AR)
-
-(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/caption/caption3.sty
-Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
-\caption@tempdima=\dimen187
-\captionmargin=\dimen188
-\caption@leftmargin=\dimen189
-\caption@rightmargin=\dimen190
-\caption@width=\dimen191
-\caption@indent=\dimen192
-\caption@parindent=\dimen193
-\caption@hangindent=\dimen194
-Package caption Info: Standard document class detected.
-)
-\c@caption@flags=\count299
-\c@continuedfloat=\count300
-Package caption Info: hyperref package is loaded.
-)
-Package caption Info: New subtype `subfigure' on input line 238.
-\c@subfigure=\count301
-Package caption Info: New subtype `subtable' on input line 238.
-\c@subtable=\count302
-)
-Package hyperref Info: Option `colorlinks' set `true' on input line 10.
+Package hyperref Info: Option `colorlinks' set `true' on input line 17.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 16.
-(./final_report.aux)
+(Font)              scaled to size 9.6222pt on input line 23.
+ (./final_report.aux)
 \openout1 = final_report.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 16.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 1
-6.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
+3.
 
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
+LaTeX Font Info:    ... okay on input line 23.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 16.
+(Font)              scaled to size 10.53629pt on input line 23.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 16.
+(Font)              scaled to size 10.53629pt on input line 23.
 
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count303
-\scratchdimen=\dimen195
+\scratchcounter=\count299
+\scratchdimen=\dimen187
 \scratchbox=\box71
-\nofMPsegments=\count304
-\nofMParguments=\count305
+\nofMPsegments=\count300
+\nofMParguments=\count301
 \everyMPshowfont=\toks32
-\MPscratchCnt=\count306
-\MPscratchDim=\dimen196
-\MPnumerator=\count307
-\makeMPintoPDFobject=\count308
+\MPscratchCnt=\count302
+\MPscratchDim=\dimen188
+\MPnumerator=\count303
+\makeMPintoPDFobject=\count304
 \everyMPtoPDFconversion=\toks33
 )
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
@@ -740,61 +713,59 @@ File: color.cfg 2016/01/02 v1.6 sample color configuration
 )
 Package color Info: Driver file: luatex.def on input line 149.
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 16.
+Package hyperref Info: Link coloring ON on input line 23.
  (./final_report.out) (./final_report.out)
 \@outlinefile=\write3
 
 \openout3 = final_report.out
-Package caption Info: Begin \AtBeginDocument code.
-Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 18.
+(Font)              scaled to size 16.62714pt on input line 25.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 18.
+(Font)              scaled to size 16.62714pt on input line 25.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 18.
+(Font)              scaled to size 11.54663pt on input line 25.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 18.
+(Font)              scaled to size 11.54663pt on input line 25.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 18.
+(Font)              scaled to size 7.69775pt on input line 25.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 18.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
+(Font)              scaled to size 5.77332pt on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
 
 
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
 
 
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 19.
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 19.
+(Font)              scaled to size 9.6222pt on input line 26.
 LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 19.
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 26.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 19.
+(Font)              scaled to size 9.6222pt on input line 26.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 23.
+(Font)              scaled to size 6.73553pt on input line 30.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 23.
+(Font)              scaled to size 4.8111pt on input line 30.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 41.
+(Font)              scaled to size 13.85594pt on input line 48.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 41.
+(Font)              scaled to size 13.85594pt on input line 48.
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 41.
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 41.
+(Font)              scaled to size 13.85594pt on input line 48.
 LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 41.
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 48.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 41.
+(Font)              scaled to size 13.85594pt on input line 48.
 
 (./final_report.toc
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <10.95> not available
@@ -813,295 +784,393 @@ LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 \openout4 = final_report.toc
  [2]
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <12> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 46.
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 46.
+(Font)              scaled to size 11.54663pt on input line 53.
 LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <12> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 46.
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 53.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 46.
+(Font)              scaled to size 11.54663pt on input line 53.
  [3]
-<../figures/dist_recency.png, id=185, 505.89pt x 289.08pt>
+<../figures/dist_recency.png, id=192, 505.89pt x 289.08pt>
 File: ../figures/dist_recency.png Graphic file (type png)
 <use ../figures/dist_recency.png>
-Package luatex.def Info: ../figures/dist_recency.png  used on input line 107.
-(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
-<../figures/dist_history.png, id=186, 505.89pt x 289.08pt>
+Package luatex.def Info: ../figures/dist_recency.png  used on input line 119.
+(luatex.def)             Requested size: 316.80176pt x 181.03183pt.
+<../figures/dist_history.png, id=193, 505.89pt x 289.08pt>
 File: ../figures/dist_history.png Graphic file (type png)
 <use ../figures/dist_history.png>
-Package luatex.def Info: ../figures/dist_history.png  used on input line 111.
-(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
-<../figures/box_recency_by_conversion.png, id=187, 505.89pt x 289.08pt>
+Package luatex.def Info: ../figures/dist_history.png  used on input line 126.
+(luatex.def)             Requested size: 316.80176pt x 181.03183pt.
+<../figures/box_recency_by_conversion.png, id=194, 505.89pt x 289.08pt>
 File: ../figures/box_recency_by_conversion.png Graphic file (type png)
 <use ../figures/box_recency_by_conversion.png>
 Package luatex.def Info: ../figures/box_recency_by_conversion.png  used on inpu
-t line 115.
-(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
-<../figures/box_history_by_conversion.png, id=188, 505.89pt x 289.08pt>
+t line 133.
+(luatex.def)             Requested size: 316.80176pt x 181.03183pt.
+<../figures/box_history_by_conversion.png, id=195, 505.89pt x 289.08pt>
 File: ../figures/box_history_by_conversion.png Graphic file (type png)
 <use ../figures/box_history_by_conversion.png>
 Package luatex.def Info: ../figures/box_history_by_conversion.png  used on inpu
-t line 119.
-(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
+t line 140.
+(luatex.def)             Requested size: 316.80176pt x 181.03183pt.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 128.
+(Font)              scaled to size 7.69775pt on input line 147.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 128.
+(Font)              scaled to size 5.77332pt on input line 147.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 132.
+(hyperref)                removing `math shift' on input line 151.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 132.
+(hyperref)                removing `\times' on input line 151.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 132.
+(hyperref)                removing `math shift' on input line 151.
 
-<../figures/heat_cvr_offer_x_channel.png, id=190, 505.89pt x 289.08pt>
+<../figures/heat_cvr_offer_x_channel.png, id=197, 505.89pt x 289.08pt>
 File: ../figures/heat_cvr_offer_x_channel.png Graphic file (type png)
 <use ../figures/heat_cvr_offer_x_channel.png>
 Package luatex.def Info: ../figures/heat_cvr_offer_x_channel.png  used on input
- line 137.
+ line 156.
 (luatex.def)             Requested size: 331.19934pt x 189.25835pt.
-<../figures/cvr_by_offer.png, id=192, 578.16pt x 289.08pt>
+[4] [5<../figures/dist_recency.png><../figures/dist_history.png>] [6<../figures/
+box_recency_by_conversion.png><../figures/box_history_by_conversion.png>]
+<../figures/cvr_by_offer.png, id=226, 578.16pt x 289.08pt>
 File: ../figures/cvr_by_offer.png Graphic file (type png)
 <use ../figures/cvr_by_offer.png>
-Package luatex.def Info: ../figures/cvr_by_offer.png  used on input line 153.
-(luatex.def)             Requested size: 115.20264pt x 57.59883pt.
-<../figures/cvr_by_channel.png, id=193, 578.16pt x 289.08pt>
+Package luatex.def Info: ../figures/cvr_by_offer.png  used on input line 171.
+(luatex.def)             Requested size: 259.20044pt x 129.59958pt.
+<../figures/cvr_by_channel.png, id=227, 578.16pt x 289.08pt>
 File: ../figures/cvr_by_channel.png Graphic file (type png)
 <use ../figures/cvr_by_channel.png>
-Package luatex.def Info: ../figures/cvr_by_channel.png  used on input line 157.
+Package luatex.def Info: ../figures/cvr_by_channel.png  used on input line 178.
 
-(luatex.def)             Requested size: 115.20264pt x 57.59883pt.
-<../figures/cvr_by_zip_code.png, id=194, 578.16pt x 289.08pt>
+(luatex.def)             Requested size: 259.20044pt x 129.59958pt.
+<../figures/cvr_by_zip_code.png, id=228, 578.16pt x 289.08pt>
 File: ../figures/cvr_by_zip_code.png Graphic file (type png)
 <use ../figures/cvr_by_zip_code.png>
-Package luatex.def Info: ../figures/cvr_by_zip_code.png  used on input line 161
+Package luatex.def Info: ../figures/cvr_by_zip_code.png  used on input line 185
 .
-(luatex.def)             Requested size: 115.20264pt x 57.59883pt.
-[4] [5<../figures/dist_recency.png><../figures/dist_history.png><../figures/box_
-recency_by_conversion.png><../figures/box_history_by_conversion.png><../figures/
-heat_cvr_offer_x_channel.png>]
-Overfull \hbox (35.97636pt too wide) in paragraph at lines 176--179
+(luatex.def)             Requested size: 259.20044pt x 129.59958pt.
+
+[7<../figures/heat_cvr_offer_x_channel.png><../figures/cvr_by_offer.png>]
+[8<../figures/cvr_by_channel.png><../figures/cvr_by_zip_code.png>]
+Overfull \hbox (35.97636pt too wide) in paragraph at lines 198--201
 |\JY3/mc/m/n/10.95 各 |カ |テ |ゴ |リ |特 |徴 |量 |に |つ |い |て |
 購 |入 |と |の |\JY3/mc/b/n/10.95 独 |立 |性 |の |カ |イ |二 |乗 |
 検 |定 |\JY3/mc/m/n/10.95 を |行 |い []  \TU/lmr/m/n/10.95 Benjamini--Hochb
 erg
  []
 
-<../figures/improvements/chi2_cramers_v_bar.png, id=219, 578.16pt x 289.08pt>
+<../figures/improvements/chi2_cramers_v_bar.png, id=247, 578.16pt x 289.08pt>
 File: ../figures/improvements/chi2_cramers_v_bar.png Graphic file (type png)
 <use ../figures/improvements/chi2_cramers_v_bar.png>
 Package luatex.def Info: ../figures/improvements/chi2_cramers_v_bar.png  used o
-n input line 182.
+n input line 204.
 (luatex.def)             Requested size: 270.0pt x 134.99864pt.
-<../figures/roc_logreg.png, id=220, 462.528pt x 346.896pt>
+(./generated_stats_lsi_sections.tex
+
+LaTeX Warning: Reference `fig:corr' on page 9 undefined on input line 4.
+
+<../figures/improvements/corr_numeric_detailed.png, id=248, 650.43pt x 542.025p
+t>
+File: ../figures/improvements/corr_numeric_detailed.png Graphic file (type png)
+
+<use ../figures/improvements/corr_numeric_detailed.png>
+Package luatex.def Info: ../figures/improvements/corr_numeric_detailed.png  use
+d on input line 9.
+(luatex.def)             Requested size: 331.19934pt x 276.00728pt.
+<../figures/improvements/scatter_recency_history_by_conversion.png, id=249, 578
+.16pt x 397.485pt>
+File: ../figures/improvements/scatter_recency_history_by_conversion.png Graphic
+ file (type png)
+<use ../figures/improvements/scatter_recency_history_by_conversion.png>
+Package luatex.def Info: ../figures/improvements/scatter_recency_history_by_con
+version.png  used on input line 16.
+(luatex.def)             Requested size: 316.80176pt x 217.79863pt.
+<../figures/improvements/ols_history_coefficients.png, id=250, 505.89pt x 289.0
+8pt>
+File: ../figures/improvements/ols_history_coefficients.png Graphic file (type p
+ng)
+<use ../figures/improvements/ols_history_coefficients.png>
+Package luatex.def Info: ../figures/improvements/ols_history_coefficients.png  
+used on input line 27.
+(luatex.def)             Requested size: 280.79956pt x 160.45894pt.
+[9<../figures/improvements/chi2_cramers_v_bar.png>] [10<../figures/improvements/
+corr_numeric_detailed.png><../figures/improvements/scatter_recency_history_by_co
+nversion.png>]
+
+LaTeX Warning: Reference `fig:lsi_ab' on page 11 undefined on input line 36.
+
+<../figures/improvements/ablation_base_vs_lsi_logreg.png, id=267, 578.16pt x 36
+1.35pt>
+File: ../figures/improvements/ablation_base_vs_lsi_logreg.png Graphic file (typ
+e png)
+<use ../figures/improvements/ablation_base_vs_lsi_logreg.png>
+Package luatex.def Info: ../figures/improvements/ablation_base_vs_lsi_logreg.pn
+g  used on input line 40.
+(luatex.def)             Requested size: 331.19934pt x 206.9972pt.
+)
+<../figures/roc_logreg.png, id=268, 462.528pt x 346.896pt>
 File: ../figures/roc_logreg.png Graphic file (type png)
 <use ../figures/roc_logreg.png>
-Package luatex.def Info: ../figures/roc_logreg.png  used on input line 202.
-(luatex.def)             Requested size: 172.79846pt x 129.5987pt.
-<../figures/roc_hgb.png, id=221, 462.528pt x 346.896pt>
+Package luatex.def Info: ../figures/roc_logreg.png  used on input line 227.
+(luatex.def)             Requested size: 259.20044pt x 194.40863pt.
+<../figures/roc_hgb.png, id=269, 462.528pt x 346.896pt>
 File: ../figures/roc_hgb.png Graphic file (type png)
 <use ../figures/roc_hgb.png>
-Package luatex.def Info: ../figures/roc_hgb.png  used on input line 206.
-(luatex.def)             Requested size: 172.79846pt x 129.5987pt.
-<../figures/calibration_logreg.png, id=222, 361.35pt x 361.35pt>
+Package luatex.def Info: ../figures/roc_hgb.png  used on input line 234.
+(luatex.def)             Requested size: 259.20044pt x 194.40863pt.
+<../figures/calibration_logreg.png, id=270, 361.35pt x 361.35pt>
 File: ../figures/calibration_logreg.png Graphic file (type png)
 <use ../figures/calibration_logreg.png>
 Package luatex.def Info: ../figures/calibration_logreg.png  used on input line 
-210.
-(luatex.def)             Requested size: 172.79846pt x 172.80092pt.
-<../figures/calibration_hgb.png, id=223, 361.35pt x 361.35pt>
+241.
+(luatex.def)             Requested size: 259.20044pt x 259.20139pt.
+<../figures/calibration_hgb.png, id=271, 361.35pt x 361.35pt>
 File: ../figures/calibration_hgb.png Graphic file (type png)
 <use ../figures/calibration_hgb.png>
-Package luatex.def Info: ../figures/calibration_hgb.png  used on input line 214
+Package luatex.def Info: ../figures/calibration_hgb.png  used on input line 248
 .
-(luatex.def)             Requested size: 172.79846pt x 172.80092pt.
-<../figures/improvements/pr_curve_logreg.png, id=224, 462.528pt x 346.896pt>
+(luatex.def)             Requested size: 259.20044pt x 259.20139pt.
+<../figures/improvements/pr_curve_logreg.png, id=272, 462.528pt x 346.896pt>
 File: ../figures/improvements/pr_curve_logreg.png Graphic file (type png)
 <use ../figures/improvements/pr_curve_logreg.png>
 Package luatex.def Info: ../figures/improvements/pr_curve_logreg.png  used on i
-nput line 228.
-(luatex.def)             Requested size: 172.79846pt x 129.5987pt.
-<../figures/improvements/pr_curve_hgb.png, id=225, 462.528pt x 346.896pt>
+nput line 260.
+(luatex.def)             Requested size: 259.20044pt x 194.40863pt.
+<../figures/improvements/pr_curve_hgb.png, id=273, 462.528pt x 346.896pt>
 File: ../figures/improvements/pr_curve_hgb.png Graphic file (type png)
 <use ../figures/improvements/pr_curve_hgb.png>
 Package luatex.def Info: ../figures/improvements/pr_curve_hgb.png  used on inpu
-t line 232.
-(luatex.def)             Requested size: 172.79846pt x 129.5987pt.
-[6]
-<../figures/improvements/report_dr_full_vs_holdout.png, id=234, 585.387pt x 361
+t line 267.
+(luatex.def)             Requested size: 259.20044pt x 194.40863pt.
+ [11<../figures/improvements/ols_history_coefficients.png>] [12<../figures/impro
+vements/ablation_base_vs_lsi_logreg.png><../figures/roc_logreg.png>] [13<../figu
+res/roc_hgb.png><../figures/calibration_logreg.png>] [14<../figures/calibration_
+hgb.png><../figures/improvements/pr_curve_logreg.png>]
+<../figures/improvements/report_dr_full_vs_holdout.png, id=307, 585.387pt x 361
 .35pt>
 File: ../figures/improvements/report_dr_full_vs_holdout.png Graphic file (type 
 png)
 <use ../figures/improvements/report_dr_full_vs_holdout.png>
 Package luatex.def Info: ../figures/improvements/report_dr_full_vs_holdout.png 
- used on input line 260.
+ used on input line 301.
 (luatex.def)             Requested size: 331.19934pt x 204.44434pt.
-<../figures/improvements/report_propensity_ess.png, id=235, 505.89pt x 289.08pt
+<../figures/improvements/report_propensity_ess.png, id=308, 505.89pt x 289.08pt
 >
 File: ../figures/improvements/report_propensity_ess.png Graphic file (type png)
 
 <use ../figures/improvements/report_propensity_ess.png>
 Package luatex.def Info: ../figures/improvements/report_propensity_ess.png  use
-d on input line 270.
+d on input line 312.
 (luatex.def)             Requested size: 306.0022pt x 174.86086pt.
-<../figures/improvements/dr_bootstrap_ci.png, id=236, 578.16pt x 289.08pt>
+ [15<../figures/improvements/pr_curve_hgb.png>]
+<../figures/improvements/dr_bootstrap_ci.png, id=319, 578.16pt x 289.08pt>
 File: ../figures/improvements/dr_bootstrap_ci.png Graphic file (type png)
 <use ../figures/improvements/dr_bootstrap_ci.png>
 Package luatex.def Info: ../figures/improvements/dr_bootstrap_ci.png  used on i
-nput line 280.
+nput line 323.
 (luatex.def)             Requested size: 270.0pt x 134.99864pt.
- [7]
-<../figures/improvements/policy_reco_dist_full.png, id=244, 578.16pt x 289.08pt
+ [16<../figures/improvements/report_dr_full_vs_holdout.png><../figures/improveme
+nts/report_propensity_ess.png>]
+<../figures/improvements/policy_reco_dist_full.png, id=330, 578.16pt x 289.08pt
 >
 File: ../figures/improvements/policy_reco_dist_full.png Graphic file (type png)
 
 <use ../figures/improvements/policy_reco_dist_full.png>
 Package luatex.def Info: ../figures/improvements/policy_reco_dist_full.png  use
-d on input line 306.
-(luatex.def)             Requested size: 172.79846pt x 86.39824pt.
-<../figures/improvements/profit_full_vs_oof_scatter.png, id=245, 433.62pt x 289
+d on input line 352.
+(luatex.def)             Requested size: 316.80176pt x 158.399pt.
+<../figures/improvements/profit_full_vs_oof_scatter.png, id=331, 433.62pt x 289
 .08pt>
 File: ../figures/improvements/profit_full_vs_oof_scatter.png Graphic file (type
  png)
 <use ../figures/improvements/profit_full_vs_oof_scatter.png>
 Package luatex.def Info: ../figures/improvements/profit_full_vs_oof_scatter.png
-  used on input line 310.
-(luatex.def)             Requested size: 172.79846pt x 115.19766pt.
-<../figures/improvements/policy_benchmarks_bar.png, id=246, 505.89pt x 289.08pt
+  used on input line 359.
+(luatex.def)             Requested size: 316.80176pt x 211.2119pt.
+<../figures/improvements/policy_benchmarks_bar.png, id=332, 505.89pt x 289.08pt
 >
 File: ../figures/improvements/policy_benchmarks_bar.png Graphic file (type png)
 
 <use ../figures/improvements/policy_benchmarks_bar.png>
 Package luatex.def Info: ../figures/improvements/policy_benchmarks_bar.png  use
-d on input line 314.
-(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
-<../figures/improvements/report_profit_summary_by_scenario.png, id=247, 433.62p
+d on input line 366.
+(luatex.def)             Requested size: 316.80176pt x 181.03183pt.
+<../figures/improvements/report_profit_summary_by_scenario.png, id=333, 433.62p
 t x 289.08pt>
 File: ../figures/improvements/report_profit_summary_by_scenario.png Graphic fil
 e (type png)
 <use ../figures/improvements/report_profit_summary_by_scenario.png>
 Package luatex.def Info: ../figures/improvements/report_profit_summary_by_scena
-rio.png  used on input line 318.
-(luatex.def)             Requested size: 172.79846pt x 115.19766pt.
-<../figures/improvements/decision_flow.png, id=248, 578.16pt x 158.994pt>
+rio.png  used on input line 373.
+(luatex.def)             Requested size: 316.80176pt x 211.2119pt.
+<../figures/improvements/decision_flow.png, id=334, 578.16pt x 158.994pt>
 File: ../figures/improvements/decision_flow.png Graphic file (type png)
 <use ../figures/improvements/decision_flow.png>
 Package luatex.def Info: ../figures/improvements/decision_flow.png  used on inp
-ut line 332.
-(luatex.def)             Requested size: 172.79846pt x 47.51903pt.
-<../figures/improvements/report_policy_eval_means.png, id=249, 505.89pt x 325.2
+ut line 385.
+(luatex.def)             Requested size: 316.80176pt x 87.11945pt.
+<../figures/improvements/report_policy_eval_means.png, id=335, 505.89pt x 325.2
 15pt>
 File: ../figures/improvements/report_policy_eval_means.png Graphic file (type p
 ng)
 <use ../figures/improvements/report_policy_eval_means.png>
 Package luatex.def Info: ../figures/improvements/report_policy_eval_means.png  
-used on input line 336.
-(luatex.def)             Requested size: 172.79846pt x 111.08772pt.
-<../figures/improvements/constrained_selection_summary.png, id=250, 433.62pt x 
+used on input line 392.
+(luatex.def)             Requested size: 316.80176pt x 203.66083pt.
+ [17<../figures/improvements/dr_bootstrap_ci.png>] [18<../figures/improvements/p
+olicy_reco_dist_full.png><../figures/improvements/profit_full_vs_oof_scatter.png
+>] [19<../figures/improvements/policy_benchmarks_bar.png><../figures/improvement
+s/report_profit_summary_by_scenario.png><../figures/improvements/decision_flow.p
+ng>]
+<../figures/improvements/constrained_selection_summary.png, id=367, 433.62pt x 
 289.08pt>
 File: ../figures/improvements/constrained_selection_summary.png Graphic file (t
 ype png)
 <use ../figures/improvements/constrained_selection_summary.png>
 Package luatex.def Info: ../figures/improvements/constrained_selection_summary.
-png  used on input line 352.
-(luatex.def)             Requested size: 198.0011pt x 132.00357pt.
-<../figures/improvements/latent2d_pca2_color_conversion.png, id=251, 1405.25pt 
+png  used on input line 407.
+(luatex.def)             Requested size: 233.9978pt x 155.9994pt.
+ [20<../figures/improvements/report_policy_eval_means.png><../figures/improvemen
+ts/constrained_selection_summary.png>]
+<../figures/improvements/latent2d_pca2_color_conversion.png, id=379, 1405.25pt 
 x 1003.75pt>
 File: ../figures/improvements/latent2d_pca2_color_conversion.png Graphic file (
 type png)
 <use ../figures/improvements/latent2d_pca2_color_conversion.png>
 Package luatex.def Info: ../figures/improvements/latent2d_pca2_color_conversion
-.png  used on input line 369.
-(luatex.def)             Requested size: 172.79846pt x 123.41609pt.
-<../figures/improvements/latent2d_umap2_color_conversion.png, id=252, 1405.25pt
+.png  used on input line 424.
+(luatex.def)             Requested size: 316.80176pt x 226.27817pt.
+<../figures/improvements/latent2d_umap2_color_conversion.png, id=380, 1405.25pt
  x 1003.75pt>
 File: ../figures/improvements/latent2d_umap2_color_conversion.png Graphic file 
 (type png)
 <use ../figures/improvements/latent2d_umap2_color_conversion.png>
 Package luatex.def Info: ../figures/improvements/latent2d_umap2_color_conversio
-n.png  used on input line 373.
-(luatex.def)             Requested size: 172.79846pt x 123.41609pt.
-<../figures/latent3d_umap3_color_conversion.png, id=253, 1405.25pt x 1003.75pt>
+n.png  used on input line 431.
+(luatex.def)             Requested size: 316.80176pt x 226.27817pt.
+<../figures/latent3d_umap3_color_conversion.png, id=381, 1405.25pt x 1003.75pt>
 
 File: ../figures/latent3d_umap3_color_conversion.png Graphic file (type png)
 <use ../figures/latent3d_umap3_color_conversion.png>
 Package luatex.def Info: ../figures/latent3d_umap3_color_conversion.png  used o
-n input line 377.
-(luatex.def)             Requested size: 172.79846pt x 123.41609pt.
-<../figures/improvements/latent3d_umap3_color_segment.png, id=254, 1405.25pt x 
+n input line 438.
+(luatex.def)             Requested size: 316.80176pt x 226.27817pt.
+<../figures/improvements/latent3d_umap3_color_segment.png, id=382, 1405.25pt x 
 1003.75pt>
 File: ../figures/improvements/latent3d_umap3_color_segment.png Graphic file (ty
 pe png)
 <use ../figures/improvements/latent3d_umap3_color_segment.png>
 Package luatex.def Info: ../figures/improvements/latent3d_umap3_color_segment.p
-ng  used on input line 381.
-(luatex.def)             Requested size: 172.79846pt x 123.41609pt.
-<../figures/improvements/silhouette_vs_k.png, id=255, 505.89pt x 289.08pt>
+ng  used on input line 445.
+(luatex.def)             Requested size: 316.80176pt x 226.27817pt.
+<../figures/improvements/silhouette_vs_k.png, id=383, 505.89pt x 289.08pt>
 File: ../figures/improvements/silhouette_vs_k.png Graphic file (type png)
 <use ../figures/improvements/silhouette_vs_k.png>
 Package luatex.def Info: ../figures/improvements/silhouette_vs_k.png  used on i
-nput line 393.
-(luatex.def)             Requested size: 172.79846pt x 98.74463pt.
-<../figures/improvements/segment_stability_ari.png, id=256, 361.35pt x 289.08pt
+nput line 456.
+(luatex.def)             Requested size: 316.80176pt x 181.03183pt.
+<../figures/improvements/segment_stability_ari.png, id=384, 361.35pt x 289.08pt
 >
 File: ../figures/improvements/segment_stability_ari.png Graphic file (type png)
 
 <use ../figures/improvements/segment_stability_ari.png>
 Package luatex.def Info: ../figures/improvements/segment_stability_ari.png  use
-d on input line 397.
-(luatex.def)             Requested size: 172.79846pt x 138.24072pt.
-<../figures/improvements/report_segment_mean_profit.png, id=257, 505.89pt x 289
+d on input line 463.
+(luatex.def)             Requested size: 316.80176pt x 253.44281pt.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 471.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\times' on input line 471.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 471.
+
+
+LaTeX Warning: Reference `fig:seg_treat' on page 21 undefined on input line 472
+.
+
+[21<../figures/improvements/latent2d_pca2_color_conversion.png>] [22<../figures/
+improvements/latent2d_umap2_color_conversion.png><../figures/latent3d_umap3_colo
+r_conversion.png>] [23<../figures/improvements/latent3d_umap3_color_segment.png>
+<../figures/improvements/silhouette_vs_k.png>]
+<../figures/improvements/segment_treatment_cvr_heatmap_exploratory.png, id=412,
+ 578.16pt x 289.08pt>
+File: ../figures/improvements/segment_treatment_cvr_heatmap_exploratory.png Gra
+phic file (type png)
+<use ../figures/improvements/segment_treatment_cvr_heatmap_exploratory.png>
+Package luatex.def Info: ../figures/improvements/segment_treatment_cvr_heatmap_
+exploratory.png  used on input line 477.
+(luatex.def)             Requested size: 331.19934pt x 165.59775pt.
+<../figures/improvements/report_segment_mean_profit.png, id=413, 505.89pt x 289
 .08pt>
 File: ../figures/improvements/report_segment_mean_profit.png Graphic file (type
  png)
 <use ../figures/improvements/report_segment_mean_profit.png>
 Package luatex.def Info: ../figures/improvements/report_segment_mean_profit.png
-  used on input line 408.
+  used on input line 484.
 (luatex.def)             Requested size: 270.0pt x 154.28795pt.
- [8] (../artifacts/tables/ab_design.tex)
-(../artifacts/tables/governance_ethics.tex) [9]
-(../artifacts/tables/monitoring_summary.tex) [10] [11<../figures/cvr_by_offer.pn
-g><../figures/cvr_by_channel.png><../figures/cvr_by_zip_code.png><../figures/imp
-rovements/chi2_cramers_v_bar.png>] [12<../figures/roc_logreg.png><../figures/roc
-_hgb.png><../figures/calibration_logreg.png><../figures/calibration_hgb.png><../
-figures/improvements/pr_curve_logreg.png><../figures/improvements/pr_curve_hgb.p
-ng>] [13<../figures/improvements/report_dr_full_vs_holdout.png><../figures/impro
-vements/report_propensity_ess.png>] [14<../figures/improvements/dr_bootstrap_ci.
-png><../figures/improvements/policy_reco_dist_full.png><../figures/improvements/
-profit_full_vs_oof_scatter.png><../figures/improvements/policy_benchmarks_bar.pn
-g><../figures/improvements/report_profit_summary_by_scenario.png>]
-[15<../figures/improvements/decision_flow.png><../figures/improvements/report_po
-licy_eval_means.png><../figures/improvements/constrained_selection_summary.png>] [16<../figures/improvements/latent2d_pca2_color_conversion.png><../figures/improvements/latent2d_umap2_color_conversion.png><../figures/latent3d_umap3_color_conversion.png><../figures/improvements/latent3d_umap3_color_segment.png><../figures/improvements/silhouette_vs_k.png><../figures/improvements/segment_stability_ari.png>] [17<../figures/improvements/report_segment_mean_profit.png>]
-(./final_report.aux)
+
+(../artifacts/tables/ab_design.tex) (../artifacts/tables/governance_ethics.tex
+[24<../figures/improvements/segment_stability_ari.png>] [25<../figures/improveme
+nts/segment_treatment_cvr_heatmap_exploratory.png><../figures/improvements/repor
+t_segment_mean_profit.png>]) (../artifacts/tables/monitoring_summary.tex)
+[26] [27] (./final_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
 
 
+LaTeX Warning: There were undefined references.
+
+
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
-Package rerunfilecheck Info: File `final_report.out' has not changed.
-(rerunfilecheck)             Checksum: 66BD4DE5B28B85AC2D358B558FA62703;4237.
+
+Package rerunfilecheck Warning: File `final_report.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `final_report.out':
+(rerunfilecheck)             Before: 66BD4DE5B28B85AC2D358B558FA62703;4237
+(rerunfilecheck)             After:  A61357331BAFB94050EB90CECF473BD0;5111.
 )
 
 Here is how much of LuaTeX's memory you used:
- 13750 strings out of 476497
- 244629,1977958 words of node,token memory allocated
- 1152 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 247 attribute, 55 glue_sp
-ec, 34 attribute_list, 1 write, 13 user_defined nodes
-   avail lists: 1:43,2:66204,3:755,4:677,5:210,6:141,7:5016,8:59,9:2318,10:20,11
-:35
- 35287 multiletter control sequences out of 65536+600000
+ 12447 strings out of 476497
+ 156557,1977958 words of node,token memory allocated
+ 1392 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 357 attribute, 55 glue_sp
+ec, 44 attribute_list, 1 write, 13 user_defined nodes
+   avail lists: 1:42,2:37882,3:515,4:430,5:210,6:69,7:4524,8:60,9:1907,10:18,11:
+34
+ 33934 multiletter control sequences out of 65536+600000
  91 fonts using 54768103 bytes
- 110i,12n,128p,1863b,801s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 110i,12n,115p,1863b,423s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+warning  (pdf backend): unreferenced destination with name 'equation.6.1'
+
+warning  (pdf backend): unreferenced destination with name 'equation.7.2'
+
+warning  (pdf backend): unreferenced destination with name 'subsection.7.3'
+
+warning  (pdf backend): unreferenced destination with name 'subsection.7.2'
+
+warning  (pdf backend): unreferenced destination with name 'subsection.6.2'
+
+warning  (pdf backend): unreferenced destination with name 'subsection.6.1'
 <//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
 an12-bold.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/p
 ublic/lm/lmmono10-regular.otf><//?/c:/users/yutok/appdata/local/programs/miktex/
@@ -1122,9 +1191,9 @@ ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/yutok/AppData/Local/Programs/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/yutok/AppData/Local/Progr
 ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/yutok/AppData/Loca
 l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on final_report.pdf (17 pages, 2280520 bytes).
+Output written on final_report.pdf (27 pages, 3070178 bytes).
 
-PDF statistics: 438 PDF objects out of 1000 (max. 8388607)
- 89 named destinations out of 1000 (max. 131072)
+PDF statistics: 536 PDF objects out of 1000 (max. 8388607)
+ 134 named destinations out of 1000 (max. 131072)
  241 words of extra memory for PDF output out of 10000 (max. 100000000)
 
