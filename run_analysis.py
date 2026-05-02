@@ -5,9 +5,10 @@
   cd プロジェクトルート
   python run_analysis.py
 
-LuaLaTeX（任意）:
+LuaLaTeX（任意・プロジェクトルートにいるとき）:
   cd latex
   latexmk -lualatex final_report.tex
+  # またはルートで: scripts\\compile_final_report.ps1（Windows）
 """
 
 from __future__ import annotations

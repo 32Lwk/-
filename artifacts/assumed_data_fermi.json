@@ -1,0 +1,67 @@
+{
+  "gross_margin": 0.32,
+  "revenue_fraction_of_history": 0.08333333333333333,
+  "discount_offer_redemption": 0.25,
+  "bogo_effective_redemption": 0.38,
+  "contact_floor_web": 5.0,
+  "contact_floor_multichannel": 29.0,
+  "contact_floor_phone": 92.0,
+  "contact_rate_vs_history": 0.006,
+  "impressions_lambda": 3.2,
+  "demand_cv": 0.18,
+  "promo_demand_multiplier_bogo": 1.35,
+  "promo_demand_multiplier_discount": 1.22,
+  "capacity_safety_factor": 1.12,
+  "claims_rate_baseline": 0.015,
+  "claims_increment_discount": 0.004,
+  "claims_increment_bogo": 0.007,
+  "fatigue_decay_per_contact": 0.04,
+  "panel_horizon": 24,
+  "notes": "history は円建ての年間購買額プロキシとして扱う。BOGOの0.38は「第2品目の辺際原価＋オペ損失」の目安。 接触コストの床は estimate_jpy_contact_costs_fermi() のフェルミ推定に従う。",
+  "contact_cost_fermi_estimation": {
+    "currency": "JPY",
+    "web_floor_jpy": {
+      "marginal_email_per_send_jpy_range": [
+        0.5,
+        2.0
+      ],
+      "allocated_fixed_per_touch_jpy_range": [
+        2.0,
+        10.0
+      ],
+      "formula_note": "geom_mean(marginal)+geom_mean(alloc)/2, floor_cap=5JPY",
+      "chosen_floor_jpy": 5.0
+    },
+    "multichannel_floor_jpy": {
+      "web_component_jpy": 5.0,
+      "sms_push_increment_jpy_range": [
+        18.0,
+        30.0
+      ],
+      "sms_increment_mid_jpy": 24.0,
+      "chosen_floor_jpy": 29.0
+    },
+    "phone_floor_jpy": {
+      "loaded_hourly_cost_jpy_range": [
+        2000.0,
+        2800.0
+      ],
+      "effective_touches_per_hour_range": [
+        20.0,
+        32.0
+      ],
+      "mid_hourly_jpy": 2400.0,
+      "mid_touches_per_hour": 26.0,
+      "ratio_raw": 92.31,
+      "chosen_floor_jpy": 92.0
+    },
+    "contact_rate_vs_history": {
+      "interpretation": "incremental_ops_vs_annual_spend_proxy",
+      "range": [
+        0.004,
+        0.008
+      ],
+      "chosen": 0.006
+    }
+  }
+}

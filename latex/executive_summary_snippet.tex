@@ -1,0 +1,15 @@
+% 経営者向け要約（数値はホールドアウト・artifacts ベース。必要に応じ再計算）
+\begin{quote}
+\small
+\setlength{\parskip}{0.35em}
+\begin{itemize}
+  \item \textbf{推奨ターゲット（スコア層）}：購入確率モデル（ロジスティック）でランキングし、\textbf{上位 5〜10\,\%}を優先候補とする。ホールドアウト上で当該層の実測CVRは約 \textbf{27--28\,\%}（全体ベースライン約 \textbf{14.7\,\%}、\texttt{artifacts/topk\_precision\_recall\_logreg.csv}）。
+  \item \textbf{推奨オファー／チャネル（オフライン・参考）}：期待利益の代理指標では、\textbf{\texttt{No Offer / Web}}（インセンティブを掛けない・Web接触）が最頻となるシナリオが多い。条件付きCVRが高く見える割引系も、\textbf{コストを差し引くと利益では劣後}しうる（本文 \texttt{policy\_reco\_dist} 等）。\textbf{コスト係数の感度}は表 \ref{tab:cost_sensitivity_modes}：割引コストを極端に下げた設定では \texttt{Discount / Web} が最頻になりうる一方、高コスト設定では \texttt{No Offer / Web} が支配的となり、\textbf{推奨処置が入れ替わる}。なお本データには\textbf{メッセージ文面・接触頻度・配信タイミング}が無く、施策はオファー$\times$チャネルの離散処置として評価している（第\ref{sec:target_kpi}節）。
+  \item \textbf{次のパイロット（仮説・規模・成功指標）}：
+  \begin{itemize}
+    \item \textbf{仮説}：スコア上位層では、\textbf{軽い訴求（無オファー・低コストチャネル）}でも、重い割引と\textbf{購入率・利益proxy}で大差がつかない（または割引の\textbf{増分}が小さい）。
+    \item \textbf{母数の目安}：購入率差 MDE 1\,pt・検定力 0.8 なら片群約 \textbf{2.0\,万}・合計約 \textbf{4.0\,万}（表 \ref{tab:ab}）。上位 10\,\% だけを母集団に絞る設計なら、必要人数は再見積もり。
+    \item \textbf{成功指標}：\textbf{購入率}（主アウトカム）、\textbf{期待利益 proxy}（\texttt{history} を\textbf{円}の売上 proxy とみなす）、\textbf{接触コスト}、\textbf{副次}として試験後\textbf{90日}累積売上（LTV proxy）と\textbf{90日以内再購入}を事前登録。運用面では \textbf{校正（Brier/ECE）}・\textbf{傾向 ESS} の閾値内維持（本編の閾値例参照）。
+  \end{itemize}
+\end{itemize}
+\end{quote}

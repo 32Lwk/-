@@ -282,6 +282,13 @@ def run_pipeline() -> None:
 
     write_latex_bundle()
 
+    try:
+        from analytics.assumed_supplementary_analysis import main as assumed_supplementary_main
+
+        assumed_supplementary_main()
+    except Exception as exc:
+        print("assumed_supplementary_analysis skipped:", exc)
+
     print("Done. Outputs:")
     print(f"- Report: {ART_DIR.parent / 'final_report.md'}")
     print(f"- LaTeX: {ART_DIR.parent / 'latex' / 'final_report.tex'}")

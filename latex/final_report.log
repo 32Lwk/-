@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2026.2.7)  27 APR 2026 02:54
+This is LuaHBTeX, Version 1.17.1 (MiKTeX 24.1) (format=lualatex 2026.2.7)  2 MAY 2026 22:41
  restricted system commands enabled.
 **final_report.tex
 (./final_report.tex
@@ -641,61 +641,121 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip53
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 17.
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: luatex.def on input line 274.
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+) (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.sty
+\lst@mode=\count299
+\lst@gtempboxa=\box71
+\lst@token=\toks32
+\lst@length=\count300
+\lst@currlwidth=\dimen187
+\lst@column=\count301
+\lst@pos=\count302
+\lst@lostspace=\dimen188
+\lst@width=\dimen189
+\lst@newlines=\count303
+\lst@lineno=\count304
+\lst@maxwidth=\dimen190
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count305
+\lst@skipnumbers=\count306
+\lst@framebox=\box72
+)
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexja/patches/lltjp
+-listings.sty
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbase-
+cctb.sty
+Package: luatexbase-cctb 2015/10/04 v1.3 luatexbase interface to LuaTeX (legacy
+ subpackage) 
+)
+\ltj@lst@japanese@min=\count307
+\CatcodeTableLTJlistings=\catcodetable17
+\ltj@lst@frame@lslimit@h=\dimen191
+\ltj@lst@frame@lslimit@d=\dimen192
+\@temptokenb=\toks33
+
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\lst@WFtoken=\toks34
+\lst@WF=\write3
+))
+Package hyperref Info: Option `colorlinks' set `true' on input line 32.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 23.
- (./final_report.aux)
+(Font)              scaled to size 9.6222pt on input line 38.
+
+(./final_report.aux)
 \openout1 = final_report.aux
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 23.
-LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 2
-3.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 38.
+LaTeX Font Info:    Trying to load font information for TS1+cmr on input line 3
+8.
 
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/base/ts1cmr.fd
 File: ts1cmr.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 23.
-LaTeX Font Info:    ... okay on input line 23.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for TU/lmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for JY3/mc/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for JT3/mc/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 38.
+LaTeX Font Info:    ... okay on input line 38.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 23.
+(Font)              scaled to size 10.53629pt on input line 38.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 10.53629pt on input line 23.
+(Font)              scaled to size 10.53629pt on input line 38.
 
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/context/base/mkii/supp-pdf.mk
 ii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count299
-\scratchdimen=\dimen187
-\scratchbox=\box71
-\nofMPsegments=\count300
-\nofMParguments=\count301
-\everyMPshowfont=\toks32
-\MPscratchCnt=\count302
-\MPscratchDim=\dimen188
-\MPnumerator=\count303
-\makeMPintoPDFobject=\count304
-\everyMPtoPDFconversion=\toks33
+\scratchcounter=\count308
+\scratchdimen=\dimen193
+\scratchbox=\box73
+\nofMPsegments=\count309
+\nofMParguments=\count310
+\everyMPshowfont=\toks35
+\MPscratchCnt=\count311
+\MPscratchDim=\dimen194
+\MPnumerator=\count312
+\makeMPintoPDFobject=\count313
+\everyMPtoPDFconversion=\toks36
 )
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/epstopdf-pkg/epstopdf-b
 ase.sty
@@ -706,68 +766,69 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/00miktex/epstopdf-sys.c
 fg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
-)) (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics/color.sty
-Package: color 2022/01/06 v1.3d Standard LaTeX Color (DPC)
-(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics-cfg/color.cfg
-File: color.cfg 2016/01/02 v1.6 sample color configuration
-)
-Package color Info: Driver file: luatex.def on input line 149.
-(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/graphics/mathcolor.ltx))
-Package hyperref Info: Link coloring ON on input line 23.
+))
+Package hyperref Info: Link coloring ON on input line 38.
  (./final_report.out) (./final_report.out)
-\@outlinefile=\write3
+\@outlinefile=\write4
 
-\openout3 = final_report.out
+\openout4 = final_report.out
+\c@lstlisting=\count314
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 25.
+(Font)              scaled to size 16.62714pt on input line 40.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 16.62714pt on input line 25.
+(Font)              scaled to size 16.62714pt on input line 40.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 25.
+(Font)              scaled to size 11.54663pt on input line 40.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 25.
+(Font)              scaled to size 11.54663pt on input line 40.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 25.
+(Font)              scaled to size 7.69775pt on input line 40.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 25.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 25.
+(Font)              scaled to size 5.77332pt on input line 40.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 40.
 
 
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 25.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 40.
 
 
 (C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <10> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 26.
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 41.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 26.
+(Font)              scaled to size 9.6222pt on input line 41.
 LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <10> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 26.
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 41.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 9.6222pt on input line 26.
+(Font)              scaled to size 9.6222pt on input line 41.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 6.73553pt on input line 30.
+(Font)              scaled to size 6.73553pt on input line 45.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 4.8111pt on input line 30.
+(Font)              scaled to size 4.8111pt on input line 45.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 48.
+(Font)              scaled to size 13.85594pt on input line 69.
 LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 48.
+(Font)              scaled to size 13.85594pt on input line 69.
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 48.
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 48.
+(Font)              scaled to size 13.85594pt on input line 69.
 LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <14.4> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 48.
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 69.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 13.85594pt on input line 48.
+(Font)              scaled to size 13.85594pt on input line 69.
 
-(./final_report.toc
+(./executive_summary_snippet.tex
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 7.
+ [1
+
+{C:/Users/yutok/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]) (./final_re
+port.toc
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <10.95> not available
 (Font)              Font shape `JT3/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
@@ -776,107 +837,114 @@ LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <10.95> not available
 (Font)              Font shape `JY3/gt/m/n' tried instead on input line 1.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
 (Font)              scaled to size 10.53629pt on input line 1.
- [1
+ [2] [3])
+\tf@toc=\write5
 
-{C:/Users/yutok/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
-\tf@toc=\write4
-
-\openout4 = final_report.toc
- [2]
+\openout5 = final_report.toc
+ [4]
 LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <12> not available
-(Font)              Font shape `JT3/gt/m/n' tried instead on input line 53.
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 53.
+(Font)              scaled to size 11.54663pt on input line 79.
 LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <12> not available
-(Font)              Font shape `JY3/gt/m/n' tried instead on input line 53.
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 79.
 LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
-(Font)              scaled to size 11.54663pt on input line 53.
- [3]
-<../figures/dist_recency.png, id=192, 505.89pt x 289.08pt>
+(Font)              scaled to size 11.54663pt on input line 79.
+
+(./data_overview_snippet.tex) (./data_sample_table.tex) [5]
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10.95> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 107.
+ [6]
+Overfull \hbox (14.40088pt too wide) in paragraph at lines 136--149
+ [][][][] 
+ []
+
+[7] (./recommended_target_definition.tex [8]
+(./generated_pilot_cohort_profile.tex)) [9]
+<../figures/dist_recency.png, id=397, 505.89pt x 289.08pt>
 File: ../figures/dist_recency.png Graphic file (type png)
 <use ../figures/dist_recency.png>
-Package luatex.def Info: ../figures/dist_recency.png  used on input line 119.
+Package luatex.def Info: ../figures/dist_recency.png  used on input line 232.
 (luatex.def)             Requested size: 316.80176pt x 181.03183pt.
-<../figures/dist_history.png, id=193, 505.89pt x 289.08pt>
+ [10]
+<../figures/dist_history.png, id=407, 505.89pt x 289.08pt>
 File: ../figures/dist_history.png Graphic file (type png)
 <use ../figures/dist_history.png>
-Package luatex.def Info: ../figures/dist_history.png  used on input line 126.
+Package luatex.def Info: ../figures/dist_history.png  used on input line 239.
 (luatex.def)             Requested size: 316.80176pt x 181.03183pt.
-<../figures/box_recency_by_conversion.png, id=194, 505.89pt x 289.08pt>
+<../figures/box_recency_by_conversion.png, id=408, 505.89pt x 289.08pt>
 File: ../figures/box_recency_by_conversion.png Graphic file (type png)
 <use ../figures/box_recency_by_conversion.png>
 Package luatex.def Info: ../figures/box_recency_by_conversion.png  used on inpu
-t line 133.
+t line 246.
 (luatex.def)             Requested size: 316.80176pt x 181.03183pt.
-<../figures/box_history_by_conversion.png, id=195, 505.89pt x 289.08pt>
+<../figures/box_history_by_conversion.png, id=409, 505.89pt x 289.08pt>
 File: ../figures/box_history_by_conversion.png Graphic file (type png)
 <use ../figures/box_history_by_conversion.png>
 Package luatex.def Info: ../figures/box_history_by_conversion.png  used on inpu
-t line 140.
+t line 253.
 (luatex.def)             Requested size: 316.80176pt x 181.03183pt.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 7.69775pt on input line 147.
+(Font)              scaled to size 7.69775pt on input line 260.
 LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
-(Font)              scaled to size 5.77332pt on input line 147.
+(Font)              scaled to size 5.77332pt on input line 260.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 151.
+(hyperref)                removing `math shift' on input line 264.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 151.
+(hyperref)                removing `\times' on input line 264.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 151.
+(hyperref)                removing `math shift' on input line 264.
 
-<../figures/heat_cvr_offer_x_channel.png, id=197, 505.89pt x 289.08pt>
+<../figures/heat_cvr_offer_x_channel.png, id=411, 505.89pt x 289.08pt>
 File: ../figures/heat_cvr_offer_x_channel.png Graphic file (type png)
 <use ../figures/heat_cvr_offer_x_channel.png>
 Package luatex.def Info: ../figures/heat_cvr_offer_x_channel.png  used on input
- line 156.
+ line 269.
 (luatex.def)             Requested size: 331.19934pt x 189.25835pt.
-[4] [5<../figures/dist_recency.png><../figures/dist_history.png>] [6<../figures/
-box_recency_by_conversion.png><../figures/box_history_by_conversion.png>]
-<../figures/cvr_by_offer.png, id=226, 578.16pt x 289.08pt>
+[11<../figures/dist_recency.png><../figures/dist_history.png>] [12<../figures/bo
+x_recency_by_conversion.png><../figures/box_history_by_conversion.png>]
+<../figures/cvr_by_offer.png, id=433, 578.16pt x 289.08pt>
 File: ../figures/cvr_by_offer.png Graphic file (type png)
 <use ../figures/cvr_by_offer.png>
-Package luatex.def Info: ../figures/cvr_by_offer.png  used on input line 171.
+Package luatex.def Info: ../figures/cvr_by_offer.png  used on input line 284.
 (luatex.def)             Requested size: 259.20044pt x 129.59958pt.
-<../figures/cvr_by_channel.png, id=227, 578.16pt x 289.08pt>
+<../figures/cvr_by_channel.png, id=434, 578.16pt x 289.08pt>
 File: ../figures/cvr_by_channel.png Graphic file (type png)
 <use ../figures/cvr_by_channel.png>
-Package luatex.def Info: ../figures/cvr_by_channel.png  used on input line 178.
+Package luatex.def Info: ../figures/cvr_by_channel.png  used on input line 291.
 
 (luatex.def)             Requested size: 259.20044pt x 129.59958pt.
-<../figures/cvr_by_zip_code.png, id=228, 578.16pt x 289.08pt>
+<../figures/cvr_by_zip_code.png, id=435, 578.16pt x 289.08pt>
 File: ../figures/cvr_by_zip_code.png Graphic file (type png)
 <use ../figures/cvr_by_zip_code.png>
-Package luatex.def Info: ../figures/cvr_by_zip_code.png  used on input line 185
+Package luatex.def Info: ../figures/cvr_by_zip_code.png  used on input line 298
 .
 (luatex.def)             Requested size: 259.20044pt x 129.59958pt.
 
-[7<../figures/heat_cvr_offer_x_channel.png><../figures/cvr_by_offer.png>]
-[8<../figures/cvr_by_channel.png><../figures/cvr_by_zip_code.png>]
-Overfull \hbox (35.97636pt too wide) in paragraph at lines 198--201
+[13<../figures/heat_cvr_offer_x_channel.png><../figures/cvr_by_offer.png>]
+[14<../figures/cvr_by_channel.png><../figures/cvr_by_zip_code.png>]
+Overfull \hbox (35.97636pt too wide) in paragraph at lines 311--314
 |\JY3/mc/m/n/10.95 各 |カ |テ |ゴ |リ |特 |徴 |量 |に |つ |い |て |
 購 |入 |と |の |\JY3/mc/b/n/10.95 独 |立 |性 |の |カ |イ |二 |乗 |
 検 |定 |\JY3/mc/m/n/10.95 を |行 |い []  \TU/lmr/m/n/10.95 Benjamini--Hochb
 erg
  []
 
-<../figures/improvements/chi2_cramers_v_bar.png, id=247, 578.16pt x 289.08pt>
+<../figures/improvements/chi2_cramers_v_bar.png, id=454, 578.16pt x 289.08pt>
 File: ../figures/improvements/chi2_cramers_v_bar.png Graphic file (type png)
 <use ../figures/improvements/chi2_cramers_v_bar.png>
 Package luatex.def Info: ../figures/improvements/chi2_cramers_v_bar.png  used o
-n input line 204.
+n input line 317.
 (luatex.def)             Requested size: 270.0pt x 134.99864pt.
-(./generated_stats_lsi_sections.tex
-
-LaTeX Warning: Reference `fig:corr' on page 9 undefined on input line 4.
-
-<../figures/improvements/corr_numeric_detailed.png, id=248, 650.43pt x 542.025p
+(./generated_stats_lsi_sections.tex [15<../figures/improvements/chi2_cramers_v_b
+ar.png>]
+<../figures/improvements/corr_numeric_detailed.png, id=464, 650.43pt x 542.025p
 t>
 File: ../figures/improvements/corr_numeric_detailed.png Graphic file (type png)
 
@@ -884,7 +952,7 @@ File: ../figures/improvements/corr_numeric_detailed.png Graphic file (type png)
 Package luatex.def Info: ../figures/improvements/corr_numeric_detailed.png  use
 d on input line 9.
 (luatex.def)             Requested size: 331.19934pt x 276.00728pt.
-<../figures/improvements/scatter_recency_history_by_conversion.png, id=249, 578
+<../figures/improvements/scatter_recency_history_by_conversion.png, id=465, 578
 .16pt x 397.485pt>
 File: ../figures/improvements/scatter_recency_history_by_conversion.png Graphic
  file (type png)
@@ -892,7 +960,7 @@ File: ../figures/improvements/scatter_recency_history_by_conversion.png Graphic
 Package luatex.def Info: ../figures/improvements/scatter_recency_history_by_con
 version.png  used on input line 16.
 (luatex.def)             Requested size: 316.80176pt x 217.79863pt.
-<../figures/improvements/ols_history_coefficients.png, id=250, 505.89pt x 289.0
+<../figures/improvements/ols_history_coefficients.png, id=466, 505.89pt x 289.0
 8pt>
 File: ../figures/improvements/ols_history_coefficients.png Graphic file (type p
 ng)
@@ -900,13 +968,7 @@ ng)
 Package luatex.def Info: ../figures/improvements/ols_history_coefficients.png  
 used on input line 27.
 (luatex.def)             Requested size: 280.79956pt x 160.45894pt.
-[9<../figures/improvements/chi2_cramers_v_bar.png>] [10<../figures/improvements/
-corr_numeric_detailed.png><../figures/improvements/scatter_recency_history_by_co
-nversion.png>]
-
-LaTeX Warning: Reference `fig:lsi_ab' on page 11 undefined on input line 36.
-
-<../figures/improvements/ablation_base_vs_lsi_logreg.png, id=267, 578.16pt x 36
+<../figures/improvements/ablation_base_vs_lsi_logreg.png, id=468, 578.16pt x 36
 1.35pt>
 File: ../figures/improvements/ablation_base_vs_lsi_logreg.png Graphic file (typ
 e png)
@@ -914,286 +976,1492 @@ e png)
 Package luatex.def Info: ../figures/improvements/ablation_base_vs_lsi_logreg.pn
 g  used on input line 40.
 (luatex.def)             Requested size: 331.19934pt x 206.9972pt.
-)
-<../figures/roc_logreg.png, id=268, 462.528pt x 346.896pt>
+ [16<../figures/improvements/corr_numeric_detailed.png>] [17<../figures/improvem
+ents/scatter_recency_history_by_conversion.png><../figures/improvements/ols_hist
+ory_coefficients.png>])
+<../figures/roc_logreg.png, id=484, 462.528pt x 346.896pt>
 File: ../figures/roc_logreg.png Graphic file (type png)
 <use ../figures/roc_logreg.png>
-Package luatex.def Info: ../figures/roc_logreg.png  used on input line 227.
+Package luatex.def Info: ../figures/roc_logreg.png  used on input line 349.
 (luatex.def)             Requested size: 259.20044pt x 194.40863pt.
-<../figures/roc_hgb.png, id=269, 462.528pt x 346.896pt>
+<../figures/roc_hgb.png, id=485, 462.528pt x 346.896pt>
 File: ../figures/roc_hgb.png Graphic file (type png)
 <use ../figures/roc_hgb.png>
-Package luatex.def Info: ../figures/roc_hgb.png  used on input line 234.
+Package luatex.def Info: ../figures/roc_hgb.png  used on input line 356.
 (luatex.def)             Requested size: 259.20044pt x 194.40863pt.
-<../figures/calibration_logreg.png, id=270, 361.35pt x 361.35pt>
+<../figures/calibration_logreg.png, id=486, 361.35pt x 361.35pt>
 File: ../figures/calibration_logreg.png Graphic file (type png)
 <use ../figures/calibration_logreg.png>
 Package luatex.def Info: ../figures/calibration_logreg.png  used on input line 
-241.
+363.
 (luatex.def)             Requested size: 259.20044pt x 259.20139pt.
-<../figures/calibration_hgb.png, id=271, 361.35pt x 361.35pt>
+<../figures/calibration_hgb.png, id=487, 361.35pt x 361.35pt>
 File: ../figures/calibration_hgb.png Graphic file (type png)
 <use ../figures/calibration_hgb.png>
-Package luatex.def Info: ../figures/calibration_hgb.png  used on input line 248
+Package luatex.def Info: ../figures/calibration_hgb.png  used on input line 370
 .
 (luatex.def)             Requested size: 259.20044pt x 259.20139pt.
-<../figures/improvements/pr_curve_logreg.png, id=272, 462.528pt x 346.896pt>
+<../figures/improvements/pr_curve_logreg.png, id=488, 462.528pt x 346.896pt>
 File: ../figures/improvements/pr_curve_logreg.png Graphic file (type png)
 <use ../figures/improvements/pr_curve_logreg.png>
 Package luatex.def Info: ../figures/improvements/pr_curve_logreg.png  used on i
-nput line 260.
+nput line 384.
 (luatex.def)             Requested size: 259.20044pt x 194.40863pt.
-<../figures/improvements/pr_curve_hgb.png, id=273, 462.528pt x 346.896pt>
+<../figures/improvements/pr_curve_hgb.png, id=489, 462.528pt x 346.896pt>
 File: ../figures/improvements/pr_curve_hgb.png Graphic file (type png)
 <use ../figures/improvements/pr_curve_hgb.png>
 Package luatex.def Info: ../figures/improvements/pr_curve_hgb.png  used on inpu
-t line 267.
+t line 391.
 (luatex.def)             Requested size: 259.20044pt x 194.40863pt.
- [11<../figures/improvements/ols_history_coefficients.png>] [12<../figures/impro
-vements/ablation_base_vs_lsi_logreg.png><../figures/roc_logreg.png>] [13<../figu
-res/roc_hgb.png><../figures/calibration_logreg.png>] [14<../figures/calibration_
-hgb.png><../figures/improvements/pr_curve_logreg.png>]
-<../figures/improvements/report_dr_full_vs_holdout.png, id=307, 585.387pt x 361
+ [18<../figures/improvements/ablation_base_vs_lsi_logreg.png>] [19<../figures/ro
+c_logreg.png><../figures/roc_hgb.png>]
+[20<../figures/calibration_logreg.png><../figures/calibration_hgb.png>]
+[21<../figures/improvements/pr_curve_logreg.png><../figures/improvements/pr_curv
+e_hgb.png>]
+<../figures/improvements/report_dr_full_vs_holdout.png, id=526, 585.387pt x 361
 .35pt>
 File: ../figures/improvements/report_dr_full_vs_holdout.png Graphic file (type 
 png)
 <use ../figures/improvements/report_dr_full_vs_holdout.png>
 Package luatex.def Info: ../figures/improvements/report_dr_full_vs_holdout.png 
- used on input line 301.
+ used on input line 432.
 (luatex.def)             Requested size: 331.19934pt x 204.44434pt.
-<../figures/improvements/report_propensity_ess.png, id=308, 505.89pt x 289.08pt
+<../figures/improvements/report_propensity_ess.png, id=527, 505.89pt x 289.08pt
 >
 File: ../figures/improvements/report_propensity_ess.png Graphic file (type png)
 
 <use ../figures/improvements/report_propensity_ess.png>
 Package luatex.def Info: ../figures/improvements/report_propensity_ess.png  use
-d on input line 312.
+d on input line 443.
 (luatex.def)             Requested size: 306.0022pt x 174.86086pt.
- [15<../figures/improvements/pr_curve_hgb.png>]
-<../figures/improvements/dr_bootstrap_ci.png, id=319, 578.16pt x 289.08pt>
+<../figures/improvements/dr_bootstrap_ci.png, id=528, 578.16pt x 289.08pt>
 File: ../figures/improvements/dr_bootstrap_ci.png Graphic file (type png)
 <use ../figures/improvements/dr_bootstrap_ci.png>
 Package luatex.def Info: ../figures/improvements/dr_bootstrap_ci.png  used on i
-nput line 323.
+nput line 454.
 (luatex.def)             Requested size: 270.0pt x 134.99864pt.
- [16<../figures/improvements/report_dr_full_vs_holdout.png><../figures/improveme
-nts/report_propensity_ess.png>]
-<../figures/improvements/policy_reco_dist_full.png, id=330, 578.16pt x 289.08pt
+ [22] [23<../figures/improvements/report_dr_full_vs_holdout.png><../figures/impr
+ovements/report_propensity_ess.png>] [24<../figures/improvements/dr_bootstrap_ci
+.png>] (./scenario_cost_sensitivity.tex
+Overfull \hbox (19.10782pt too wide) in paragraph at lines 7--19
+ [][][][] 
+ []
+
+LaTeX Font Info:    Font shape `JT3/mc/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 19.
+LaTeX Font Info:    Font shape `JY3/mc/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 19.
+LaTeX Font Info:    Font shape `JT3/mc/b/n' in size <9> not available
+(Font)              Font shape `JT3/gt/m/n' tried instead on input line 19.
+LaTeX Font Info:    Font shape `JT3/gt/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 19.
+LaTeX Font Info:    Font shape `JY3/mc/b/n' in size <9> not available
+(Font)              Font shape `JY3/gt/m/n' tried instead on input line 19.
+LaTeX Font Info:    Font shape `JY3/gt/m/n' will be
+(Font)              scaled to size 8.65997pt on input line 19.
+)
+<../figures/improvements/policy_reco_dist_full.png, id=564, 578.16pt x 289.08pt
 >
 File: ../figures/improvements/policy_reco_dist_full.png Graphic file (type png)
 
 <use ../figures/improvements/policy_reco_dist_full.png>
 Package luatex.def Info: ../figures/improvements/policy_reco_dist_full.png  use
-d on input line 352.
+d on input line 503.
 (luatex.def)             Requested size: 316.80176pt x 158.399pt.
-<../figures/improvements/profit_full_vs_oof_scatter.png, id=331, 433.62pt x 289
+<../figures/improvements/profit_full_vs_oof_scatter.png, id=565, 433.62pt x 289
 .08pt>
 File: ../figures/improvements/profit_full_vs_oof_scatter.png Graphic file (type
  png)
 <use ../figures/improvements/profit_full_vs_oof_scatter.png>
 Package luatex.def Info: ../figures/improvements/profit_full_vs_oof_scatter.png
-  used on input line 359.
+  used on input line 510.
 (luatex.def)             Requested size: 316.80176pt x 211.2119pt.
-<../figures/improvements/policy_benchmarks_bar.png, id=332, 505.89pt x 289.08pt
+<../figures/improvements/policy_benchmarks_bar.png, id=566, 505.89pt x 289.08pt
 >
 File: ../figures/improvements/policy_benchmarks_bar.png Graphic file (type png)
 
 <use ../figures/improvements/policy_benchmarks_bar.png>
 Package luatex.def Info: ../figures/improvements/policy_benchmarks_bar.png  use
-d on input line 366.
+d on input line 517.
 (luatex.def)             Requested size: 316.80176pt x 181.03183pt.
-<../figures/improvements/report_profit_summary_by_scenario.png, id=333, 433.62p
+<../figures/improvements/report_profit_summary_by_scenario.png, id=567, 433.62p
 t x 289.08pt>
 File: ../figures/improvements/report_profit_summary_by_scenario.png Graphic fil
 e (type png)
 <use ../figures/improvements/report_profit_summary_by_scenario.png>
 Package luatex.def Info: ../figures/improvements/report_profit_summary_by_scena
-rio.png  used on input line 373.
+rio.png  used on input line 524.
 (luatex.def)             Requested size: 316.80176pt x 211.2119pt.
-<../figures/improvements/decision_flow.png, id=334, 578.16pt x 158.994pt>
+ [25<../figures/improvements/policy_reco_dist_full.png>] [26<../figures/improvem
+ents/profit_full_vs_oof_scatter.png><../figures/improvements/policy_benchmarks_b
+ar.png>]
+<../figures/improvements/decision_flow.png, id=586, 578.16pt x 158.994pt>
 File: ../figures/improvements/decision_flow.png Graphic file (type png)
 <use ../figures/improvements/decision_flow.png>
 Package luatex.def Info: ../figures/improvements/decision_flow.png  used on inp
-ut line 385.
+ut line 536.
 (luatex.def)             Requested size: 316.80176pt x 87.11945pt.
-<../figures/improvements/report_policy_eval_means.png, id=335, 505.89pt x 325.2
+<../figures/improvements/report_policy_eval_means.png, id=587, 505.89pt x 325.2
 15pt>
 File: ../figures/improvements/report_policy_eval_means.png Graphic file (type p
 ng)
 <use ../figures/improvements/report_policy_eval_means.png>
 Package luatex.def Info: ../figures/improvements/report_policy_eval_means.png  
-used on input line 392.
+used on input line 543.
 (luatex.def)             Requested size: 316.80176pt x 203.66083pt.
- [17<../figures/improvements/dr_bootstrap_ci.png>] [18<../figures/improvements/p
-olicy_reco_dist_full.png><../figures/improvements/profit_full_vs_oof_scatter.png
->] [19<../figures/improvements/policy_benchmarks_bar.png><../figures/improvement
-s/report_profit_summary_by_scenario.png><../figures/improvements/decision_flow.p
-ng>]
-<../figures/improvements/constrained_selection_summary.png, id=367, 433.62pt x 
+<../figures/improvements/constrained_selection_summary.png, id=590, 433.62pt x 
 289.08pt>
 File: ../figures/improvements/constrained_selection_summary.png Graphic file (t
 ype png)
 <use ../figures/improvements/constrained_selection_summary.png>
 Package luatex.def Info: ../figures/improvements/constrained_selection_summary.
-png  used on input line 407.
+png  used on input line 558.
 (luatex.def)             Requested size: 233.9978pt x 155.9994pt.
- [20<../figures/improvements/report_policy_eval_means.png><../figures/improvemen
-ts/constrained_selection_summary.png>]
-<../figures/improvements/latent2d_pca2_color_conversion.png, id=379, 1405.25pt 
+ [27<../figures/improvements/report_profit_summary_by_scenario.png><../figures/i
+mprovements/decision_flow.png>] [28<../figures/improvements/report_policy_eval_m
+eans.png><../figures/improvements/constrained_selection_summary.png>]
+<../figures/improvements/latent2d_pca2_color_conversion.png, id=610, 1405.25pt 
 x 1003.75pt>
 File: ../figures/improvements/latent2d_pca2_color_conversion.png Graphic file (
 type png)
 <use ../figures/improvements/latent2d_pca2_color_conversion.png>
 Package luatex.def Info: ../figures/improvements/latent2d_pca2_color_conversion
-.png  used on input line 424.
+.png  used on input line 580.
 (luatex.def)             Requested size: 316.80176pt x 226.27817pt.
-<../figures/improvements/latent2d_umap2_color_conversion.png, id=380, 1405.25pt
+<../figures/improvements/latent2d_umap2_color_conversion.png, id=611, 1405.25pt
  x 1003.75pt>
 File: ../figures/improvements/latent2d_umap2_color_conversion.png Graphic file 
 (type png)
 <use ../figures/improvements/latent2d_umap2_color_conversion.png>
 Package luatex.def Info: ../figures/improvements/latent2d_umap2_color_conversio
-n.png  used on input line 431.
+n.png  used on input line 587.
 (luatex.def)             Requested size: 316.80176pt x 226.27817pt.
-<../figures/latent3d_umap3_color_conversion.png, id=381, 1405.25pt x 1003.75pt>
+<../figures/latent3d_umap3_color_conversion.png, id=612, 1405.25pt x 1003.75pt>
 
 File: ../figures/latent3d_umap3_color_conversion.png Graphic file (type png)
 <use ../figures/latent3d_umap3_color_conversion.png>
 Package luatex.def Info: ../figures/latent3d_umap3_color_conversion.png  used o
-n input line 438.
+n input line 594.
 (luatex.def)             Requested size: 316.80176pt x 226.27817pt.
-<../figures/improvements/latent3d_umap3_color_segment.png, id=382, 1405.25pt x 
+<../figures/improvements/latent3d_umap3_color_segment.png, id=613, 1405.25pt x 
 1003.75pt>
 File: ../figures/improvements/latent3d_umap3_color_segment.png Graphic file (ty
 pe png)
 <use ../figures/improvements/latent3d_umap3_color_segment.png>
 Package luatex.def Info: ../figures/improvements/latent3d_umap3_color_segment.p
-ng  used on input line 445.
+ng  used on input line 601.
 (luatex.def)             Requested size: 316.80176pt x 226.27817pt.
-<../figures/improvements/silhouette_vs_k.png, id=383, 505.89pt x 289.08pt>
+<../figures/improvements/silhouette_vs_k.png, id=614, 505.89pt x 289.08pt>
 File: ../figures/improvements/silhouette_vs_k.png Graphic file (type png)
 <use ../figures/improvements/silhouette_vs_k.png>
 Package luatex.def Info: ../figures/improvements/silhouette_vs_k.png  used on i
-nput line 456.
+nput line 612.
 (luatex.def)             Requested size: 316.80176pt x 181.03183pt.
-<../figures/improvements/segment_stability_ari.png, id=384, 361.35pt x 289.08pt
+<../figures/improvements/segment_stability_ari.png, id=615, 361.35pt x 289.08pt
 >
 File: ../figures/improvements/segment_stability_ari.png Graphic file (type png)
 
 <use ../figures/improvements/segment_stability_ari.png>
 Package luatex.def Info: ../figures/improvements/segment_stability_ari.png  use
-d on input line 463.
+d on input line 619.
 (luatex.def)             Requested size: 316.80176pt x 253.44281pt.
+ [29<../figures/improvements/latent2d_pca2_color_conversion.png>] [30<../figures
+/improvements/latent2d_umap2_color_conversion.png><../figures/latent3d_umap3_col
+or_conversion.png>] [31<../figures/improvements/latent3d_umap3_color_segment.png
+><../figures/improvements/silhouette_vs_k.png>]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 627.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 471.
+(hyperref)                removing `\times' on input line 627.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\times' on input line 471.
+(hyperref)                removing `math shift' on input line 627.
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 471.
-
-
-LaTeX Warning: Reference `fig:seg_treat' on page 21 undefined on input line 472
-.
-
-[21<../figures/improvements/latent2d_pca2_color_conversion.png>] [22<../figures/
-improvements/latent2d_umap2_color_conversion.png><../figures/latent3d_umap3_colo
-r_conversion.png>] [23<../figures/improvements/latent3d_umap3_color_segment.png>
-<../figures/improvements/silhouette_vs_k.png>]
-<../figures/improvements/segment_treatment_cvr_heatmap_exploratory.png, id=412,
+<../figures/improvements/segment_treatment_cvr_heatmap_exploratory.png, id=642,
  578.16pt x 289.08pt>
 File: ../figures/improvements/segment_treatment_cvr_heatmap_exploratory.png Gra
 phic file (type png)
 <use ../figures/improvements/segment_treatment_cvr_heatmap_exploratory.png>
 Package luatex.def Info: ../figures/improvements/segment_treatment_cvr_heatmap_
-exploratory.png  used on input line 477.
+exploratory.png  used on input line 633.
 (luatex.def)             Requested size: 331.19934pt x 165.59775pt.
-<../figures/improvements/report_segment_mean_profit.png, id=413, 505.89pt x 289
+<../figures/improvements/report_segment_mean_profit.png, id=643, 505.89pt x 289
 .08pt>
 File: ../figures/improvements/report_segment_mean_profit.png Graphic file (type
  png)
 <use ../figures/improvements/report_segment_mean_profit.png>
 Package luatex.def Info: ../figures/improvements/report_segment_mean_profit.png
-  used on input line 484.
+  used on input line 640.
 (luatex.def)             Requested size: 270.0pt x 154.28795pt.
+(../artifacts/tables/ab_design.tex) [32<../figures/improvements/segment_stabilit
+y_ari.png>] [33<../figures/improvements/segment_treatment_cvr_heatmap_explorator
+y.png><../figures/improvements/report_segment_mean_profit.png>]
+(../artifacts/tables/governance_ethics.tex)
+(../artifacts/tables/monitoring_summary.tex) [34] [35]
+Overfull \hbox (76.69824pt too wide) in paragraph at lines 716--722
+|\JY3/mc/m/n/10.95 用 |い []  |上 |位 \TU/lmr/m/n/10.95 10% [] 5%|\JY3/mc/m
+/n/10.95 の |コ |ホ |ー |ト |を |定 |義 |し |た  [] |再 |現 [] \TU/
+lmtt/m/n/10.95 python scripts/pilot_design_stdlib.py[]
+ []
 
-(../artifacts/tables/ab_design.tex) (../artifacts/tables/governance_ethics.tex
-[24<../figures/improvements/segment_stability_ari.png>] [25<../figures/improveme
-nts/segment_treatment_cvr_heatmap_exploratory.png><../figures/improvements/repor
-t_segment_mean_profit.png>]) (../artifacts/tables/monitoring_summary.tex)
-[26] [27] (./final_report.aux)
+[36] (./pilot_design_analysis.tex
+<../figures/improvements/uplift_crude_gap_by_score_decile.png, id=695, 462.528p
+t x 274.626pt>
+File: ../figures/improvements/uplift_crude_gap_by_score_decile.png Graphic file
+ (type png)
+<use ../figures/improvements/uplift_crude_gap_by_score_decile.png>
+Package luatex.def Info: ../figures/improvements/uplift_crude_gap_by_score_deci
+le.png  used on input line 40.
+(luatex.def)             Requested size: 316.80176pt x 188.10928pt.
+) [37] (./appendix_fermi_numeric_snippet.tex)
+[38<../figures/improvements/uplift_crude_gap_by_score_decile.png>]
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 780.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 785.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 790.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 794.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 799.
+ [39]
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 805.
+
+Overfull \hbox (6.3054pt too wide) in paragraph at lines 811--814
+|\JY3/mc/m/n/10.95 付 |録 |は |\JY3/mc/b/n/10.95 再 |現 |手 |順 []  |
+中 |間 |成 |果 |物 |の |所 |在 []  |\JY3/mc/m/n/10.95 お |よ |び |\J
+Y3/mc/b/n/10.95 仮 |定 |ベ |ー |ス |の |補 |完 |分 |析  []\TU/lmtt/m/
+n/10.95 exercise.csv
+ []
+
+
+Overfull \hbox (1.79268pt too wide) in paragraph at lines 823--826
+\TU/lmtt/m/n/10.95 latex/data_overview_snippet.tex |\JY3/mc/m/n/10.95 と \TU/l
+mtt/m/n/10.95 latex/data_sample_table.tex |\JY3/mc/m/n/10.95 を
+ []
+
+
+Overfull \hbox (186.8929pt too wide) in paragraph at lines 828--830
+|\JY3/mc/m/n/10.95 表 [][]\TU/lmr/m/n/10.95 6[][] |\JY3/mc/m/n/10.95 は \TU/l
+mtt/m/n/10.95 artifacts/profit_long.csv |\JY3/mc/m/n/10.95 か |ら \TU/lmtt/m/
+n/10.95 python -S scripts/build_cost_sensitivity_from_profit_long.py
+ []
+
+
+Overfull \hbox (27.75992pt too wide) in paragraph at lines 832--834
+|\JY3/mc/m/n/10.95 詳 |細 |な |数 |表 [] |中 |間 |成 |果 |物 |は \TU
+/lmtt/m/n/10.95 artifacts/ |\JY3/mc/m/n/10.95 に |集 |約 |す |る  [] |例 
+[] \TU/lmtt/m/n/10.95 chi2_tests_with_fdr.csv[]
+ []
+
+
+Overfull \hbox (108.97498pt too wide) in paragraph at lines 832--834
+\TU/lmtt/m/n/10.95 promo_targets*.csv[]  policy_eval_compare.csv[]  segment_trea
+tment_cvr_exploratory.csv[] []
+ []
+
+
+Overfull \hbox (92.15213pt too wide) in paragraph at lines 838--843
+|\JY3/mc/m/n/10.95 れ |な |い []  |本 |節 |で |は []  |\JY3/mc/b/n/10.95
+ フ |ェ |ル |ミ |推 |定 |で |オ |ー |ダ |ー |を |揃 |え |た |
+仮 |定  []\TU/lmtt/m/n/10.95 artifacts/assumed_data_fermi.json[]
+ []
+
+[40] (./appendix_contact_cost_fermi.tex) (./appendix_assumed_supplementary.tex
+<../figures/appendix/fig_fermi_schematic.png, id=722, 650.43pt x 303.534pt>
+File: ../figures/appendix/fig_fermi_schematic.png Graphic file (type png)
+<use ../figures/appendix/fig_fermi_schematic.png>
+Package luatex.def Info: ../figures/appendix/fig_fermi_schematic.png  used on i
+nput line 4.
+(luatex.def)             Requested size: 331.19934pt x 154.56407pt.
+<../figures/appendix/fig_profit_by_observed_offer.png, id=723, 505.89pt x 289.0
+8pt>
+File: ../figures/appendix/fig_profit_by_observed_offer.png Graphic file (type p
+ng)
+<use ../figures/appendix/fig_profit_by_observed_offer.png>
+Package luatex.def Info: ../figures/appendix/fig_profit_by_observed_offer.png  
+used on input line 11.
+(luatex.def)             Requested size: 331.19934pt x 189.25835pt.
+<../figures/appendix/fig_gp_violin_by_offer.png, id=724, 578.16pt x 325.215pt>
+File: ../figures/appendix/fig_gp_violin_by_offer.png Graphic file (type png)
+<use ../figures/appendix/fig_gp_violin_by_offer.png>
+Package luatex.def Info: ../figures/appendix/fig_gp_violin_by_offer.png  used o
+n input line 18.
+(luatex.def)             Requested size: 331.19934pt x 186.29747pt.
+<../figures/appendix/fig_contact_cost_by_channel.png, id=725, 505.89pt x 289.08
+pt>
+File: ../figures/appendix/fig_contact_cost_by_channel.png Graphic file (type pn
+g)
+<use ../figures/appendix/fig_contact_cost_by_channel.png>
+Package luatex.def Info: ../figures/appendix/fig_contact_cost_by_channel.png  u
+sed on input line 25.
+(luatex.def)             Requested size: 331.19934pt x 189.25835pt.
+<../figures/appendix/fig_exposure_scatter_audit.png, id=726, 469.755pt x 325.21
+5pt>
+File: ../figures/appendix/fig_exposure_scatter_audit.png Graphic file (type png
+)
+<use ../figures/appendix/fig_exposure_scatter_audit.png>
+Package luatex.def Info: ../figures/appendix/fig_exposure_scatter_audit.png  us
+ed on input line 32.
+(luatex.def)             Requested size: 331.19934pt x 229.29149pt.
+<../figures/appendix/fig_cvr_by_impression_bin.png, id=727, 469.755pt x 289.08p
+t>
+File: ../figures/appendix/fig_cvr_by_impression_bin.png Graphic file (type png)
+
+<use ../figures/appendix/fig_cvr_by_impression_bin.png>
+Package luatex.def Info: ../figures/appendix/fig_cvr_by_impression_bin.png  use
+d on input line 39.
+(luatex.def)             Requested size: 331.19934pt x 203.81465pt.
+<../figures/appendix/fig_assignment_cross_heatmap.png, id=728, 505.89pt x 361.3
+5pt>
+File: ../figures/appendix/fig_assignment_cross_heatmap.png Graphic file (type p
+ng)
+<use ../figures/appendix/fig_assignment_cross_heatmap.png>
+Package luatex.def Info: ../figures/appendix/fig_assignment_cross_heatmap.png  
+used on input line 46.
+(luatex.def)             Requested size: 331.19934pt x 236.57295pt.
+<../figures/appendix/fig_inventory_stockout.png, id=729, 542.025pt x 325.215pt>
+
+File: ../figures/appendix/fig_inventory_stockout.png Graphic file (type png)
+<use ../figures/appendix/fig_inventory_stockout.png>
+Package luatex.def Info: ../figures/appendix/fig_inventory_stockout.png  used o
+n input line 53.
+(luatex.def)             Requested size: 331.19934pt x 198.72823pt.
+<../figures/appendix/fig_claims_rate_by_offer.png, id=730, 433.62pt x 289.08pt>
+
+File: ../figures/appendix/fig_claims_rate_by_offer.png Graphic file (type png)
+<use ../figures/appendix/fig_claims_rate_by_offer.png>
+Package luatex.def Info: ../figures/appendix/fig_claims_rate_by_offer.png  used
+ on input line 60.
+(luatex.def)             Requested size: 331.19934pt x 220.81023pt.
+<../figures/appendix/fig_panel_ltv_fatigue.png, id=731, 542.025pt x 325.215pt>
+File: ../figures/appendix/fig_panel_ltv_fatigue.png Graphic file (type png)
+<use ../figures/appendix/fig_panel_ltv_fatigue.png>
+Package luatex.def Info: ../figures/appendix/fig_panel_ltv_fatigue.png  used on
+ input line 67.
+(luatex.def)             Requested size: 331.19934pt x 198.72823pt.
+<../figures/appendix/fig_profit_components_grouped.png, id=732, 650.43pt x 325.
+215pt>
+File: ../figures/appendix/fig_profit_components_grouped.png Graphic file (type 
+png)
+<use ../figures/appendix/fig_profit_components_grouped.png>
+Package luatex.def Info: ../figures/appendix/fig_profit_components_grouped.png 
+ used on input line 74.
+(luatex.def)             Requested size: 331.19934pt x 165.60437pt.
+)
+Overfull \hbox (12.90823pt too wide) in paragraph at lines 849--851
+|\JY3/mc/m/n/10.95 パ |ラ |メ |ー |タ |の |機 |械 |可 |読 |な |一 |
+覧 |は \TU/lmtt/m/n/10.95 artifacts/assumed_data_fermi.json  []python
+ []
+
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <12> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 852.
+
+Overfull \hbox (114.11588pt too wide) in paragraph at lines 853--856
+|\JY3/mc/m/n/10.95 全 |件 |は |リ |ポ |ジ |ト |リ |直 |下 |の \TU/lm
+tt/m/n/10.95 exercise.csv[]  |\JY3/mc/m/n/10.95 先 |頭 \TU/lmr/m/n/10.95 500 
+|\JY3/mc/m/n/10.95 行 |は \TU/lmtt/m/n/10.95 artifacts/appendix_exercise_sampl
+e.csv[]
+ []
+
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 862.
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' in `process_input_buffer'. (../artifacts/a
+ppendix_exercise_sample.csv
+Overfull \hbox (98.32559pt too wide) in paragraph at lines 1--2
+[][][][][][][][][][][][][][][][][][][][][][][][]  
+ []
+
+)
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' in `process_input_buffer'. (../artifacts/s
+ynthetic_exposure_log_sample.csv
+Overfull \hbox (98.32559pt too wide) in paragraph at lines 1--2
+[][][][][][][][][][][][][][]  
+ []
+
+[41] [42<../figures/appendix/fig_fermi_schematic.png><../figures/appendix/fig_pr
+ofit_by_observed_offer.png>] [43<../figures/appendix/fig_gp_violin_by_offer.png>
+<../figures/appendix/fig_contact_cost_by_channel.png>] [44<../figures/appendix/f
+ig_exposure_scatter_audit.png><../figures/appendix/fig_cvr_by_impression_bin.png
+>] [45<../figures/appendix/fig_assignment_cross_heatmap.png><../figures/appendix
+/fig_inventory_stockout.png>] [46<../figures/appendix/fig_claims_rate_by_offer.p
+ng><../figures/appendix/fig_panel_ltv_fatigue.png>])
+Removing  `ltj.listings_unicode' from `process_input_buffer'.
+(C:/Users/yutok/AppData/Local/Programs/MiKTeX/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
+)
+Removing  `ltj.process_input_buffer' from `process_input_buffer'.
+Inserting `ltj.listings_unicode' in `process_input_buffer'.
+Inserting `ltj.process_input_buffer' in `process_input_buffer'.
+(../analytics/assumed_supplementary_analysis.py
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 1.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 2.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 3.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 5.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 5.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 5.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 6.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 6.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 6.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 6.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 6.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 6.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 6.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 6.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 7.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 8.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 8.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 8.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 8.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 8.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 8.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 8.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 8.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 9.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 9.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 9.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 9.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 9.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 9.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 9.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 9.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 10.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 10.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 10.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 10.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 10.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 10.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 10.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 10.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 11.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 11.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 11.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 11.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 11.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 11.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 11.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 11.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 12.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 13.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 14.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 16.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 17.
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <9> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 18.
+ [47]
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 38.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 38.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 39.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 41.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 42.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 44.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 45.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 47.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 48.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 50.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 51.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 52.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 52.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+LaTeX Font Info:    Kanji font shape `JY3/mc/m/it' undefined
+(Font)              No change on input line 53.
+)
+Removing  `ltj.listings_unicode' from `process_input_buffer'. [48] [49<../figure
+s/appendix/fig_profit_components_grouped.png>] (./final_report.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-04>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `final_report.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `final_report.out':
-(rerunfilecheck)             Before: 66BD4DE5B28B85AC2D358B558FA62703;4237
-(rerunfilecheck)             After:  A61357331BAFB94050EB90CECF473BD0;5111.
+Package rerunfilecheck Info: File `final_report.out' has not changed.
+(rerunfilecheck)             Checksum: 35D15D7E1C23CC1E5A79519198263DAD;9789.
 )
 
 Here is how much of LuaTeX's memory you used:
- 12447 strings out of 476497
- 156557,1977958 words of node,token memory allocated
- 1392 words of node memory still in use:
-   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 357 attribute, 55 glue_sp
-ec, 44 attribute_list, 1 write, 13 user_defined nodes
-   avail lists: 1:42,2:37882,3:515,4:430,5:210,6:69,7:4524,8:60,9:1907,10:18,11:
-34
- 33934 multiletter control sequences out of 65536+600000
- 91 fonts using 54768103 bytes
- 110i,12n,115p,1863b,423s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 15242 strings out of 476497
+ 382270,1977958 words of node,token memory allocated
+ 1338 words of node memory still in use:
+   10 hlist, 2 vlist, 5 rule, 2 glue, 4 kern, 1 glyph, 333 attribute, 55 glue_sp
+ec, 41 attribute_list, 1 write, 13 user_defined nodes
+   avail lists: 1:27,2:71465,3:1082,4:7047,5:2189,6:101,7:6607,8:60,9:8313,10:40
+,11:197
+ 36437 multiletter control sequences out of 65536+600000
+ 102 fonts using 63487615 bytes
+ 110i,12n,115p,1863b,1274s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmon
+o10-italic.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/
+public/lm/lmroman6-regular.otf><//?/c:/users/yutok/appdata/local/programs/miktex
+/fonts/opentype/public/lm/lmroman10-italic.otf><//?/c:/users/yutok/appdata/local
+/programs/miktex/fonts/opentype/public/lm/lmroman9-bold.otf><//?/c:/users/yutok/
+appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman9-regular.otf><//?
+/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/public/lm/lmmono9-r
+egular.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/publ
+ic/lm/lmmonolt10-bold.otf><//?/c:/users/yutok/appdata/local/programs/miktex/font
+s/opentype/public/lm/lmroman12-bold.otf><//?/c:/users/yutok/appdata/local/progra
+ms/miktex/fonts/opentype/public/lm/lmroman10-regular.otf><//?/c:/users/yutok/app
+data/local/programs/miktex/fonts/opentype/public/haranoaji/haranoajigothic-mediu
+m.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/public/lm
+/lmroman10-bold.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fonts/open
+type/public/lm/lmroman12-regular.otf><//?/c:/users/yutok/appdata/local/programs/
+miktex/fonts/opentype/public/lm/lmmono10-regular.otf><//?/c:/users/yutok/appdata
+/local/programs/miktex/fonts/opentype/public/haranoaji/haranoajimincho-regular.o
+tf><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/
+cmbx10.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmex10.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/pub
+lic/amsfonts/cm/cmmi10.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmmi7.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/
+fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Users/yutok/AppData/Local/Programs/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/yutok/AppData/Local/Pr
+ograms/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/yutok/AppData/Lo
+cal/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/yutok/Ap
+pData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/y
+utok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pf
+b>
+Output written on final_report.pdf (49 pages, 4142603 bytes).
 
-warning  (pdf backend): unreferenced destination with name 'equation.6.1'
-
-warning  (pdf backend): unreferenced destination with name 'equation.7.2'
-
-warning  (pdf backend): unreferenced destination with name 'subsection.7.3'
-
-warning  (pdf backend): unreferenced destination with name 'subsection.7.2'
-
-warning  (pdf backend): unreferenced destination with name 'subsection.6.2'
-
-warning  (pdf backend): unreferenced destination with name 'subsection.6.1'
-<//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/public/lm/lmrom
-an12-bold.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/p
-ublic/lm/lmmono10-regular.otf><//?/c:/users/yutok/appdata/local/programs/miktex/
-fonts/opentype/public/lm/lmroman10-regular.otf><//?/c:/users/yutok/appdata/local
-/programs/miktex/fonts/opentype/public/haranoaji/haranoajigothic-medium.otf><//?
-/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/public/lm/lmroman10
--bold.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fonts/opentype/publi
-c/lm/lmroman12-regular.otf><//?/c:/users/yutok/appdata/local/programs/miktex/fon
-ts/opentype/public/lm/lmmono12-regular.otf><//?/c:/users/yutok/appdata/local/pro
-grams/miktex/fonts/opentype/public/haranoaji/haranoajimincho-regular.otf><C:/Use
-rs/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb
-><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-ex10.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfon
-ts/cm/cmmi10.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type1/publi
-c/amsfonts/cm/cmmi8.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmr10.pfb><C:/Users/yutok/AppData/Local/Programs/MiKTeX/fon
-ts/type1/public/amsfonts/cm/cmr8.pfb><C:/Users/yutok/AppData/Local/Programs/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/yutok/AppData/Local/Progr
-ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Users/yutok/AppData/Loca
-l/Programs/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on final_report.pdf (27 pages, 3070178 bytes).
-
-PDF statistics: 536 PDF objects out of 1000 (max. 8388607)
- 134 named destinations out of 1000 (max. 131072)
- 241 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1005 PDF objects out of 1200 (max. 8388607)
+ 287 named destinations out of 1000 (max. 131072)
+ 473 words of extra memory for PDF output out of 10000 (max. 100000000)
 

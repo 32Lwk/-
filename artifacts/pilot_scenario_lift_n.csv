@@ -1,0 +1,3 @@
+comparison,assumed_lift,n_per_arm_power80,n_per_arm_power90
+holdout_vs_lowcost,0.01,29821,39921
+holdout_vs_discount,0.02,7550,10107

@@ -30,6 +30,24 @@ cd latex
 latexmk -lualatex final_report.tex
 ```
 
+### Windows / 作業ディレクトリの注意
+
+- **`python -m analytics.…` は必ずリポジトリ直下**（`exercise.csv` があるフォルダ）で実行する。`latex` フォルダにいると `ModuleNotFoundError: No module named 'analytics'` になる。
+- **`cd latex` は「いまルートにいるとき」だけ**。すでに `...\キカガク\latex` にいる状態で再度 `cd latex` すると `latex\latex` になり失敗する。
+- **`python scripts\build_*.py` もルートから**。`latex` にいると `latex\scripts\...` を探して「ファイルが見つからない」になる。
+
+一括（ルートで）:
+
+```powershell
+.\scripts\compile_final_report.ps1
+```
+
+または CMD:
+
+```bat
+scripts\compile_final_report.bat
+```
+
 ## パラメータ
 
 `analytics/config.py` の `BOOTSTRAP_B`、`BOOTSTRAP_N`、`CONSTRAINT_*` などを調整可能。

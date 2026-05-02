@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import seaborn as sns
 from matplotlib import font_manager as fm
 from matplotlib import pyplot as plt
 
@@ -47,7 +46,13 @@ def set_japanese_font() -> None:
 
 
 def init_plot_style() -> None:
-    sns.set_theme(style="whitegrid")
+    try:
+        import seaborn as sns
+    except ImportError:
+        plt.rcParams["axes.grid"] = True
+        plt.rcParams["grid.alpha"] = 0.28
+    else:
+        sns.set_theme(style="whitegrid")
     set_japanese_font()
 
 

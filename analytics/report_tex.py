@@ -1,7 +1,103 @@
 from __future__ import annotations
 
-from analytics.config import LATEX_DIR
+from pathlib import Path
+
+import pandas as pd
+
+from analytics.config import ART_DIR, LATEX_DIR, TABLES_DIR
 from analytics.governance import write_governance_ethics_tex
+
+
+def _latex_escape_cell(val: object) -> str:
+    t = str(val)
+    repl = (
+        ("\\", "\\textbackslash{}"),
+        ("&", "\\&"),
+        ("%", "\\%"),
+        ("#", "\\#"),
+        ("_", "\\_"),
+        ("{", "\\{"),
+        ("}", "\\}"),
+    )
+    for a, b in repl:
+        t = t.replace(a, b)
+    return t
+
+
+def write_data_sample_tex(processed_csv: Path | None = None) -> None:
+    """レポート用：代表行を LaTeX の tabular 断片として出力する。"""
+    path = processed_csv or (ART_DIR / "processed.csv")
+    if not path.is_file():
+        return
+    df = pd.read_csv(path)
+    picks: list[pd.Series] = []
+    seen: set[int] = set()
+    for sel in (
+        df["conversion"] == 1,
+        df["conversion"] == 0,
+    ):
+        sub = df.loc[sel]
+        if len(sub) == 0:
+            continue
+        r = sub.iloc[0]
+        i = int(r.name)
+        if i not in seen:
+            picks.append(r)
+            seen.add(i)
+    if len(df) > 0:
+        r = df.loc[df["history"].idxmax()]
+        i = int(r.name)
+        if i not in seen:
+            picks.append(r)
+            seen.add(i)
+    if len(df) > 0:
+        r = df.loc[df["recency"].idxmin()]
+        i = int(r.name)
+        if i not in seen:
+            picks.append(r)
+            seen.add(i)
+    need = max(0, 5 - len(picks))
+    pool = df.drop(index=list(seen), errors="ignore")
+    if need > 0 and len(pool) > 0:
+        extra = pool.sample(n=min(need, len(pool)), random_state=7, replace=False)
+        for _, r in extra.iterrows():
+            picks.append(r)
+    picks = picks[:5]
+
+    lines = [
+        r"\begin{table}[ht]",
+        r"\centering",
+        r"\caption{分析に用いた顧客レコードの例（抜粋。\texttt{customer\_id} は分析パイプラインが付与した行番号）。}",
+        r"\label{tab:data_examples}",
+        r"\footnotesize",
+        r"\begin{tabular}{@{}rrrrllllr@{}}",
+        r"\toprule",
+        r"\texttt{id} & \texttt{recency} & \texttt{history} & \texttt{u\_disc} & \texttt{u\_bogo} & \texttt{zip} & \texttt{ref} & \texttt{channel} & \texttt{offer} & \texttt{conv} \\",
+        r"\midrule",
+    ]
+    for r in picks:
+        cells = [
+            int(r["customer_id"]),
+            int(r["recency"]),
+            f"{float(r['history']):.2f}",
+            int(r["used_discount"]),
+            int(r["used_bogo"]),
+            _latex_escape_cell(r["zip_code"]),
+            int(r["is_referral"]),
+            _latex_escape_cell(r["channel"]),
+            _latex_escape_cell(r["offer"]),
+            int(r["conversion"]),
+        ]
+        lines.append(" & ".join(str(c) for c in cells) + r" \\")
+    lines.extend(
+        [
+            r"\bottomrule",
+            r"\end{tabular}",
+            r"\end{table}",
+        ]
+    )
+    TABLES_DIR.mkdir(parents=True, exist_ok=True)
+    (TABLES_DIR / "data_sample_rows.tex").write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 # `final_report.md` の §3.4 / §3.5 / §4.5 と同じ図パス（LaTeX はメイン .tex からの相対パス）
 _STATS_LSI_TEX = r"""\section{相関と補助的重回帰（history）}
@@ -69,3 +165,4 @@ def write_latex_bundle() -> None:
     write_governance_ethics_tex()
     LATEX_DIR.mkdir(parents=True, exist_ok=True)
     write_generated_stats_lsi_sections_tex()
+    write_data_sample_tex()
