@@ -3,8 +3,8 @@
 Dep. Variable:                history   R-squared:                       0.221
 Model:                            OLS   Adj. R-squared:                  0.221
 Method:                 Least Squares   F-statistic:                     2813.
-Date:                Mon, 27 Apr 2026   Prob (F-statistic):               0.00
-Time:                        02:46:09   Log-Likelihood:            -4.3774e+05
+Date:                Sun, 03 May 2026   Prob (F-statistic):               0.00
+Time:                        00:03:31   Log-Likelihood:            -4.3774e+05
 No. Observations:               64000   AIC:                         8.755e+05
 Df Residuals:                   63995   BIC:                         8.755e+05
 Df Model:                           4                                         

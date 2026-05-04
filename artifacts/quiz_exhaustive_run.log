@@ -1,0 +1,29 @@
+2026-05-04 01:36:24 チェックボックス待機中… 残り約 179s（ページ全体をポーリング）
+2026-05-04 01:36:35 チェックボックス待機中… 残り約 169s（ページ全体をポーリング）
+2026-05-04 01:36:45 チェックボックス待機中… 残り約 159s（ページ全体をポーリング）
+2026-05-04 01:36:56 チェックボックス待機中… 残り約 148s（ページ全体をポーリング）
+2026-05-04 01:37:06 チェックボックス待機中… 残り約 138s（ページ全体をポーリング）
+2026-05-04 01:37:17 チェックボックス待機中… 残り約 127s（ページ全体をポーリング）
+2026-05-04 01:37:27 チェックボックス待機中… 残り約 117s（ページ全体をポーリング）
+2026-05-04 01:37:37 チェックボックス待機中… 残り約 179s（ページ全体をポーリング）
+2026-05-04 01:37:48 チェックボックス待機中… 残り約 169s（ページ全体をポーリング）
+2026-05-04 01:37:58 チェックボックス待機中… 残り約 159s（ページ全体をポーリング）
+2026-05-04 01:38:09 チェックボックス待機中… 残り約 148s（ページ全体をポーリング）
+2026-05-04 01:38:19 チェックボックス待機中… 残り約 138s（ページ全体をポーリング）
+2026-05-04 01:38:30 チェックボックス待機中… 残り約 127s（ページ全体をポーリング）
+2026-05-04 01:38:40 チェックボックス待機中… 残り約 117s（ページ全体をポーリング）
+2026-05-04 01:38:50 チェックボックス待機中… 残り約 107s（ページ全体をポーリング）
+2026-05-04 01:39:41 警告: --quiz-url に ... や … が含まれています。ブラウザのアドレスバーからコピーした完全な URL を指定してください。
+2026-05-04 01:39:45 遷移直後 URL='https://www.kikagaku.ai/sign-in/?redirect=%2F404' frames=4
+2026-05-04 01:39:45 チェックボックス待機中… 残り約 179s 現在URL='https://www.kikagaku.ai/sign-in/?redirect=%2F404' frames=4
+2026-05-04 01:39:55 チェックボックス待機中… 残り約 169s 現在URL='https://www.kikagaku.ai/sign-in/?redirect=%2F404' frames=4
+2026-05-04 01:40:06 チェックボックス待機中… 残り約 159s 現在URL='https://www.kikagaku.ai/learning/courses-progress/?course=benesse-i-career3' frames=4
+2026-05-04 01:40:10 開始 url='https://www.kikagaku.ai/...' strat='q-label-dom-walk' groups=5 vary_1based=[1, 2] cap=5 planned_product=961 exec_limit=961 reload=True
+2026-05-04 01:40:10 試行 1/961 開始 combo_active=[1, 1]
+2026-05-04 01:45:29 遷移直後 URL='https://www.kikagaku.ai/sign-in/?redirect=%2Flearning%2Flearn%2F%5Bcourse%5D%2F%5Bsection%5D%2F%5Bcontent%5D&course=benesse-i-career3&section=chapter-test1&content=end-of-chapter1' frames=4
+2026-05-04 01:45:29 チェックボックス待機中… 残り約 179s 現在URL='https://www.kikagaku.ai/sign-in/?redirect=%2Flearning%2Flearn%2F%5Bcourse%5D%2F%5Bsection%5D%2F%5Bcontent%5D&course=benesse-i-career3&section=chapter-test1&content=end-of-chapter1' frames=4
+2026-05-04 01:45:39 チェックボックス待機中… 残り約 169s 現在URL='https://www.kikagaku.ai/learning/learn/benesse-i-career3/chapter-test1/end-of-chapter1/' frames=4
+2026-05-04 01:45:40 開始 url='https://www.kikagaku.ai/learning/learn/benesse-i-career3/chapter-test1/end-of-chapter1/' strat='q-label-dom-walk' groups=5 vary_1based=[1, 2] cap=5 planned_product=961 exec_limit=961 reload=True
+2026-05-04 01:45:40 試行 1/961 開始 combo_active=[1, 1]
+2026-05-04 01:46:40 Page.goto が networkidle でタイムアウトしました。wait_until=load で再試行します（--goto-wait load 推奨のこともあります）。
+2026-05-04 01:47:10 遷移直後 URL='https://www.kikagaku.ai/learning/learn/benesse-i-career3/chapter-test1/end-of-chapter1/' frames=4

@@ -1,65 +1,60 @@
-\contentsline {section}{\numberline {1}序論}{5}{section.1}%
-\contentsline {subsection}{\numberline {1.1}分析の目的と背景（最終課題との対応）}{5}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}使用データの概要}{5}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}データ生成過程に関する仮説（割当のストーリー）}{6}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}課題に対する結果の要約（先読み）}{6}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}本稿の構成と優先順位（データ・手法・結果）}{7}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}本稿の貢献（分析パイプラインとしての位置づけ）}{7}{subsection.1.6}%
-\contentsline {subsection}{\numberline {1.7}記号とデータ生成}{8}{subsection.1.7}%
-\contentsline {subsection}{\numberline {1.8}図表の見方と再現性}{8}{subsection.1.8}%
-\contentsline {subsection}{\numberline {1.9}本編と付録の読み方（役割分担）}{8}{subsection.1.9}%
-\contentsline {section}{\numberline {2}推奨ターゲットの定義と評価KPI}{8}{section.2}%
-\contentsline {section}{\numberline {3}問題設定と識別仮定}{10}{section.3}%
-\contentsline {subsection}{\numberline {3.1}潜在的結果とターゲット}{10}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}識別条件}{10}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}補足：購入しやすさの予測と「増分効果」の違い}{10}{subsection.3.3}%
-\contentsline {section}{\numberline {4}データと探索（分布・条件付きCVR）}{10}{section.4}%
-\contentsline {subsection}{\numberline {4.1}周辺分布と層別箱ひげ}{11}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}オファー$\times $チャネル別の条件付きCVR}{13}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}属性別 CVR（棒グラフ）}{13}{subsection.4.3}%
-\contentsline {section}{\numberline {5}多重検定（FDR）と効果量}{15}{section.5}%
-\contentsline {subsection}{\numberline {5.1}方法}{15}{subsection.5.1}%
-\contentsline {section}{\numberline {6}相関と補助的重回帰（history）}{16}{section.6}%
-\contentsline {subsection}{\numberline {6.1}Pearson 相関（数値・二値）}{16}{subsection.6.1}%
-\contentsline {subsection}{\numberline {6.2}OLS（目的変数を history）}{16}{subsection.6.2}%
-\contentsline {section}{\numberline {7}LSI類似表現と分類アブレーション}{16}{section.7}%
-\contentsline {section}{\numberline {8}予測モデル（ROC・校正・PR）}{18}{section.8}%
-\contentsline {subsection}{\numberline {8.1}評価指標の意味}{18}{subsection.8.1}%
-\contentsline {section}{\numberline {9}因果推論（傾向スコア、DR、ブートストラップ）}{22}{section.9}%
-\contentsline {subsection}{\numberline {9.1}DR 推定量（参考）}{22}{subsection.9.1}%
-\contentsline {subsection}{\numberline {9.2}実装上の注意（同一データ学習）}{22}{subsection.9.2}%
-\contentsline {subsection}{\numberline {9.3}層別の観察差と「無駄割引」仮説への接続（参考）}{24}{subsection.9.3}%
-\contentsline {section}{\numberline {10}期待利益・オフポリシー評価・ベンチマーク}{24}{section.10}%
-\contentsline {subsection}{\numberline {10.1}期待利益の定義（オフライン代理）}{24}{subsection.10.1}%
-\contentsline {subsection}{\numberline {10.2}オフポリシー評価の読み方}{25}{subsection.10.2}%
-\contentsline {subsection}{\numberline {10.3}制約付き配信（貪欲近似）}{27}{subsection.10.3}%
-\contentsline {section}{\numberline {11}セグメントと頑健性}{29}{section.11}%
-\contentsline {subsection}{\numberline {11.1}潜在空間の可視化}{29}{subsection.11.1}%
-\contentsline {subsection}{\numberline {11.2}セグメント$\times $処置の観測CVR（探索）}{32}{subsection.11.2}%
-\contentsline {section}{\numberline {12}実験計画（RCT/A/B）}{32}{section.12}%
-\contentsline {section}{\numberline {13}ガバナンス・倫理・人の関与}{34}{section.13}%
-\contentsline {paragraph}{目的限定と最小化}{34}{section*.19}%
-\contentsline {paragraph}{説明可能性と人の関与}{34}{section*.20}%
-\contentsline {paragraph}{差別・不利益リスク}{34}{section*.21}%
-\contentsline {paragraph}{オプトアウト・問い合わせ}{34}{section*.22}%
-\contentsline {paragraph}{法的助言ではない}{34}{section*.23}%
-\contentsline {section}{\numberline {14}運用モニタリングとインシデント対応}{34}{section.14}%
-\contentsline {section}{\numberline {15}まとめと今後の方針}{35}{section.15}%
-\contentsline {subsection}{\numberline {15.1}最終課題の再確認}{35}{subsection.15.1}%
-\contentsline {subsection}{\numberline {15.2}分析結果の要約}{35}{subsection.15.2}%
-\contentsline {subsection}{\numberline {15.3}想定や直感と異なる結果とその理由}{36}{subsection.15.3}%
-\contentsline {subsection}{\numberline {15.4}今後の方針（新施策の提案）}{36}{subsection.15.4}%
-\contentsline {subsection}{\numberline {15.5}上位スコア層を母集団としたパイロットの記述（演習データ）}{36}{subsection.15.5}%
-\contentsline {subsection}{\numberline {15.6}追加で欲しいデータ（次の分析のため）}{37}{subsection.15.6}%
-\contentsline {subsection}{\numberline {15.7}本稿の位置づけ（ロードマップ）}{38}{subsection.15.7}%
-\contentsline {subsection}{\numberline {15.8}最終課題への適合性と改善余地（自己査読）}{39}{subsection.15.8}%
-\contentsline {section}{\numberline {A}限界と免責}{40}{appendix.A}%
-\contentsline {section}{\numberline {B}付録：データスニペットの再現方法}{40}{appendix.B}%
-\contentsline {section}{\numberline {C}付録：コスト感度表の再現方法}{40}{appendix.C}%
-\contentsline {section}{\numberline {D}付録：本文で詳述しきれなかった出力物}{40}{appendix.D}%
-\contentsline {section}{\numberline {E}付録：仮定データによる補完分析（図表・サンプル・コード）}{41}{appendix.E}%
-\contentsline {paragraph}{接触コスト（円）のフェルミ推定.}{41}{section*.27}%
-\contentsline {subsection}{\numberline {E.1}仮定パラメータ（JSON）}{41}{subsection.E.1}%
-\contentsline {subsection}{\numberline {E.2}データセット抜粋（演習用 \texttt {exercise.csv}）}{41}{subsection.E.2}%
-\contentsline {subsection}{\numberline {E.3}合成露出ログ抜粋}{47}{subsection.E.3}%
-\contentsline {subsection}{\numberline {E.4}分析に用いた Python コード}{47}{subsection.E.4}%
+\contentsline {section}{\numberline {1}序論}{4}{section.1}%
+\contentsline {subsection}{\numberline {1.1}分析の目的と背景}{4}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}使用データの概要}{4}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}データ生成過程に関する仮説}{5}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}課題に対する結果の要約}{5}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}記号とデータ生成}{5}{subsection.1.5}%
+\contentsline {section}{\numberline {2}推奨ターゲットの定義と評価KPI}{6}{section.2}%
+\contentsline {section}{\numberline {3}問題設定と識別仮定}{7}{section.3}%
+\contentsline {subsection}{\numberline {3.1}潜在的結果・観測結果・傾向スコア}{7}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}識別条件と本稿での読み方}{7}{subsection.3.2}%
+\contentsline {paragraph}{無視可能性（強い無視可能性）.}{7}{section*.6}%
+\contentsline {paragraph}{SUTVA（安定単位処置値仮定）.}{7}{section*.7}%
+\contentsline {paragraph}{共通支援（重なり）.}{7}{section*.8}%
+\contentsline {subsection}{\numberline {3.3}購入確率の予測と増分効果（uplift）：問いの分離}{8}{subsection.3.3}%
+\contentsline {paragraph}{(A) 購入確率の予測＝「誰が買いやすいか」の順位付け.}{8}{section*.9}%
+\contentsline {paragraph}{(B) 増分（uplift）＝「見せ方を変えたらどう変わるか」.}{8}{section*.10}%
+\contentsline {paragraph}{実験と本稿の役割分担.}{8}{section*.11}%
+\contentsline {section}{\numberline {4}データと探索（分布・条件付きCVR）}{9}{section.4}%
+\contentsline {subsection}{\numberline {4.1}周辺分布と層別箱ひげ}{9}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}オファー$\times $チャネル別の条件付きCVR}{10}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}属性別 CVR（棒グラフ）}{11}{subsection.4.3}%
+\contentsline {section}{\numberline {5}多重検定（FDR）と効果量}{12}{section.5}%
+\contentsline {subsection}{\numberline {5.1}方法}{12}{subsection.5.1}%
+\contentsline {section}{\numberline {6}相関と補助的重回帰（history）}{13}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Pearson 相関（数値・二値）}{13}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}OLS（目的変数を history）}{13}{subsection.6.2}%
+\contentsline {section}{\numberline {7}LSI類似表現と分類アブレーション}{14}{section.7}%
+\contentsline {section}{\numberline {8}予測モデル（ROC・校正・PR）}{15}{section.8}%
+\contentsline {subsection}{\numberline {8.1}評価指標の意味}{15}{subsection.8.1}%
+\contentsline {section}{\numberline {9}因果推論（傾向スコア、DR、ブートストラップ）}{17}{section.9}%
+\contentsline {subsection}{\numberline {9.1}DR 推定量（参考）}{17}{subsection.9.1}%
+\contentsline {subsection}{\numberline {9.2}実装上の注意（同一データ学習）}{17}{subsection.9.2}%
+\contentsline {subsection}{\numberline {9.3}層別の観察差と「無駄割引」仮説への接続（参考）}{19}{subsection.9.3}%
+\contentsline {section}{\numberline {10}期待利益・オフポリシー評価・ベンチマーク}{19}{section.10}%
+\contentsline {subsection}{\numberline {10.1}期待利益の定義（オフライン代理）}{19}{subsection.10.1}%
+\contentsline {subsection}{\numberline {10.2}オフポリシー評価の読み方}{19}{subsection.10.2}%
+\contentsline {subsection}{\numberline {10.3}制約付き配信（貪欲近似）}{21}{subsection.10.3}%
+\contentsline {section}{\numberline {11}セグメントと頑健性}{21}{section.11}%
+\contentsline {subsection}{\numberline {11.1}潜在空間の可視化}{22}{subsection.11.1}%
+\contentsline {subsection}{\numberline {11.2}セグメント$\times $処置の観測CVR（探索）}{23}{subsection.11.2}%
+\contentsline {section}{\numberline {12}実験（RCT/A/B）}{24}{section.12}%
+\contentsline {section}{\numberline {13}ガバナンス}{24}{section.13}%
+\contentsline {paragraph}{目的限定と最小化}{24}{section*.61}%
+\contentsline {paragraph}{説明可能性と人の関与}{24}{section*.62}%
+\contentsline {paragraph}{差別・不利益リスク}{24}{section*.63}%
+\contentsline {section}{\numberline {14}運用モニタリングとインシデント対応}{25}{section.14}%
+\contentsline {section}{\numberline {15}まとめと今後の方針}{25}{section.15}%
+\contentsline {subsection}{\numberline {15.1}最終課題の再確認}{25}{subsection.15.1}%
+\contentsline {subsection}{\numberline {15.2}分析結果の要約}{26}{subsection.15.2}%
+\contentsline {subsection}{\numberline {15.3}想定や直感と異なる結果とその理由}{26}{subsection.15.3}%
+\contentsline {subsection}{\numberline {15.4}今後の方針（新施策の提案）}{26}{subsection.15.4}%
+\contentsline {subsection}{\numberline {15.5}提案の図解と proxy 感度}{27}{subsection.15.5}%
+\contentsline {subsection}{\numberline {15.6}上位スコア層を母集団としたパイロットの記述}{28}{subsection.15.6}%
+\contentsline {subsection}{\numberline {15.7}本稿の位置づけ（ロードマップ）}{29}{subsection.15.7}%
+\contentsline {section}{\numberline {A}付録：仮定データによる補完分析}{30}{appendix.A}%
+\contentsline {paragraph}{接触コスト（円）のフェルミ推定.}{30}{section*.74}%
+\contentsline {subsection}{\numberline {A.1}仮定パラメータ（JSON）}{33}{subsection.A.1}%
+\contentsline {subsection}{\numberline {A.2}データセット抜粋（演習用 \texttt {exercise.csv}）}{33}{subsection.A.2}%
+\contentsline {subsection}{\numberline {A.3}合成露出ログ抜粋}{33}{subsection.A.3}%
+\contentsline {subsection}{\numberline {A.4}分析に用いた Python コード}{34}{subsection.A.4}%

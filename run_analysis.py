@@ -5,6 +5,9 @@
   cd プロジェクトルート
   python run_analysis.py
 
+  まとめ章の図（パイロット模式・90日副次・マージン感度・データギャップ）は
+  analytics/future_directions_analysis.py が profit_long.csv 生成直後に実行される。
+
 LuaLaTeX（任意・プロジェクトルートにいるとき）:
   cd latex
   latexmk -lualatex final_report.tex

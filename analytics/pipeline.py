@@ -43,6 +43,7 @@ from analytics.stats_extra import run_stats_extra
 from analytics.supervised_ablation import run_lsi_logreg_ablation
 from analytics.constants import BASE_FEATURES
 from analytics.eda import make_eda_figures
+from analytics.future_directions_analysis import run_future_directions_analysis
 from analytics.exploratory_strata import write_segment_treatment_exploratory
 from analytics.experiment_design import write_ab_design_table
 from analytics.figures_jp import init_plot_style
@@ -175,6 +176,7 @@ def run_pipeline() -> None:
     p_full = policy_recommendations(df, out_full, BASE_FEATURES, treatments)
     profit_long = build_profit_tables(df, p_full, DEFAULT_SCENARIOS)
     profit_long.to_csv(ART_DIR / "profit_long.csv", index=False)
+    run_future_directions_analysis(profit_long)
     best_targets = export_targets(profit_long, p_full, csv_path=ART_DIR / "promo_targets.csv")
     profit_summary = summarize_profit(best_targets)
     profit_summary.to_csv(ART_DIR / "profit_summary.csv", index=False)

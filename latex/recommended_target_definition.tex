@@ -1,14 +1,16 @@
 % 推奨ターゲットとKPIの集約（本編）。プロファイル数値は \texttt{python -m analytics.pilot\_design\_analysis} で再生成。
-\noindent\textbf{課題への直球の答え（1段落）.}
+\noindent\textbf{課題への答え.}
 ベース特徴（\texttt{recency}, \texttt{history}, 過去プロモ利用, \texttt{zip\_code}, \texttt{is\_referral}）のみから推定した購入スコアの\textbf{上位5--10\,\%}は、過去購入価値が高く・\texttt{recency}が低い傾向が強い（表\ref{tab:pilot_cohort}）。
-過去割引・BOGO利用の観察比率など層別のプロファイルは表\ref{tab:pilot_profile_binary}に集約（スコア定義に依存し、紹介フラグは必ずしも単調に増えない）。
+過去割引・BOGO利用の観察比率など層別のプロファイルは表\ref{tab:pilot_profile_binary}に集約（スコア定義に依存し、紹介フラグは必ずしも単調に増えない）。\\
 \textbf{誰に何を}は「スコア層 $\times$ オファー $\times$ チャネル」として離散処置で評価するが、本データには\textbf{メッセージ文面・接触頻度・配信タイミング}が無い（施策の射程はオファー種別とチャネルに限定）。
 オフライン上の期待利益代理ではコスト仮定次第で\textbf{無オファー・低コストチャネル}が支配的になりうるため、「高確度だから重いプロモ」は\textbf{増分効果とコスト}をRCTで確認するまで採用しない（第\ref{sec:opeval}節・図\ref{fig:uplift_crude_gap}）。
 
+
+\FloatBarrier
 \begin{table}[htbp]
   \centering
   \small
-  \caption{評価KPIの階層（パイロット〜本番の合意用。数値は組織で確定）}
+  \caption{評価KPIの階層}
   \label{tab:kpi_hierarchy}
   \begin{tabular}{@{}p{0.22\linewidth}p{0.34\linewidth}p{0.36\linewidth}@{}}
     \toprule
@@ -36,13 +38,17 @@
   \end{tabular}
 \end{table}
 
-\noindent\textbf{送る／送らない（オフライン・運用ルール案）.}
-\begin{itemize}\setlength{\itemsep}{0.25em}
-  \item \textbf{送る（優先検討）}：購入スコアが\textbf{上位5--10\,\%}かつ、オフライン期待利益代理（式\eqref{eq:profit}）で\textbf{当該顧客にとって最良の処置}がインセンティブ付きでない、または予算・接触上限内で割り当て可能な場合。制約付き配信では貪欲割当の結果に従う（第\ref{sec:opeval}節）。
-  \item \textbf{条件付きで送る}：スコアは中位だが在庫処理・季節キャンペーン等の\textbf{ビジネス上の理由}があり、RCTまたはホールドアウトで\textbf{害がない}ことが確認されているセル。
-  \item \textbf{送らない／ホールドアウト}：スコア下位で期待利益代理が負、または同一顧客への\textbf{過剰接触}が予想される場合。RCTのコントロール臂として無処置を必ず確保する。
-  \item \textbf{禁止}：ガバナンス上レビュー前に、地域カテゴリ等の\textbf{禁止・要レビュー変数のみ}を理由に不利益な差別的配信を行わない（第\ref{sec:governance}節）。
-\end{itemize}
+\noindent\textbf{接触・配信の推奨区分.}\par\smallskip
+\begingroup
+\setlength{\leftmargini}{1.5em}%
+\setlength{\labelsep}{0.6em}%
+\begin{description}\setlength{\itemsep}{0.35em}\setlength{\parsep}{0pt}
+  \item[\textbf{優先的接触（推奨）}] 購入スコアが\textbf{上位5--10\,\%}かつ、オフライン期待利益代理（式\eqref{eq:profit}）で\textbf{当該顧客にとって最良の処置}がインセンティブ付きでない、または予算・接触上限内で割り当て可能な場合。制約付き配信では貪欲割当の結果に従う（第\ref{sec:opeval}節）。
+  \item[\textbf{条件付き接触}] スコアは中位だが在庫処理・季節キャンペーン等の\textbf{ビジネス上の理由}があり、RCTまたはホールドアウトで\textbf{害がない}ことが確認されているセル。
+  \item[\textbf{接触回避・ホールドアウト}] スコア下位で期待利益代理が負、または同一顧客への\textbf{過剰接触}が予想される場合。RCTのコントロール臂として無処置を必ず確保する。
+  \item[\textbf{禁止（ガバナンス）}] ガバナンス上レビュー前に、地域カテゴリ等の\textbf{禁止・要レビュー変数のみ}を理由に不利益な差別的配信を行わない（第\ref{sec:governance}節）。
+\end{description}
+\endgroup
 
 \medskip\noindent\textbf{上位スコア層のプロファイル（記述）.}
 \input{generated_pilot_cohort_profile}

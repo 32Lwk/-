@@ -5,3 +5,6 @@ __pycache__/
 .venv/
 venv/
 .env
+learning_auth.json
+learning_credentials.json
+artifacts/quiz_inferred_correct.json

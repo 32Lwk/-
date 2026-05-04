@@ -56,7 +56,8 @@ def init_plot_style() -> None:
     set_japanese_font()
 
 
-def save_fig(path, dpi: int = 200) -> None:
-    plt.tight_layout()
+def save_fig(path, dpi: int = 200, *, tight_layout: bool = True) -> None:
+    if tight_layout:
+        plt.tight_layout()
     plt.savefig(path, dpi=dpi)
     plt.close()
