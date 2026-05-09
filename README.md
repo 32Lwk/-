@@ -46,6 +46,10 @@ latexmk -lualatex final_report.tex
 scripts\compile_final_report.bat
 ```
 
+## Flask から FastAPI への移行準備
+
+現時点では、このリポジトリ内に Flask アプリケーションのエントリポイントやルート定義は確認できていません。移行対象の確認結果と、FastAPI へ移植する前に整理すべき項目は `docs/FLASK_TO_FASTAPI_MIGRATION.md` を参照してください。
+
 ## パラメータ
 
 `analytics/config.py` の `BOOTSTRAP_B`、`BOOTSTRAP_N`、`CONSTRAINT_*` などを調整可能。
