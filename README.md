@@ -46,9 +46,22 @@ latexmk -lualatex final_report.tex
 scripts\compile_final_report.bat
 ```
 
-## Flask から FastAPI への移行準備
+## FastAPI API サーバー
 
-現時点では、このリポジトリ内に Flask アプリケーションのエントリポイントやルート定義は確認できていません。移行対象の確認結果と、FastAPI へ移植する前に整理すべき項目は `docs/FLASK_TO_FASTAPI_MIGRATION.md` を参照してください。
+分析パイプラインは FastAPI からも実行できます。Flask から FastAPI への移行実装の詳細は `docs/FLASK_TO_FASTAPI_MIGRATION.md` を参照してください。
+
+```bash
+pip install -r requirements.txt
+uvicorn web.main:app --reload
+```
+
+主なエンドポイント:
+
+- `GET /health` … API と入力データの状態確認
+- `POST /api/analysis/run` … 分析パイプラインをバックグラウンド実行
+- `GET /api/analysis/status` … 分析パイプラインの実行状態確認
+- `GET /api/artifacts` … 生成済み成果物の一覧
+- `GET /api/artifacts/{artifact_path}` … 成果物ファイルの取得
 
 ## パラメータ
 

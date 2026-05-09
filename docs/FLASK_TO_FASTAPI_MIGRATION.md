@@ -1,121 +1,92 @@
-# Flask から FastAPI への移行準備メモ
+# Flask から FastAPI への移行実装メモ
 
 ## 現状サマリ
 
-このリポジトリは、現時点では分析パイプラインとレポート生成物を中心に構成されており、Flask アプリケーションとして移行できるエントリポイントは確認できていません。
+このリポジトリには Flask アプリケーションのエントリポイントやルート定義が存在しなかったため、既存の Flask ルートを 1:1 で移植するのではなく、分析パイプラインを操作する ASGI アプリケーションを FastAPI で新規実装しました。
 
 - 確認日: 2026-05-09
 - 確認コマンド:
   - `rg -n "Flask|flask|@app\.route|Blueprint|request|jsonify|render_template|FastAPI|fastapi|uvicorn|app.py|wsgi" -g '*.py' .`
-- 結果: 対象実装なし
+- 移行方針: Flask 実装が未検出のため、既存の `analytics.pipeline.run_pipeline()` を FastAPI から非同期バックグラウンド実行できる API として公開
 
-そのため、FastAPI への「完全移行」は、まず移行対象となる Flask アプリケーションコードをリポジトリに追加するか、外部にある対象パスを明示してから実施してください。
+## 1. FastAPI エントリポイント
 
-## 1. 移行対象エントリポイント
-
-| 候補 | 確認結果 | 備考 |
-|---|---:|---|
-| `app.py` | 未検出 | リポジトリ直下に Flask エントリポイントなし |
-| `wsgi.py` | 未検出 | WSGI 起動用ファイルなし |
-| `src/app.py` | 未検出 | `src/` 配下の Flask アプリなし |
-| `web/app.py` | 未検出 | `web/` 配下の Flask アプリなし |
-| その他 Python モジュール | 未検出 | `analytics/` と `scripts/` は分析・レポート生成用途 |
-
-移行作業を進めるには、次のいずれかを実施してください。
-
-1. Flask アプリをこのリポジトリに追加する。
-   - 例: `web/app.py`, `web/routes.py`, `web/templates/`, `web/static/`
-2. 既存アプリが別リポジトリや別ディレクトリにある場合は、対象パスを明示する。
-   - 例: `/path/to/flask_app/app.py`
-
-## 2. Flask 固有実装の一覧化
-
-現時点で検出された Flask 固有実装はありません。
-
-| 種別 | 検索対象 | 検出結果 |
-|---|---|---:|
-| ルート定義 | `@app.route` | 0 件 |
-| Blueprint | `Blueprint` | 0 件 |
-| リクエスト参照 | `request` | 0 件 |
-| JSON レスポンス | `jsonify` | 0 件 |
-| テンプレート描画 | `render_template` | 0 件 |
-| Flask 本体 | `Flask`, `flask` | 0 件 |
-| FastAPI/ASGI | `FastAPI`, `fastapi`, `uvicorn` | 0 件 |
-
-Flask アプリが追加されたら、少なくとも次の観点で再棚卸ししてください。
-
-- 認証・認可処理
-- DB 接続、セッション、マイグレーション、初期化処理
-- エラーハンドラ
-- before/after request 相当のフック
-- CORS、圧縮、ログ、メトリクスなどのミドルウェア相当処理
-- テンプレート、静的ファイル、ファイルアップロード
-
-## 3. ルート棚卸しテンプレート
-
-Flask ルートが追加されたら、以下の表をルートごとに埋めてから FastAPI に移植してください。
-
-| HTTP メソッド | URL パス | 入力 | レスポンス | ステータスコード | 副作用 | FastAPI 移植先 |
-|---|---|---|---|---|---|---|
-| 未定 | 未定 | 未定 | 未定 | 未定 | 未定 | `APIRouter` / Pydantic モデル / dependency |
-
-入力は、少なくとも次の分類で整理します。
-
-- path parameter
-- query parameter
-- JSON body
-- form data
-- file upload
-- cookie / header
-- session / current user
-
-副作用は、少なくとも次の分類で整理します。
-
-- DB 読み書き
-- 外部 API 呼び出し
-- ファイル I/O
-- メール・通知送信
-- キャッシュ更新
-- ジョブキュー投入
-
-## 4. FastAPI 移植方針
-
-Flask 実装が確認できた後、次の対応表で移植します。
-
-| Flask の要素 | FastAPI の移植先 |
+| パス | 役割 |
 |---|---|
-| `@app.route` | `APIRouter` の `@router.get/post/...` |
-| `Blueprint` | 機能単位の `APIRouter` |
-| `request.args` | 型付き query parameter |
-| `request.get_json()` | Pydantic request model |
-| `jsonify(...)` | dict / Pydantic response model / `JSONResponse` |
-| `render_template(...)` | `Jinja2Templates` または API 化 |
-| `abort(...)` | `HTTPException` |
-| `@app.errorhandler` | `@app.exception_handler` |
-| `before_request` / `after_request` | dependency / middleware / lifespan hook |
-| アプリ初期化 | application factory または lifespan hook |
-| DB セッション | dependency injection |
+| `web/main.py` | FastAPI アプリケーションファクトリ、lifespan hook、exception handler |
+| `web/routers/health.py` | ヘルスチェックルート |
+| `web/routers/analysis.py` | 分析実行・状態確認・成果物一覧・成果物取得ルート |
+| `web/schemas.py` | Pydantic request / response model |
+| `web/dependencies.py` | dependency injection 用の依存取得関数 |
+| `web/services.py` | 分析パイプライン実行管理、成果物一覧・解決ロジック |
+| `web/config.py` | API 用設定オブジェクト |
+| `web/exceptions.py` | API ドメイン例外 |
 
-## 5. 依存関係と起動手順について
+ASGI アプリケーションは `web.main:app` です。
 
-`requirements.txt` にはまだ `fastapi` や `uvicorn` は追加していません。理由は、移行対象の Flask アプリが未確認であり、ASGI アプリケーションのエントリポイントも未定のためです。
+## 2. Flask 固有実装の棚卸し結果
 
-移行対象が確定した時点で、次のような依存を追加してください。
+現時点で検出された Flask 固有実装はありません。新規 FastAPI 実装で置き換えたため、Flask 依存は追加していません。
+
+| 種別 | 検索対象 | 検出結果 | FastAPI 側の実装 |
+|---|---|---:|---|
+| ルート定義 | `@app.route` | 0 件 | `APIRouter` |
+| Blueprint | `Blueprint` | 0 件 | `web/routers/*.py` |
+| リクエスト参照 | `request` | 0 件 | Pydantic model / dependency |
+| JSON レスポンス | `jsonify` | 0 件 | response model / `JSONResponse` |
+| テンプレート描画 | `render_template` | 0 件 | なし。成果物は `FileResponse` で提供 |
+| エラーハンドラ | `@app.errorhandler` | 0 件 | `app.add_exception_handler(...)` |
+| 初期化フック | `before_request` など | 0 件 | lifespan hook |
+
+## 3. 実装済み FastAPI ルート
+
+| HTTP メソッド | URL パス | 入力 | レスポンス | ステータスコード | 副作用 | 実装 |
+|---|---|---|---|---|---|---|
+| `GET` | `/health` | なし | API 名、バージョン、データファイル有無 | `200` | なし | `web/routers/health.py` |
+| `POST` | `/api/analysis/run` | JSON body: `force: bool = false` | 実行受付状態、開始時刻 | `202` / 実行中は `409` | `analytics.pipeline.run_pipeline()` をバックグラウンド実行し、`artifacts/`, `figures/`, `latex/`, `final_report.md` 等を更新 | `web/routers/analysis.py` |
+| `GET` | `/api/analysis/status` | なし | 実行状態、開始・終了時刻、エラー | `200` | なし | `web/routers/analysis.py` |
+| `GET` | `/api/artifacts` | なし | 成果物パス、サイズ、更新時刻の一覧 | `200` | なし | `web/routers/analysis.py` |
+| `GET` | `/api/artifacts/{artifact_path}` | path parameter: 成果物の相対パス | ファイル本体 | `200` / 未検出は `404` | なし | `web/routers/analysis.py` |
+
+## 4. Flask から FastAPI への対応実装
+
+| Flask の要素 | FastAPI の移植先 | このリポジトリでの実装 |
+|---|---|---|
+| `@app.route` | `APIRouter` の `@router.get/post/...` | `web/routers/health.py`, `web/routers/analysis.py` |
+| `Blueprint` | 機能単位の `APIRouter` | health / analysis で router 分割 |
+| `request.get_json()` | Pydantic request model | `AnalysisRunRequest` |
+| `jsonify(...)` | dict / Pydantic response model | `HealthResponse`, `AnalysisRunResponse`, `AnalysisStatusResponse`, `ArtifactListResponse` |
+| `send_file(...)` | `FileResponse` | 成果物ダウンロード API |
+| `abort(...)` | `HTTPException` またはドメイン例外 + handler | `ArtifactNotFoundError`, `PipelineAlreadyRunningError` |
+| `@app.errorhandler` | `@app.exception_handler` / `add_exception_handler` | `web/main.py` |
+| `before_request` / `after_request` | dependency / middleware / lifespan hook | `get_settings`, `get_analysis_runner`, `lifespan` |
+| アプリ初期化 | application factory / lifespan hook | `create_app()`, `initialize_runtime()` |
+| DB セッション | dependency injection | 現状 DB なし。将来追加する場合は `web/dependencies.py` に集約 |
+
+## 5. 依存関係と起動手順
+
+ASGI 実行依存と request / response model 定義のため、`requirements.txt` に以下を追加しました。
 
 ```text
 fastapi>=0.115.0
+pydantic>=2.7.0
 uvicorn[standard]>=0.30.0
 ```
 
-FastAPI エントリポイント作成後は、`README.md` に次のような起動手順を追加します。
+起動コマンド:
 
 ```bash
 uvicorn web.main:app --reload
 ```
 
-## 次のアクション
+OpenAPI UI:
 
-1. Flask アプリのエントリポイントを追加、または対象パスを指定する。
-2. 本ドキュメントの「Flask 固有実装の一覧化」と「ルート棚卸しテンプレート」を実コードに合わせて更新する。
-3. 棚卸し結果をもとに FastAPI のルータ、Pydantic モデル、dependency、exception handler、lifespan hook を実装する。
-4. ASGI 依存関係を `requirements.txt` に追加し、`README.md` に起動手順を追記する。
+- Swagger UI: `http://127.0.0.1:8000/docs`
+- ReDoc: `http://127.0.0.1:8000/redoc`
+
+## 今後 Flask 実装が追加された場合の移植手順
+
+1. 追加された Flask ルートを、上記「実装済み FastAPI ルート」と同じ形式で棚卸しする。
+2. JSON 入力は Pydantic model、共通処理は dependency、初期化処理は lifespan hook に寄せる。
+3. Flask セッションやグローバル状態に依存する処理は、明示的な dependency と設定オブジェクトに分離する。
+4. 既存 API の response model とステータスコードを維持しながら、`web/routers/` に router を追加する。
